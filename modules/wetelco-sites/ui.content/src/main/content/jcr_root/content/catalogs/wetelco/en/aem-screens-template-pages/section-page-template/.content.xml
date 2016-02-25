@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2016-01-23T04:38:18.169+11:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/wetelco-screens/templates/screens-section-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="WeTelco Section Page Template"
+        sling:resourceType="wetelco-screens/components/page_section">
+        <par jcr:primaryType="nt:unstructured">
+            <banner jcr:primaryType="nt:unstructured"/>
+        </par>
+    </jcr:content>
+</jcr:root>

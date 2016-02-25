@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2016-02-22T15:43:08.966+11:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/mobileapps/dps/templates/collection/default"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Mobile Phones"
+        sling:resourceType="mobileapps/dps/components/page/collection/collection"
+        dps-id="/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/collection/mobile-phones0;version=1456116318544"
+        dps-lastUploaded="{Date}2016-02-22T15:45:18.676+11:00"
+        dps-lastUploadedBy="admin"
+        dps-resourceType="dps:Collection"/>
+</jcr:root>

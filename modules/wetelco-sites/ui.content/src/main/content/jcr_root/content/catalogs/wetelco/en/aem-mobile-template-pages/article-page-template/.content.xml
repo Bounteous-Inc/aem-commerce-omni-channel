@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:commerceProvider="wetelco"
+        cq:designPath="/etc/designs/phonegap/weTelco/weTelco"
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2016-02-16T06:26:19.279+11:00"
+        cq:lastModifiedBy="admin"
+        cq:productMaster="/etc/commerce/products/wetelco/personal/prepaid/mobile-phones/apple/iphone5s"
+        cq:template="/apps/weTelco/weTelco/templates/ng-ionic-product-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="MyArticle1"
+        sling:resourceType="weTelco/weTelco/components/ng-ionic-product-page"
+        dps-access="metered"
+        dps-category="Mobile"
+        dps-resourceType="dps:Article"
+        dps-smoothScrolling="always"
+        dps-title="MyArticle1"
+        pge-type="app-content"
+        phonegap-exportTemplate="/content/phonegap/weTelco/en/jcr:content/pge-app/app-config">
+        <content-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <ng-product
+                jcr:created="{Date}2013-08-29T10:15:06.985Z"
+                jcr:createdBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="weTelco/weTelco/components/ng-product"
+                frameworkType="angular"/>
+        </content-par>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone-portrait
+                    jcr:primaryType="nt:unstructured"
+                    title="Phone Portrait"
+                    width="480"/>
+                <phone-land
+                    jcr:primaryType="nt:unstructured"
+                    title="Phone Landscape"
+                    width="767"/>
+                <tablet-portrait
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet Portrait"
+                    width="979"/>
+                <tablet-land
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet Landscape"
+                    width="1199"/>
+            </breakpoints>
+        </cq:responsive>
+        <image
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/image"
+            fileReference="/content/dam/wetelco-sites/Mobile/iphone6-select-2014_GEO_AU.jpg"
+            imageCrop=""
+            imageRotate="{Long}0"/>
+    </jcr:content>
+</jcr:root>

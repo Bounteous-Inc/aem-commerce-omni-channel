@@ -1,0 +1,17 @@
+<div class="promo-list"
+    data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+    
+<div class="item item-divider">Bill Summary</div>
+<div class="row">
+  <div class="col col-67">
+  	<p><strong>Balance</strong><br>{{accounts.balancestatus}}</p>
+    <button class="button button-positive">Download PDF Bill (approx 500k)</button>
+ </div>
+  <div class="col">
+     <p><strong>Bill Issued</strong><br>{{accounts.lastbillissued}}</p>
+      <p><strong>Bill Number</strong><br>{{accounts.lastbillno}}</p>
+      <p><strong>Last bill</strong><br>$ {{accounts.lastbillamount}}</p>
+</div>
+</div>
+ 
+</div>

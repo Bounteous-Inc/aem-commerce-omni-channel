@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:catalogBlueprint="/content/catalogs/wetelco/en/aem-screens-base-catalog"
+        cq:commerceProvider="wetelco"
+        cq:commerceType="section"
+        cq:designPath="/etc/designs/wetelco-sites"
+        cq:lastModified="{Date}2016-02-22T11:21:27.099+11:00"
+        cq:lastModifiedBy="admin"
+        cq:lastPropertyRollout="{Date}2016-02-22T11:21:27.099+11:00"
+        cq:template="/apps/wetelco-screens/templates/screens-catalog-page"
+        jcr:description="Personal Devices Shop"
+        jcr:language="en_US"
+        jcr:mixinTypes="[cq:LiveSync]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Shop"
+        sling:resourceType="wetelco-screens/components/page_catalog"
+        assetCategory="[weTelco:]"
+        navTitle="Shop"
+        pageTitle="Shop">
+        <cq:LiveSyncConfig
+            cq:isDeep="{Boolean}false"
+            cq:master="/content/catalogs/wetelco/en/aem-screens-template-pages/catalog-page-template"
+            cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
+            jcr:primaryType="cq:LiveCopy"/>
+    </jcr:content>
+    <mobile-phones/>
+    <tablets/>
+    <broadband/>
+</jcr:root>

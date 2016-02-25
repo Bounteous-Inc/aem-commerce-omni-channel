@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:importCount="{Long}15"
+    jcr:primaryType="sling:Folder">
+    <jcr:content jcr:primaryType="nt:unstructured">
+        <folderThumbnail/>
+    </jcr:content>
+    <samsung-galaxy-tab-s2
+        cq:commerceType="product"
+        cq:productVariantAxes="[color,plan,size,term]"
+        cq:tags="[weTelco:device/tablets,weTelco:plans/prepaid,weTelco:customer/personal,weTelco:device/tablets/samsung]"
+        jcr:description="From $700 &#xa;(Outright)&#xa;Terms and Conditions apply"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.323Z"
+        jcr:mixinTypes="[cq:Taggable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Samsung Galaxy Tab S2"
+        sling:resourceType="commerce/components/product"
+        brand="Samsung"
+        features="..."
+        identifier="personal-tablet-prepaid-samsung-galaxy-tab-s2"
+        summary="...">
+        <image
+            jcr:lastModified="{Date}2015-01-26T12:28:08.323Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wetelco-sites/components/content/product/image"
+            fileReference="/content/dam/wetelco-sites/Tablet/samsung_galaxy_tab_a_8_wi_fi.jpg"/>
+        <prepaid-mobile-broadband-55-samsung-galaxy-tab-a-80-white
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.324Z"
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Samsung Galaxy Tab S2 - White"
+            sling:resourceType="commerce/components/product"
+            color="white"
+            identifier="prepaid-mobile-broadband-55-samsung-galaxy-tab-a-80-white"
+            plan="55"
+            size="80gb"
+            term="24"/>
+    </samsung-galaxy-tab-s2>
+</jcr:root>

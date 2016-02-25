@@ -1,0 +1,66 @@
+
+<!-- footer -->
+<footer data-sly-use.head="head.js"
+	data-sly-use.navigator="navigator.js">
+	<div class="container-fluid sitemap">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 level-container hidden-xs"
+				data-sly-list.child="${navigator.level2Page.listChildren}"
+				data-sly-test="${navigator.level2Page}">
+				<div class="level1" data-sly-test="${!child.hideInNav}">
+					<a href="${child.path}.html">${child.title}</a>
+					<ul data-sly-list.child1="${child.listChildren}">
+						<li><a href="${child1.path}.html">${child1.title}</a></li>
+					</ul>
+				</div>
+				<span class="stretch" data-sly-test="${childList.last}"></span>
+			</div>
+		</div>
+	</div>
+	<!-- /.level-container -->
+	<div class="container-fluid links">
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-xs-8 level-container">
+				<div class="level1">
+					<a href="#">${'Media Center' @ i18n}</a>
+				</div>
+				<div class="level1">
+					<a href="#">${'Contacts' @ i18n}</a>
+				</div>
+				<div class="level1">
+					<a href="#">${'Website feedback' @ i18n}</a>
+				</div>
+				<div class="level1">
+					<a href="#">${'Help' @ i18n}</a>
+				</div>
+				<span class="stretch"></span>
+			</div>
+			<div
+				class="col-md-2 col-md-offset-1 col-sm-2 col-xs-4 level-container">
+				<div class="level1 social">
+					<a href="#"><img class="level-icon"
+						src="${head.designPath}/images/facebook.png"></a> <a href="#"><img
+						class="level-icon" src="${head.designPath}/images/twitter.png"></a>
+					<a href="#"><img class="level-icon"
+						src="${head.designPath}/images/youtube.png"></a>
+				</div>
+				<span class="stretch"></span>
+			</div>
+		</div>
+	</div>
+	<!-- /.level-container -->
+		<div class="container-fluid term">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 level-container">
+				<h4>&#x000A9;2016 weTelco. ${'(Demo Site!)' @ i18n}</h4>
+				<p>${'Any reference to weTelco.com and its related logo is for
+					Adobe demonstration purposes only and is not intended to refer to
+					any actual organization.' @ i18n}</p>
+				<p>${'Check our Terms & Conditions and find out more about
+					Privacy Policy.' @ i18n}</p>
+			</div>
+		</div>
+	</div>
+	<!-- /.level-container -->
+</footer>
+<!-- end of footer -->

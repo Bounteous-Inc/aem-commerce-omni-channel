@@ -1,0 +1,61 @@
+/*
+ ADOBE CONFIDENTIAL
+ __________________
+
+  Copyright 2013 Adobe Systems Incorporated
+  All Rights Reserved.
+
+ NOTICE:  All information contained herein is, and remains
+ the property of Adobe Systems Incorporated and its suppliers,
+ if any.  The intellectual and technical concepts contained
+ herein are proprietary to Adobe Systems Incorporated and its
+ suppliers and are protected by trade secret or copyright law.
+ Dissemination of this information or reproduction of this material
+ is strictly forbidden unless prior written permission is obtained
+ from Adobe Systems Incorporated.
+ */
+
+/* Mobile only style */
+@media (max-width: 480px),
+(-webkit-min-device-pixel-ratio: 2) and (max-width: 640px) {
+    .bg,
+    .title-and-author,
+    .category-trim {
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .article-title,
+    .article-content,
+	.article .article{
+        margin: 0 .5em 0 .5em;
+    }
+
+    .article-content {
+        padding-top: 0;
+    }
+
+    .article-title h1 {
+        font-size: 1.3em;
+        padding: .35em 0 .35em 0;
+    }
+
+    .article > p:first-of-type:first-letter{
+        font-size: 3em;
+    }
+
+    .article-teaser,
+    .article {
+        font-size: .9em;
+    }
+
+    .article-category span {
+        border-top: 0;
+        border-bottom: 0;
+        top: .4em;
+        font-size: .85em;
+    }
+    .footer {
+        font-size: .7em;
+    }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:catalogBlueprint="/content/catalogs/wetelco/en/aem-screens-base-catalog/broadband"
+        cq:commerceType="section"
+        cq:lastModified="{Date}2016-02-22T11:21:27.374+11:00"
+        cq:lastModifiedBy="admin"
+        cq:lastPropertyRollout="{Date}2016-02-22T11:21:27.373+11:00"
+        cq:template="/apps/wetelco-screens/templates/screens-section-page"
+        jcr:mixinTypes="[cq:LiveSync]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Broadband"
+        sling:resourceType="wetelco-screens/components/page_section"
+        coverImage="/content/dam/wetelco/screens/AdobeStock_84486650.jpeg">
+        <par
+            jcr:mixinTypes="[cq:LiveRelationship]"
+            jcr:primaryType="nt:unstructured">
+            <banner
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                fileReference="/content/dam/geometrixx-outdoors/banners/snowboard-action.jpg"/>
+        </par>
+        <cq:LiveSyncConfig
+            cq:isDeep="{Boolean}false"
+            cq:master="/content/catalogs/wetelco/en/aem-screens-template-pages/section-page-template"
+            cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
+            jcr:primaryType="cq:LiveCopy"/>
+    </jcr:content>
+    <home-broadband/>
+    <mobile-broadband/>
+</jcr:root>

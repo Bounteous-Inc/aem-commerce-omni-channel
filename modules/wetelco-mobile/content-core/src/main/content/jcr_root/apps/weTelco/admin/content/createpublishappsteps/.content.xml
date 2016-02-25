@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:vlt="http://www.day.com/jcr/vault/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[vlt:FullCoverage]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="WeTelco AEM Apps"
+        sling:resourceType="mobileapps/gui/components/page"
+        clientLibs="[cq.apps.create.publish.app]">
+        <content jcr:primaryType="nt:unstructured">
+            <items jcr:primaryType="nt:unstructured">
+                <step2properties
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="App Properties"
+                    sling:resourceType="granite/ui/components/foundation/form/wizard/step">
+                    <items jcr:primaryType="nt:unstructured">
+                        <properties
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Properties"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                            <items jcr:primaryType="nt:unstructured">
+                                <properties
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/container">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <tabs
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <layout
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/layouts/container"/>
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <basic
+                                                    jcr:primaryType="nt:unstructured"
+                                                    jcr:title="Basic"
+                                                    sling:resourceType="granite/ui/components/foundation/section">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <title
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <title
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                                    fieldDescription="Title of the App that is displayed throughout the UI."
+                                                                    fieldLabel="Title *"
+                                                                    name="pageTitle"
+                                                                    required="{Boolean}true"/>
+                                                                <pagename
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                                    fieldDescription="Name of the app that will be used in the App's URI."
+                                                                    fieldLabel="Name"
+                                                                    name="pageName"
+                                                                    validation="cq.apps.dps.jcr.name"/>
+                                                                <description
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                                                    fieldDescription="Description of the App to explain the App's intention."
+                                                                    fieldLabel="Description"
+                                                                    name="jcr:description"/>
+                                                                <charset
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                                                    ignoreData="{Boolean}true"
+                                                                    name="_charset_"
+                                                                    value="utf-8"/>
+                                                                <mergeshell
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                                                    ignoreData="{Boolean}true"
+                                                                    name="mergeGroupAndShell"
+                                                                    value="true"/>
+                                                                <parentpath
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                                                    ignoreData="{Boolean}true"
+                                                                    name="parentPath"
+                                                                    value="${empty requestPathInfo.suffix ? &quot;/content/mobileapps&quot; : requestPathInfo.suffix}"/>
+                                                                <operation
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                                                    name=":operation"
+                                                                    value="mobileapps:createMobileApp"/>
+                                                                <redirect
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                                                    name="redirectTo"
+                                                                    value="/aem/apps.html/content/mobileapps"/>
+                                                            </items>
+                                                        </title>
+                                                    </items>
+                                                </basic>
+                                            </items>
+                                        </tabs>
+                                    </items>
+                                </properties>
+                                <prev
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/button"
+                                    class="foundation-wizard-control"
+                                    foundation-wizard-control-action="prev"
+                                    text="Back"/>
+                                <next
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/button"
+                                    class="foundation-wizard-control"
+                                    disabled="{Boolean}true"
+                                    foundation-wizard-control-action="next"
+                                    text="Next"/>
+                            </items>
+                        </properties>
+                    </items>
+                </step2properties>
+                <step3cloudconfig
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="App Cloud Config"
+                    sling:resourceType="granite/ui/components/foundation/form/wizard/step">
+                    <items jcr:primaryType="nt:unstructured">
+                        <cloudconfig
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                            <layout
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                            <items jcr:primaryType="nt:unstructured">
+                                <tabs
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/container">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/container"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <publishservice
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/select"
+                                            configPath="/etc/cloudservices/dps2015"
+                                            emptyText="Select a Digital Publishing Solution Cloud Config"
+                                            fieldDescription="Setting a DPS Cloud Configuration allows the dashboard to use its values to connect to and interact with Adobe DPS."
+                                            fieldLabel="Select a Digital Publishing Solution Cloud Config *"
+                                            multiple="false"
+                                            name="app/dps-cloudConfig"
+                                            prompt="Select an existing App Cloud Config"
+                                            rel="cq-apps-dps-cloudconfig-form-select"
+                                            required="{Boolean}false">
+                                            <datasource
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="mobileapps/gui/components/datasources/configurations"/>
+                                        </publishservice>
+                                        <instructions
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/text"
+                                            class="cq-apps--block-text coral-Form-fieldlabel"
+                                            text="Manage Digital Publishing Solution Cloud Configurations">
+                                            <granite:rendercondition
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/renderconditions/privilege"
+                                                path="/etc/cloudservices/dps2015"
+                                                privileges="[jcr:write]"/>
+                                        </instructions>
+                                        <configurePublish
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/hyperlink"
+                                            class="cq-apps-configure-dps coral-Button coral-Button--secondary"
+                                            hideText="{Boolean}true"
+                                            href="/etc/cloudservices/dps2015.html"
+                                            icon="icon-wrench"
+                                            target="_blank"
+                                            title="Manage the Digital Publishing Solution Configurations"
+                                            type="button">
+                                            <granite:rendercondition
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/renderconditions/privilege"
+                                                path="/etc/cloudservices/dps2015"
+                                                privileges="[jcr:write]"/>
+                                        </configurePublish>
+                                        <publishprojectid
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/select"
+                                            configPath="/etc/cloudservices/dps2015"
+                                            disabled="{Boolean}true"
+                                            emptyText="Select a Digital Publishing Solution Project"
+                                            fieldDescription="Setting a DPS Project allows the dashboard to perform operations on a project level."
+                                            fieldLabel="Select a Digital Publishing Solution Project"
+                                            multiple="false"
+                                            name="app/dps-projectId"
+                                            prompt="Select an existing Digital Publishing Solution Project"
+                                            rel="cq-apps-publish-project-form-select"
+                                            required="{Boolean}false"/>
+                                        <publishprojecttitle
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                            ignoreData="{Boolean}true"
+                                            name="app/dps-projectTitle"
+                                            value=""/>
+                                        <apptemplate
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                            ignoreData="{Boolean}true"
+                                            name="appTemplate"
+                                            value="/apps/aem-mobile-dps/templates/issue"/>
+                                    </items>
+                                </tabs>
+                            </items>
+                        </cloudconfig>
+                        <prev
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/button"
+                            class="foundation-wizard-control"
+                            foundation-wizard-control-action="prev"
+                            text="Back"/>
+                        <cancel
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/hyperlink"
+                            class="foundation-wizard-control"
+                            foundation-wizard-control-action="cancel"
+                            hideText="{Boolean}true"
+                            href="${empty header['referer'] ? &quot;/aem/apps.html/content/mobileapps&quot; : header['referer']}"
+                            text="Cancel"/>
+                        <create
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/submit"
+                            class="foundation-wizard-control"
+                            disabled="{Boolean}false"
+                            foundation-wizard-control-action="next"
+                            text="Create"/>
+                    </items>
+                </step3cloudconfig>
+            </items>
+        </content>
+    </jcr:content>
+</jcr:root>

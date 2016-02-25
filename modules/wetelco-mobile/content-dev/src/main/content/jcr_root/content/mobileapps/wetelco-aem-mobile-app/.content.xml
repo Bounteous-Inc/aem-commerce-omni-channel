@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="[/apps/weTelco/weTelco/templates/.*]"
+        cq:designPath="/etc/designs/phonegap/weTelco/weTelco"
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2016-02-22T10:05:53.983+11:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/weTelco/weTelco/templates/issue"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="WeTelco AEM Mobile App"
+        sling:resourceType="weTelco/weTelco/components/pages/issue"
+        dps-cloudConfig="/etc/cloudservices/dps2015/vvenkata-adobe-device"
+        dps-exportTemplate="/etc/contentsync/templates/wetelco-aem-mobile"
+        dps-projectId="e0bb1e8d-4c5d-4278-aa55-b4468cf341aa"
+        dps-projectTitle="L322-INS"
+        dps-resourceType="dps:Project"
+        pge-dashboard-config="/libs/mobileapps/dps/admin/content/dashboard/tiles/dpsdefault"
+        pge-type="[app-group,app-publish,app-instance]"/>
+    <collections/>
+    <articles/>
+</jcr:root>

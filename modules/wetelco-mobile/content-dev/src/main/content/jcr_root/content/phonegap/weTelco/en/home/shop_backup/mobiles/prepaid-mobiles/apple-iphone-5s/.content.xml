@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/phonegap/weTelco/weTelco"
+        cq:lastModified="{Date}2013-12-11T22:15:24.634-05:00"
+        cq:lastModifiedBy="admin"
+        cq:productMaster="/etc/commerce/products/wetelco/personal/prepaid/mobile-phones/apple/iphone5s"
+        cq:tags="[geometrixx-outdoors:activity/skiing,geometrixx-outdoors:season/winter,geometrixx-outdoors:apparel/footwear]"
+        cq:template="/apps/weTelco/weTelco/templates/ng-product-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Apple iPhone 5s"
+        sling:resourceType="weTelco/weTelco/components/ng-ionic-product-page">
+        <content-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <image
+                jcr:created="{Date}2015-10-29T10:35:49.136+08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-10-29T15:02:50.561+08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="mobileapps/components/image"
+                fileReference="/content/dam/wetelco-sites/Mobile/iphone5s-selection-hero-2015.png"/>
+            <ng-product
+                jcr:created="{Date}2013-08-29T10:15:06.985Z"
+                jcr:createdBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="weTelco/weTelco/components/ng-product"
+                frameworkType="angular"/>
+        </content-par>
+    </jcr:content>
+</jcr:root>

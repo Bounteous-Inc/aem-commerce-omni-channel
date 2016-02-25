@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="b442fbf1-f61f-4eaa-9920-9e6026d34d21">
+    <jcr:content
+        cq:name="samsung_logo_seo.jpg"
+        cq:parentPath="/content/dam/wetelco-sites/Mobile"
+        dam:assetID="aaid:f8dd9ab7131c40a98e1d344e103e5719"
+        dam:relativePath="wetelco-sites/Mobile/samsung_logo_seo.jpg"
+        jcr:lastModified="{Date}2016-02-24T18:08:06.447+11:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2016-01-26T08:29:47.390+11:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}-1"
+            dam:Physicalheightininches="{Decimal}-1.0"
+            dam:Physicalwidthindpi="{Long}-1"
+            dam:Physicalwidthininches="{Decimal}-1.0"
+            dam:Progressive="no"
+            dam:sha1="db947b3e46c62dc4b0184932a036b6cd397e9f7f"
+            dam:size="{Long}29873"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2016-01-26T08:29:46.948+11:00"
+            jcr:lastModified="{Date}2016-01-31T12:05:18.533+11:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}315"
+            tiff:ImageWidth="{Long}600"
+            xmp:CreatorTool="Adobe Photoshop CS6 (Windows)"
+            xmpMM:DocumentID="xmp.did:7DA1A6257BEA11E4B43292F303101843"
+            xmpMM:InstanceID="xmp.iid:7DA1A6247BEA11E4B43292F303101843"
+            writebackEnable="{Boolean}true">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="xmp.did:022866387B3311E4B20BC21F7E2ECABD"
+                stRef:instanceID="xmp.iid:022866377B3311E4B20BC21F7E2ECABD"
+                xmpNodeType="xmpStruct"/>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

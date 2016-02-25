@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="71654cb3-48a1-408c-9aa2-4c6ae53e8bdb">
+    <jcr:content
+        cq:name="samsung-galaxy s 5-charcoal black-450x350.png"
+        cq:parentPath="/content/dam/wetelco-sites/Mobile"
+        dam:assetID="aaid:07ce599fcbce4f5f9d3d872e40c5ae84"
+        dam:relativePath="wetelco-sites/Mobile/samsung-galaxy s 5-charcoal black-450x350.png"
+        jcr:lastModified="{Date}2016-02-24T18:08:06.980+11:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}32"
+            dam:Comments="Software: Adobe ImageReady&#xa;"
+            dam:extracted="{Date}2016-01-26T08:29:49.522+11:00"
+            dam:Fileformat="PNG"
+            dam:MIMEtype="image/png"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}1"
+            dam:Physicalheightindpi="{Long}-1"
+            dam:Physicalheightininches="{Decimal}-1.0"
+            dam:Physicalwidthindpi="{Long}-1"
+            dam:Physicalwidthininches="{Decimal}-1.0"
+            dam:Progressive="no"
+            dam:sha1="6fdf261331f3079f3b026178b8a3d7990bc924b4"
+            dam:size="{Long}83544"
+            dc:format="image/png"
+            dc:modified="{Date}2016-01-26T08:29:49.180+11:00"
+            jcr:lastModified="{Date}2016-02-21T14:35:29.047+11:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}350"
+            tiff:ImageWidth="{Long}450"
+            xmp:CreatorTool="Adobe Photoshop CS5 Macintosh"
+            xmpMM:DocumentID="xmp.did:4E7DAC1795AE11E3A244C3E6F3C45512"
+            xmpMM:InstanceID="xmp.iid:4E7DAC1695AE11E3A244C3E6F3C45512"
+            xmpMM:OriginalDocumentID="xmp.did:018011740720681192B0ECB169B2F0F2"
+            writebackEnable="{Boolean}true">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="xmp.did:018011740720681192B0ECB169B2F0F2"
+                stRef:instanceID="xmp.iid:98F1A75C2120681195FE8C014470073B"
+                xmpNodeType="xmpStruct"/>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

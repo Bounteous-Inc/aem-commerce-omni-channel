@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2012-10-12T17:35:30.702+03:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/wetelco-sites/templates/categorypage"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Product Not Found"
+        sling:resourceType="wetelco-sites/components/structure/categorypage"
+        hideInNav="{Boolean}true">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <title
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wetelco-sites/components/structure/title"/>
+            <text
+                jcr:lastModified="{Date}2012-10-12T17:35:30.697+03:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/text"
+                text="&lt;p>Unfortunately, the product you were looking for could not be found. Please feel free to &lt;a adhocenable=&quot;false&quot; href=&quot;/content/wetelco-sites/en.html&quot;>browse our catalog&lt;/a> to find what you were looking for.&lt;/p>&#xa;"
+                textIsRich="true"/>
+        </par>
+        <image
+            jcr:lastModified="{Date}2012-10-12T17:02:58.447+03:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

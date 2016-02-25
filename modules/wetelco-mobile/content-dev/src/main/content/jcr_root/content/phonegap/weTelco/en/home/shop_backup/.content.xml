@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/phonegap/weTelco/weTelco"
+        cq:lastModified="{Date}2015-10-26T18:47:35.801+08:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/weTelco/weTelco/templates/ng-ionic-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Shop"
+        sling:resourceType="weTelco/weTelco/components/ng-ionic-page">
+        <content-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <ionic_menu_list
+                jcr:created="{Date}2014-03-03T15:44:17.331-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-10-29T10:25:12.163+08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="weTelco/weTelco/components/ionic-menu-list"
+                listFrom="static"
+                pages="[/content/phonegap/weTelco/en/home/shop/mobiles,/content/phonegap/weTelco/en/home/shop/tablets]"
+                playSpeed="6000"
+                tagsMatch="any"
+                transTime="1000"/>
+        </content-par>
+    </jcr:content>
+    <mobiles/>
+    <tablets/>
+</jcr:root>
