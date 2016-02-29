@@ -9,7 +9,7 @@
         cq:parentPath="/content/dam/weTelco/screenshots"
         dam:assetID="e4efdc9e-fe3c-4fde-b0a5-745db39c6118"
         dam:relativePath="weTelco/screenshots/homescreen640.png"
-        jcr:lastModified="{Date}2016-02-14T18:48:04.866+11:00"
+        jcr:lastModified="{Date}2016-02-29T21:03:23.060+11:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -29,7 +29,7 @@
             exif:ColorSpace="{Long}65535"
             exif:PixelXDimension="{Long}640"
             exif:PixelYDimension="{Long}1136"
-            jcr:lastModified="{Date}2016-02-14T18:23:41.876+11:00"
+            jcr:lastModified="{Date}2016-02-29T21:03:22.819+11:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"

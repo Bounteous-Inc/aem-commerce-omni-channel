@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/phonegap/weTelco/weTelco"
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2016-02-28T20:42:54.728+11:00"
+        cq:lastModifiedBy="admin"
+        cq:productMaster="/etc/commerce/products/wetelco/personal/prepaid/mobile-phones/apple/iphone5s"
+        cq:template="/apps/weTelco/weTelco/templates/ng-ionic-article-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Article1"
+        sling:resourceType="weTelco/weTelco/components/pages/article"
+        dps-access="metered"
+        dps-adType="eft"
+        dps-importance="Default"
+        dps-resourceType="dps:Article"
+        dps-smoothScrolling="always"
+        dps-title="Article1"
+        pge-type="app-content">
+        <content-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <ng-product
+                cq:commerceType="product"
+                jcr:created="{Date}2013-08-29T10:15:06.985Z"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-02-26T04:10:45.980+11:00"
+                jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="weTelco/weTelco/components/article"
+                productData="/etc/commerce/products/wetelco/personal/prepaid/mobile-phones/apple/iphone5s">
+                <pp-apple-iphone-5s-16gb-grey
+                    cq:commerceType="variant"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="weTelco/weTelco/components/ng-product"
+                    productData="/etc/commerce/products/wetelco/personal/prepaid/mobile-phones/apple/iphone5s/pp-apple-iphone-5s-16gb-grey">
+                    <image
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.323Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wetelco-sites/components/content/product/image"
+                        fileReference="/content/dam/wetelco-sites/Mobile/iphone5s-selection-hero-2015.png"/>
+                    <assets
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="weTelco/weTelco/components/ng-product/assets"/>
+                </pp-apple-iphone-5s-16gb-grey>
+                <image
+                    jcr:lastModified="{Date}2015-01-26T12:28:08.323Z"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wetelco-sites/components/content/product/image"
+                    fileReference="/content/dam/wetelco-sites/Mobile/iphone5s-selection-hero-2015.png"/>
+                <assets
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="weTelco/weTelco/components/ng-product/assets"/>
+            </ng-product>
+            <image
+                jcr:created="{Date}2016-02-14T18:01:51.655+11:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-02-14T18:01:58.264+11:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="mobileapps/components/image"
+                fileReference=""/>
+        </content-par>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone-portrait
+                    jcr:primaryType="nt:unstructured"
+                    title="Phone Portrait"
+                    width="480"/>
+                <phone-land
+                    jcr:primaryType="nt:unstructured"
+                    title="Phone Landscape"
+                    width="767"/>
+                <tablet-portrait
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet Portrait"
+                    width="979"/>
+                <tablet-land
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet Landscape"
+                    width="1199"/>
+            </breakpoints>
+        </cq:responsive>
+        <image
+            jcr:lastModified="{Date}2015-01-26T12:28:08.323Z"
+            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/image"
+            fileReference="/content/dam/wetelco-sites/Mobile/iphone5s-selection-hero-2015.png"/>
+    </jcr:content>
+</jcr:root>

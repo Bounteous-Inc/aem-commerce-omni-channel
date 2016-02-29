@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:mixinTypes="[mix:referenceable]"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
     jcr:primaryType="dam:Asset"
     jcr:uuid="488b905f-34dc-462c-a786-61a2088ab581">
     <jcr:content
+        cq:name="menulogo.png"
+        cq:parentPath="/content/dam/weTelco/weTelco"
         dam:assetID="488b905f-34dc-462c-a786-61a2088ab581"
         dam:relativePath="weTelco/weTelco/menulogo.png"
-        jcr:lastModified="{Date}2016-02-14T18:48:03.200+11:00"
+        jcr:lastModified="{Date}2016-02-29T21:03:23.692+11:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -24,6 +27,9 @@
             dam:sha1="9fdad3fc11f85dee9fbfbed6e49f0ef1eec0280c"
             dam:size="{Long}17733"
             dc:format="image/png"
+            dc:modified="{Date}2016-02-29T21:03:23.212+11:00"
+            jcr:lastModified="{Date}2016-02-29T21:03:23.212+11:00"
+            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             tiff:ImageLength="{Long}264"

@@ -3,47 +3,38 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:designPath="/etc/designs/phonegap/weTelco/weTelco"
-        cq:lastModified="{Date}2016-02-22T15:43:10.922+11:00"
+        cq:lastModified="{Date}2016-02-26T04:10:46.203+11:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-02-22T15:43:10.998+11:00"
-        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/wetelco/personal/prepaid/tablets/apple/ipad-mini-4"
         cq:template="/apps/weTelco/weTelco/templates/ng-product-page"
-        jcr:language="en_US"
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Apple iPad Mini 4"
         sling:resourceType="weTelco/weTelco/components/ng-ionic-product-page"
         dps-access="metered"
-        dps-id="/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/article/apple-ipad-mini-4;version=1456116245093"
+        dps-id="/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/article/apple-ipad-mini-4;version=1456420578081"
         dps-isRolloutout="{Boolean}true"
-        dps-lastUploaded="{Date}2016-02-22T15:44:05.230+11:00"
+        dps-lastUploaded="{Date}2016-02-26T04:16:18.304+11:00"
         dps-lastUploadedBy="admin"
         dps-resourceType="dps:Article"
         dps-smoothScrolling="always"
         dps-title="Apple iPad Mini 4"
         pge-type="app-content">
         <content-par
-            cq:lastRolledout="{Date}2016-02-22T15:43:11.010+11:00"
-            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="foundation/components/parsys">
             <ng-product
                 cq:commerceType="product"
-                cq:lastRolledout="{Date}2016-02-22T15:43:10.940+11:00"
-                cq:lastRolledoutBy="admin"
                 jcr:created="{Date}2013-08-29T10:15:06.985Z"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2016-02-22T15:43:10.939+11:00"
+                jcr:lastModified="{Date}2016-02-26T04:10:46.203+11:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weTelco/weTelco/components/ng-product"
                 productData="/etc/commerce/products/wetelco/personal/prepaid/tablets/apple/ipad-mini-4">
                 <pp-ipad-mini-4-16gb-gold-cellular
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-02-22T15:43:10.950+11:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weTelco/weTelco/components/ng-product"
@@ -55,8 +46,6 @@
                         sling:resourceType="wetelco-sites/components/content/product/image"
                         fileReference="/content/dam/wetelco-sites/Tablet/ipad-pro.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-02-22T15:43:10.971+11:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="weTelco/weTelco/components/ng-product/assets"/>
@@ -68,8 +57,6 @@
                     sling:resourceType="wetelco-sites/components/content/product/image"
                     fileReference="/content/dam/wetelco-sites/Tablet/ipad-pro.jpg"/>
                 <assets
-                    cq:lastRolledout="{Date}2016-02-22T15:43:10.987+11:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weTelco/weTelco/components/ng-product/assets"/>
@@ -84,7 +71,7 @@
             jcr:lastModified="{Date}2015-01-26T12:28:08.323Z"
             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="wetelco-sites/components/content/product/image"
+            sling:resourceType="foundation/components/image"
             fileReference="/content/dam/wetelco-sites/Tablet/ipad-pro.jpg"/>
     </jcr:content>
 </jcr:root>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2016-02-26T04:42:52.592+11:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/mobileapps/dps/templates/collection/imported"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="INDUSTRY NEWS"
+        sling:resourceType="mobileapps/dps/components/page/collection/importedCollection"
+        dps-allowDownload="true"
+        dps-contentLinks="[{&quot;href&quot;:&quot;/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/banner/News-Banner;version=1455595574912&quot;\,&quot;name&quot;:&quot;News-Banner&quot;\,&quot;version&quot;:&quot;1455595574912&quot;\,&quot;type&quot;:&quot;banner&quot;\,&quot;class&quot;:&quot;class com.adobe.dps.producer.entity.dto.EntityLink&quot;},{&quot;href&quot;:&quot;/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/article/News01;version=1455595524969&quot;\,&quot;name&quot;:&quot;News01&quot;\,&quot;version&quot;:&quot;1455595524969&quot;\,&quot;type&quot;:&quot;article&quot;\,&quot;class&quot;:&quot;class com.adobe.dps.producer.entity.dto.EntityLink&quot;},{&quot;href&quot;:&quot;/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/article/News02;version=1455595527390&quot;\,&quot;name&quot;:&quot;News02&quot;\,&quot;version&quot;:&quot;1455595527390&quot;\,&quot;type&quot;:&quot;article&quot;\,&quot;class&quot;:&quot;class com.adobe.dps.producer.entity.dto.EntityLink&quot;},{&quot;href&quot;:&quot;/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/article/News03;version=1455595530075&quot;\,&quot;name&quot;:&quot;News03&quot;\,&quot;version&quot;:&quot;1455595530075&quot;\,&quot;type&quot;:&quot;article&quot;\,&quot;class&quot;:&quot;class com.adobe.dps.producer.entity.dto.EntityLink&quot;},{&quot;href&quot;:&quot;/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/article/News04;version=1455595534650&quot;\,&quot;name&quot;:&quot;News04&quot;\,&quot;version&quot;:&quot;1455595534650&quot;\,&quot;type&quot;:&quot;article&quot;\,&quot;class&quot;:&quot;class com.adobe.dps.producer.entity.dto.EntityLink&quot;},{&quot;href&quot;:&quot;/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/article/News05;version=1455595536095&quot;\,&quot;name&quot;:&quot;News05&quot;\,&quot;version&quot;:&quot;1455595536095&quot;\,&quot;type&quot;:&quot;article&quot;\,&quot;class&quot;:&quot;class com.adobe.dps.producer.entity.dto.EntityLink&quot;},{&quot;href&quot;:&quot;/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/article/News06;version=1455595539543&quot;\,&quot;name&quot;:&quot;News06&quot;\,&quot;version&quot;:&quot;1455595539543&quot;\,&quot;type&quot;:&quot;article&quot;\,&quot;class&quot;:&quot;class com.adobe.dps.producer.entity.dto.EntityLink&quot;},{&quot;href&quot;:&quot;/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/article/News07;version=1455595542606&quot;\,&quot;name&quot;:&quot;News07&quot;\,&quot;version&quot;:&quot;1455595542606&quot;\,&quot;type&quot;:&quot;article&quot;\,&quot;class&quot;:&quot;class com.adobe.dps.producer.entity.dto.EntityLink&quot;},{&quot;href&quot;:&quot;/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/article/News08;version=1455595544812&quot;\,&quot;name&quot;:&quot;News08&quot;\,&quot;version&quot;:&quot;1455595544812&quot;\,&quot;type&quot;:&quot;article&quot;\,&quot;class&quot;:&quot;class com.adobe.dps.producer.entity.dto.EntityLink&quot;},{&quot;href&quot;:&quot;/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/article/News09;version=1455595546962&quot;\,&quot;name&quot;:&quot;News09&quot;\,&quot;version&quot;:&quot;1455595546962&quot;\,&quot;type&quot;:&quot;article&quot;\,&quot;class&quot;:&quot;class com.adobe.dps.producer.entity.dto.EntityLink&quot;}]"
+        dps-horizontalSwipe="true"
+        dps-id="/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/collection/News;version=1455595593883"
+        dps-importance="normal"
+        dps-internalKeywords="[launch]"
+        dps-lastSynced="{Date}2016-02-26T04:42:52.592+11:00"
+        dps-layout="/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/layout/d30f8678-d10e-c86c-e214-4026d61b20a5;version=1455595593036"
+        dps-layoutTitle="d30f8678-d10e-c86c-e214-4026d61b20a5"
+        dps-openDefault="browsePage"
+        dps-productId="com.health.news"
+        dps-readingPosition="retain"
+        dps-resourceType="dps:Collection"
+        dps-shortTitle="News"
+        dps-source="DPS"
+        dps-title="INDUSTRY NEWS"
+        dps-version="1455595593883"/>
+</jcr:root>

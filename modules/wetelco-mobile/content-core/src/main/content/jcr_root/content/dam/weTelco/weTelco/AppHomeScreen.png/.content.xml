@@ -9,7 +9,7 @@
         cq:parentPath="/content/dam/weTelco/weTelco"
         dam:assetID="2bd1e15a-19a7-40b0-9d8e-d8bd8e5f800b"
         dam:relativePath="weTelco/weTelco/AppHomeScreen.png"
-        jcr:lastModified="{Date}2016-02-14T18:48:04.462+11:00"
+        jcr:lastModified="{Date}2016-02-29T21:03:23.789+11:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -31,7 +31,7 @@
             dc:format="image/png"
             dc:modified="{Date}2015-10-29T15:01:28.125+08:00"
             dc:title="weTelco App Home Banner"
-            jcr:lastModified="{Date}2015-10-31T01:43:18.029+11:00"
+            jcr:lastModified="{Date}2016-02-29T21:03:22.918+11:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"

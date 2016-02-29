@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2016-02-26T04:52:05.369+11:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/mobileapps/dps/templates/collection/imported"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="default tablet"
+        sling:resourceType="mobileapps/dps/components/page/collection/importedCollection"
+        dps-allowDownload="true"
+        dps-contentLinks="[{&quot;href&quot;:&quot;/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/collection/Home;version=1456422698580&quot;\,&quot;name&quot;:&quot;Home&quot;\,&quot;version&quot;:&quot;1456422698580&quot;\,&quot;type&quot;:&quot;collection&quot;\,&quot;class&quot;:&quot;class com.adobe.dps.producer.entity.dto.EntityLink&quot;},{&quot;href&quot;:&quot;/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/collection/Launch;version=1456295111211&quot;\,&quot;name&quot;:&quot;Launch&quot;\,&quot;version&quot;:&quot;1456295111211&quot;\,&quot;type&quot;:&quot;collection&quot;\,&quot;class&quot;:&quot;class com.adobe.dps.producer.entity.dto.EntityLink&quot;}]"
+        dps-horizontalSwipe="true"
+        dps-id="/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/collection/topLevelContent;version=1456422698580"
+        dps-importance="normal"
+        dps-lastSynced="{Date}2016-02-26T04:52:05.369+11:00"
+        dps-layout="/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/layout/defaultLayout;version=1455595593352"
+        dps-layoutTitle="defaultLayout"
+        dps-openDefault="browsePage"
+        dps-productId="adobe.toplevelcontent"
+        dps-readingPosition="retain"
+        dps-resourceType="dps:Collection"
+        dps-source="DPS"
+        dps-title="default tablet"
+        dps-version="1456422698580"/>
+</jcr:root>

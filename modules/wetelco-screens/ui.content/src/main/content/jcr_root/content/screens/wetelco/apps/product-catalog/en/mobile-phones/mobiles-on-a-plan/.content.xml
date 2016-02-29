@@ -13,7 +13,7 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Mobile on Plans"
         sling:resourceType="wetelco-screens/components/page_section"
-        coverImage="/content/dam/wetelco/screens/AdobeStock_84486650.jpeg">
+        coverImage="/content/dam/wetelco/screens/AdobeStock_97639712_WM.jpeg">
         <par
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured">

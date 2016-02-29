@@ -4,5 +4,6 @@
     <filter root="/etc/clientlibs/weTelco/ionic-1.1.0"/>
     <filter root="/etc/clientlibs/weTelco/phonegap-ready"/>
     <filter root="/etc/designs/phonegap/weTelco/weTelco"/>
+    <filter root="/etc/contentsync/templates/wetelco-aem-mobile"/>
     <filter root="/content/dam/weTelco"/>
 </workspaceFilter>

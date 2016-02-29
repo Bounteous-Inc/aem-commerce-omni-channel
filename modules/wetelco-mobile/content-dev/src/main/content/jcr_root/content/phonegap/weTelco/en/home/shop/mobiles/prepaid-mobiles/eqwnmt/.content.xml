@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/phonegap/geometrixx/ng-outdoorsapp"
+        cq:lastModified="{Date}2013-12-11T22:15:25.576-05:00"
+        cq:lastModifiedBy="admin"
+        cq:productMaster="/etc/commerce/products/geometrixx-outdoors/eq/eqwn/eqwnmt"
+        cq:tags="[geometrixx-outdoors:activity/skiing,geometrixx-outdoors:season/winter,geometrixx-outdoors:apparel/gloves]"
+        cq:template="/apps/geometrixx-outdoors-app/templates/ng-product-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Samsung Galaxy Note"
+        sling:resourceType="geometrixx-outdoors-app/components/angular/ng-template-page/ng-data-only-page">
+        <content-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <ng-product
+                jcr:created="{Date}2013-08-29T10:15:06.985Z"
+                jcr:createdBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="geometrixx-outdoors-app/components/angular/ng-product"
+                frameworkType="angular">
+                <ng-image
+                    jcr:created="{Date}2013-08-29T10:15:06.985Z"
+                    jcr:createdBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="geometrixx-outdoors-app/components/angular/ng-image"
+                    fileReference="/content/dam/geometrixx-outdoors/products/gloves/Mont Tremblant.jpg"
+                    frameworkType="angular"/>
+            </ng-product>
+            <ng-reviews
+                jcr:created="{Date}2015-01-23T15:51:24.802-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-01-23T15:51:24.802-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="geometrixx-outdoors-app/components/angular/ng-reviews"/>
+        </content-par>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/content/dam/geometrixx-outdoors/products/gloves/Mont Tremblant.jpg"/>
+    </jcr:content>
+</jcr:root>

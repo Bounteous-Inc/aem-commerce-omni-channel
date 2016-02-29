@@ -1,7 +1,5 @@
 package com.adobe.demo.wetelco.mobile.dps.operations.impl;
 
-import static com.day.cq.wcm.api.NameConstants.NT_PAGE;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -74,8 +72,11 @@ public class CreateArticleServiceImpl implements CreateArticleService {
 	public static final String COLLECTION_TEMPLATE = "/libs/mobileapps/dps/templates/collection/default";
 
 	public static final String THUMBNAIL_430_430_PLACEHOLDER = "/content/dam/wetelco-sites/logo/wetelco_logo.png";
-	public static final String DPS_LOGO = "/libs/mobileapps/dps/gui/resources/icons/dps_logo.png";
-
+	public static final String DPS_IMAGE_LOGO = "/content/dam/weTelco/weTelco/WeTelco_BG.png";
+	public static final String DPS_BG_IMAGE = "/content/dam/weTelco/weTelco/transparent.png";
+	
+	
+	
 	public static final String ARTICLES_FOLDER = "/articles";
 	public static final String COLLECTIONS_FOLDER = "/collections";
 
@@ -371,8 +372,20 @@ public class CreateArticleServiceImpl implements CreateArticleService {
 					.adaptTo(Node.class);
 			Node newlyCreatedArticleNode = JcrUtil.copy(articleNode,
 					articleFolderResourceNode, name);
+
+			Node newlyCreatedArticleNodeProduct = newlyCreatedArticleNode
+					.getNode("jcr:content/content-par/ng-product");
+			newlyCreatedArticleNodeProduct.setProperty("sling:resourceType",
+					"weTelco/weTelco/components/article");
 			Node newlyCreatedArticleNodeProductImge = newlyCreatedArticleNode
 					.getNode("jcr:content/content-par/ng-product/image");
+
+			Node newlyCreatedImageNodeRenamedForArticle = JcrUtil.copy(
+					newlyCreatedArticleNodeProductImge,
+					newlyCreatedArticleNodeProduct, "article-image");
+			newlyCreatedImageNodeRenamedForArticle.setProperty(
+					"sling:resourceType", "foundation/components/image");
+			newlyCreatedArticleNodeProductImge.remove();
 
 			// Now set some key properties
 			Node newlyCreatedArticleNodeJcrContent = newlyCreatedArticleNode
@@ -386,6 +399,47 @@ public class CreateArticleServiceImpl implements CreateArticleService {
 					"dps:Article");
 			newlyCreatedArticleNodeJcrContent.setProperty("pge-type",
 					"app-content");
+			String []internalKeywords = new String[1];
+			internalKeywords[0] = "launch";
+			newlyCreatedArticleNodeJcrContent.setProperty("dps-internalKeywords", internalKeywords);
+			
+			// Change the template and resource type to make sure we use DPS
+			// article tempalte and resource
+			newlyCreatedArticleNodeJcrContent.setProperty("sling:resourceType",
+					"weTelco/weTelco/components/pages/article");
+			newlyCreatedArticleNodeJcrContent.setProperty("cq:template",
+					"/apps/weTelco/weTelco/templates/article-page");
+			
+			
+			// Make sure you can link to a collection
+			/***********/
+			Page categoryPage = productPage.getParent();
+			Node categoryPageNode = categoryPage.adaptTo(Node.class);
+
+			if (categoryPageNode != null && categoryPageNode.hasNode("jcr:content")) {
+				Node categoryPageJcrNode = categoryPageNode.getNode("jcr:content");
+
+				javax.jcr.Property commerceTypeProperty = categoryPageJcrNode
+						.getProperty("cq:commerceType");
+				// String valueOfCommerceType =
+				// commerceTypeProperty.getString();
+
+				if (commerceTypeProperty != null
+						&& StringUtils.isNotBlank(commerceTypeProperty
+								.getString())
+						&& commerceTypeProperty.getString().equals("section")) {
+					final String categoryPageTitle = categoryPage.getName();
+					// final String categoryPageName = categoryPage.getName();
+
+					newlyCreatedArticleNodeJcrContent.setProperty(
+							"collectionTitle", categoryPageTitle);
+					newlyCreatedArticleNodeJcrContent.setProperty(
+							"collectionCat", categoryPageTitle);
+
+				}
+			}
+
+			/**********/
 			// newlyCreatedArticleNodeJcrContent.addNode("image");
 			// Node imageChildNode = JcrUtils.getOrAddNode(
 			// newlyCreatedArticleNodeJcrContent, "image",
@@ -394,7 +448,7 @@ public class CreateArticleServiceImpl implements CreateArticleService {
 			// imageChildNode.setProperty("sling:resourceType",
 			// "foundation/components/image");
 			Node newlyCreatedImageNodeForArticle = JcrUtil.copy(
-					newlyCreatedArticleNodeProductImge,
+					newlyCreatedImageNodeRenamedForArticle,
 					newlyCreatedArticleNodeJcrContent, "image");
 			newlyCreatedImageNodeForArticle.setProperty("sling:resourceType",
 					"foundation/components/image");
@@ -712,7 +766,7 @@ public class CreateArticleServiceImpl implements CreateArticleService {
 			Node newCollectionNode = newCollection.adaptTo(Node.class);
 			Node newCollectionNodeJcrContent = newCollectionNode
 					.getNode("jcr:content");
-			newCollectionNodeJcrContent.setProperty("dps-productId",
+			newCollectionNodeJcrContent.setProperty("dps-productId", "com.adobe.demo.wetelco." + 
 					sectionPage.getName().replace("-", ""));
 			newCollectionNodeJcrContent
 					.setProperty(
@@ -721,11 +775,24 @@ public class CreateArticleServiceImpl implements CreateArticleService {
 			newCollectionNodeJcrContent.setProperty("dps-layoutTitle", "4-Col");
 			newCollectionNodeJcrContent.setProperty("pge-type", "app-content");
 
+			newCollectionNodeJcrContent.setProperty("dps-readingPosition", "retain");
+			newCollectionNodeJcrContent.setProperty("dps-horizontalSwipe", new Boolean(true));
+			newCollectionNodeJcrContent.setProperty("dps-openDefault", "browsePage");
+			newCollectionNodeJcrContent.setProperty("dps-allDownload", "on");
+			String []internalKeywords = new String[1];
+			internalKeywords[0] = "launch";
+			newCollectionNodeJcrContent.setProperty("dps-internalKeywords", internalKeywords);
+			newCollectionNodeJcrContent.setProperty("dps-abstract", name);
+			newCollectionNodeJcrContent.setProperty("dps-shortTitle", name);
+			newCollectionNodeJcrContent.setProperty("dps-title", name);
+			newCollectionNodeJcrContent.setProperty("dps-allDownload", "on");
+			newCollectionNodeJcrContent.setProperty("dps-importance", "normal");
+		        
 			// TODO : Create and add a image node
 			Node imageChildNode = JcrUtils.getOrAddNode(
 					newCollectionNodeJcrContent, "image", "nt:unstructured");
 			imageChildNode.setProperty("fileReference",
-					THUMBNAIL_430_430_PLACEHOLDER);
+					DPS_IMAGE_LOGO);
 			imageChildNode.setProperty("sling:resourceType",
 					"foundation/components/image");
 
@@ -733,17 +800,36 @@ public class CreateArticleServiceImpl implements CreateArticleService {
 			Node backgroundImageChildNode = JcrUtils.getOrAddNode(
 					newCollectionNodeJcrContent, "background-image",
 					"nt:unstructured");
-			backgroundImageChildNode.setProperty("fileReference", DPS_LOGO);
+			backgroundImageChildNode.setProperty("fileReference", DPS_BG_IMAGE);
 			backgroundImageChildNode.setProperty("sling:resourceType",
 					"foundation/components/image");
 
-			// final Resource collectionContentResource = newCollection
-			// .getContentResource();
-			// ModifiableValueMap collMap = collectionContentResource
-			// .adaptTo(ModifiableValueMap.class);
-			//
-			// collMap.put("dioStyle", collectionNode.getPath());
+			// Now we need to try and associate to collection parent
+			Page sectionPageParent = sectionPage.getParent();
+			Node sectionPageParentNode = sectionPageParent.adaptTo(Node.class);
 
+			if (sectionPageParentNode != null && sectionPageParentNode.hasNode("jcr:content")) {
+				Node categoryPageJcrNode = sectionPageParentNode.getNode("jcr:content");
+
+				javax.jcr.Property commerceTypeProperty = categoryPageJcrNode
+						.getProperty("cq:commerceType");
+				// String valueOfCommerceType =
+				// commerceTypeProperty.getString();
+
+				if (commerceTypeProperty != null
+						&& StringUtils.isNotBlank(commerceTypeProperty
+								.getString())
+						&& commerceTypeProperty.getString().equals("section")) {
+					final String categoryPageTitle = sectionPageParent.getName();
+					// final String categoryPageName = categoryPage.getName();
+
+					newCollectionNodeJcrContent.setProperty(
+							"collectionTitle", categoryPageTitle);
+					newCollectionNodeJcrContent.setProperty(
+							"collectionCat", categoryPageTitle);
+
+				}
+			}
 		} catch (Exception e) {
 			log.error("Error creating collection", e);
 		}

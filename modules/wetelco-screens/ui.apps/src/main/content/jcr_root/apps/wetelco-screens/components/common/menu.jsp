@@ -89,6 +89,9 @@
                 <% } %>
             </div>
         </div>
+
+    <%--
+
         <% if ((isTopLevel || isFirstLevel) && topNavigationPages != null) {
             Resource navigationPageResource;
             Page navigationPage, childPage;
@@ -107,6 +110,8 @@
                 <a class="wr-Menu-link" href="<%= xssAPI.getValidHref(childPage.getPath()) %>.html"><%= xssAPI.encodeForHTMLAttr(navigationPageTitle) %></a>
             <% }
         } %>
+--%>
+
     </div>
     <% } %>
 </div>

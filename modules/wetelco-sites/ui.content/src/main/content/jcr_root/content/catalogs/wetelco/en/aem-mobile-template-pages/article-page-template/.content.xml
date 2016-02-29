@@ -5,20 +5,17 @@
         cq:commerceProvider="wetelco"
         cq:designPath="/etc/designs/phonegap/weTelco/weTelco"
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
-        cq:lastModified="{Date}2016-02-16T06:26:19.279+11:00"
-        cq:lastModifiedBy="admin"
         cq:productMaster="/etc/commerce/products/wetelco/personal/prepaid/mobile-phones/apple/iphone5s"
-        cq:template="/apps/weTelco/weTelco/templates/ng-ionic-product-page"
+        cq:template="/apps/weTelco/weTelco/templates/article-page"
         jcr:primaryType="cq:PageContent"
         jcr:title="MyArticle1"
-        sling:resourceType="weTelco/weTelco/components/ng-ionic-product-page"
+        sling:resourceType="weTelco/weTelco/components/pages/article"
         dps-access="metered"
         dps-category="Mobile"
         dps-resourceType="dps:Article"
         dps-smoothScrolling="always"
-        dps-title="MyArticle1"
-        pge-type="app-content"
-        phonegap-exportTemplate="/content/phonegap/weTelco/en/jcr:content/pge-app/app-config">
+        dps-title=""
+        pge-type="app-content">
         <content-par
             jcr:primaryType="nt:unstructured"
             sling:resourceType="foundation/components/parsys">
@@ -52,7 +49,7 @@
         <image
             jcr:primaryType="nt:unstructured"
             sling:resourceType="foundation/components/image"
-            fileReference="/content/dam/wetelco-sites/Mobile/iphone6-select-2014_GEO_AU.jpg"
+            fileReference=""
             imageCrop=""
             imageRotate="{Long}0"/>
     </jcr:content>

@@ -3,47 +3,38 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:designPath="/etc/designs/phonegap/weTelco/weTelco"
-        cq:lastModified="{Date}2016-02-22T15:43:09.158+11:00"
+        cq:lastModified="{Date}2016-02-26T04:10:45.828+11:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-02-22T15:43:09.264+11:00"
-        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/wetelco/personal/postpaid/mobile-phones/apple/iphone6s"
         cq:template="/apps/weTelco/weTelco/templates/ng-product-page"
-        jcr:language="en_US"
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Apple iPhone 6s"
         sling:resourceType="weTelco/weTelco/components/ng-ionic-product-page"
         dps-access="metered"
-        dps-id="/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/article/apple-iphone-6s;version=1456116271348"
+        dps-id="/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/article/apple-iphone-6s;version=1456420805611"
         dps-isRolloutout="{Boolean}true"
-        dps-lastUploaded="{Date}2016-02-22T15:44:31.473+11:00"
+        dps-lastUploaded="{Date}2016-02-26T04:20:05.829+11:00"
         dps-lastUploadedBy="admin"
         dps-resourceType="dps:Article"
         dps-smoothScrolling="always"
         dps-title="Apple iPhone 6s"
         pge-type="app-content">
         <content-par
-            cq:lastRolledout="{Date}2016-02-22T15:43:09.270+11:00"
-            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="foundation/components/parsys">
             <ng-product
                 cq:commerceType="product"
-                cq:lastRolledout="{Date}2016-02-22T15:43:09.188+11:00"
-                cq:lastRolledoutBy="admin"
                 jcr:created="{Date}2013-08-29T10:15:06.985Z"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2016-02-22T15:43:09.187+11:00"
+                jcr:lastModified="{Date}2016-02-26T04:10:45.828+11:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weTelco/weTelco/components/ng-product"
                 productData="/etc/commerce/products/wetelco/personal/postpaid/mobile-phones/apple/iphone6s">
                 <go-mobile-95-apple-iphone-6s-128gb-rose-gold
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-02-22T15:43:09.204+11:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weTelco/weTelco/components/ng-product"
@@ -55,16 +46,12 @@
                         sling:resourceType="wetelco-sites/components/content/product/image"
                         fileReference="/content/dam/wetelco-sites/Mobile/iphone6s-select-2014_GEO_AU.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-02-22T15:43:09.224+11:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="weTelco/weTelco/components/ng-product/assets"/>
                 </go-mobile-95-apple-iphone-6s-128gb-rose-gold>
                 <go-mobile-95-apple-iphone-6s-64gb-gold
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-02-22T15:43:09.224+11:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weTelco/weTelco/components/ng-product"
@@ -76,8 +63,6 @@
                         sling:resourceType="wetelco-sites/components/content/product/image"
                         fileReference="/content/dam/wetelco-sites/Mobile/iphone6s-select-2014_GEO_AU.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-02-22T15:43:09.243+11:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="weTelco/weTelco/components/ng-product/assets"/>
@@ -89,8 +74,6 @@
                     sling:resourceType="wetelco-sites/components/content/product/image"
                     fileReference="/content/dam/wetelco-sites/Mobile/iphone6s-select-2014_GEO_AU.jpg"/>
                 <assets
-                    cq:lastRolledout="{Date}2016-02-22T15:43:09.256+11:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weTelco/weTelco/components/ng-product/assets"/>
@@ -105,7 +88,7 @@
             jcr:lastModified="{Date}2015-01-26T12:28:08.323Z"
             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="wetelco-sites/components/content/product/image"
+            sling:resourceType="foundation/components/image"
             fileReference="/content/dam/wetelco-sites/Mobile/iphone6s-select-2014_GEO_AU.jpg"/>
     </jcr:content>
 </jcr:root>

@@ -5,4 +5,4 @@
     cq:lastReplicationAction="Activate"
     jcr:mixinTypes="[cq:ReplicationStatus]"
     jcr:primaryType="cq:Component"
-    sling:resourceSuperType="wcm/mobile/components/page"/>
+    sling:resourceSuperType="foundation/components/page"/>

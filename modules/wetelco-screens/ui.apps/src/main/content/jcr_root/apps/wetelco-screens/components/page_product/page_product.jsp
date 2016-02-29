@@ -139,12 +139,12 @@
 <html>
 <head>
     <% currentDesign.writeCssIncludes(pageContext); %>
-    <%@include file="/apps/we-retail-instore/components/common/includecss.jsp"%>
+    <%@include file="/apps/wetelco-screens/components/common/includecss.jsp"%>
 </head>
 <body>
     <div class="wr-Page wr-CatalogProductPage">
-        <%@include file="/apps/we-retail-instore/components/common/menu.jsp"%>
-        <%@include file="/apps/we-retail-instore/components/common/connect_icons.jsp"%>
+        <%@include file="/apps/wetelco-screens/components/common/menu.jsp"%>
+        <%@include file="/apps/wetelco-screens/components/common/connect_icons.jsp"%>
         <div style="display: table; width: 100%; height: 100%;">
             <div class="wr-ColumnLayout" style="display: table-cell; vertical-align: middle;">
                 <div class="wr-ColumnLayout-50" style="display: table; height: 100%;">
@@ -160,7 +160,7 @@
                         <div class="wr-ProductDetail-summary"><%= summary %><br><%= features %></div>
                         <h4 class="wr-ProductDetail-techSpec">Tech Specs</h4>
 
-                        <div class="wr-ProductDetail-price">$<%= sPrice %>
+                        <div class="wr-ProductDetail-price">
                             <div class="geo-StarRatingView">
                                 <span class="geo-StarRatingView-rate is-filled" data-star="1">
                                     <i class="geo-StarRatingView-rate-frame"></i>
@@ -231,6 +231,6 @@
             </div>
         </div>
     </div>
-    <%@include file="/apps/we-retail-instore/components/common/includejs.jsp"%>
+    <%@include file="/apps/wetelco-screens/components/common/includejs.jsp"%>
 </body>
 </html>

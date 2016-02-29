@@ -14,19 +14,19 @@
   is strictly forbidden unless prior written permission is obtained
   from Adobe Systems Incorporated.
 --%><%
-%><%@include file="/apps/wetelco-aem-mobile/components/pages/global.jsp" %><%
+%><%@include file="/apps/weTelco/weTelco/components/pages/global.jsp" %><%
 %><%@page session="false" %>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
-    <cq:include script="headlibs.jsp"/>
+    <cq:include script="/apps/weTelco/weTelco/components/pages/page/headlibs.jsp"/>
     
     <title><%= xssAPI.encodeForHTML( currentPage.getTitle() == null ? currentPage.getName() : currentPage.getTitle() ) %></title>
 
     <% currentDesign.writeCssIncludes(pageContext); %>
     <cq:include script="/libs/wcm/core/components/init/init.jsp"/>
-    <cq:include script="stats_legacy.jsp"/>
+    
     <cq:include script="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp"/>
     <cq:include script="/libs/wcm/core/browsermap/browsermap.jsp" />
     <cq:include script="/libs/wcm/mobile/components/simulator/simulator.jsp"/>

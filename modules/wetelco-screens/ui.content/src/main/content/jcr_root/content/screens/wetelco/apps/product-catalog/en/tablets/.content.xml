@@ -12,7 +12,7 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Tablets"
         sling:resourceType="wetelco-screens/components/page_section"
-        coverImage="/content/dam/wetelco/screens/AdobeStock_84486650.jpeg">
+        coverImage="/content/dam/wetelco/screens/AdobeStock_87292370_WM.jpeg">
         <par
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured">

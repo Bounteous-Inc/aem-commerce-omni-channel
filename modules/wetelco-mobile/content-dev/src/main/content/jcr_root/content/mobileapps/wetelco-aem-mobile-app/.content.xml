@@ -11,11 +11,13 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="WeTelco AEM Mobile App"
         sling:resourceType="weTelco/weTelco/components/pages/issue"
-        dps-cloudConfig="/etc/cloudservices/dps2015/vvenkata-adobe-device"
+        dps-cloudConfig="/etc/cloudservices/dps2015/Summit2016WeTelco"
         dps-exportTemplate="/etc/contentsync/templates/wetelco-aem-mobile"
         dps-projectId="e0bb1e8d-4c5d-4278-aa55-b4468cf341aa"
         dps-projectTitle="L322-INS"
         dps-resourceType="dps:Project"
+        dps-sharedHTMLResources-lastUploaded="{Date}2016-02-24T12:22:40.855+11:00"
+        dps-sharedHTMLResources-lastUploadedBy="admin"
         pge-dashboard-config="/libs/mobileapps/dps/admin/content/dashboard/tiles/dpsdefault"
         pge-type="[app-group,app-publish,app-instance]"/>
     <collections/>

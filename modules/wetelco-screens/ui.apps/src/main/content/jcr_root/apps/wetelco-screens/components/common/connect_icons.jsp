@@ -13,19 +13,9 @@
   Dissemination of this information or reproduction of this material
   is strictly forbidden unless prior written permission is obtained
   from Adobe Systems Incorporated.
---%><%@ page import="com.adobe.cq.screens.demo.nrf2016.ScreenConnectionManager" %>
-<%@include file="/libs/foundation/global.jsp"%><%
-
-    // this should come from the display... and should probably be in JS
-    String SCREEN_ID = "/content/screens/we-retail/locations/demo/flagship/single";
-
-    ScreenConnectionManager mgr = sling.getService(ScreenConnectionManager.class);
-    ScreenConnectionManager.Screen s = mgr.getScreen(SCREEN_ID);
-    boolean isConnected = s != null && !s.getConnections().isEmpty();
-    String cls = isConnected ? "connected" : "disconnected";
-%>
+--%>
 <div class="wr-Connection">
-    <button class="wr-Connection-icon wr-Connection-icon--phone wr-Connection-icon--<%= cls %>"></button>
+    <button class="wr-Connection-icon wr-Connection-icon--phone"></button>
     <button class="wr-Connection-icon wr-Connection-icon--help"></button>
 </div>
 <div class="wr-Notification-overlay"></div>

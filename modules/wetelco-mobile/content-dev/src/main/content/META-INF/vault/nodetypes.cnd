@@ -18,6 +18,11 @@
   mixin
   - sling:resourceType (string)
 
+[cq:LiveRelationship]
+  mixin
+  - cq:lastRolledout (date)
+  - cq:lastRolledoutBy (string)
+
 [sling:OrderedFolder] > sling:Folder
   orderable
   + * (nt:base) = sling:OrderedFolder version
@@ -31,6 +36,9 @@
   - cq:lastReplicationAction (string) ignore
   - cq:lastReplicated (date) ignore
 
+[cq:CatalogSyncAction]
+  mixin
+
 [cq:OwnerTaggable] > cq:Taggable
   mixin
 
@@ -39,6 +47,23 @@
   - cq:tags (string) multiple
 
 [cq:ContentSyncConfig] > sling:Folder
+
+[cq:LiveCopy] > cq:LcPathFilter, cq:LiveSyncConfig
+  - cq:moveTarget (string)
+
+[cq:LcPathFilter]
+  mixin
+  - cq:excludedPaths (string) multiple
+
+[cq:LiveSyncConfig]
+  - cq:isDeep (boolean) = 'true'
+  - cq:rolloutConfigs (string) multiple
+  - cq:master (string) mandatory
+  - cq:trigger (string)
+
+[cq:LiveSync] > cq:LiveRelationship
+  orderable mixin
+  + cq:LiveSyncConfig (nt:base) = cq:LiveSyncConfig
 
 [rep:RepoAccessControllable]
   mixin

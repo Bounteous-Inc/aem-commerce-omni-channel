@@ -3,47 +3,38 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:designPath="/etc/designs/phonegap/weTelco/weTelco"
-        cq:lastModified="{Date}2016-02-22T15:43:10.475+11:00"
+        cq:lastModified="{Date}2016-02-26T04:10:46.125+11:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-02-22T15:43:10.586+11:00"
-        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/wetelco/personal/postpaid/tablets/apple/ipad-pro"
         cq:template="/apps/weTelco/weTelco/templates/ng-product-page"
-        jcr:language="en_US"
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Apple iPad Pro"
         sling:resourceType="weTelco/weTelco/components/ng-ionic-product-page"
         dps-access="metered"
-        dps-id="/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/article/apple-ipad-pro;version=1456116251115"
+        dps-id="/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/article/apple-ipad-pro;version=1456420633836"
         dps-isRolloutout="{Boolean}true"
-        dps-lastUploaded="{Date}2016-02-22T15:44:11.238+11:00"
+        dps-lastUploaded="{Date}2016-02-26T04:17:14.058+11:00"
         dps-lastUploadedBy="admin"
         dps-resourceType="dps:Article"
         dps-smoothScrolling="always"
         dps-title="Apple iPad Pro"
         pge-type="app-content">
         <content-par
-            cq:lastRolledout="{Date}2016-02-22T15:43:10.599+11:00"
-            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="foundation/components/parsys">
             <ng-product
                 cq:commerceType="product"
-                cq:lastRolledout="{Date}2016-02-22T15:43:10.500+11:00"
-                cq:lastRolledoutBy="admin"
                 jcr:created="{Date}2013-08-29T10:15:06.985Z"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2016-02-22T15:43:10.500+11:00"
+                jcr:lastModified="{Date}2016-02-26T04:10:46.125+11:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weTelco/weTelco/components/ng-product"
                 productData="/etc/commerce/products/wetelco/personal/postpaid/tablets/apple/ipad-pro">
                 <go-mobile-broadband-35-apple-ipad-pro-128gb-silver
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-02-22T15:43:10.512+11:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weTelco/weTelco/components/ng-product"
@@ -55,16 +46,12 @@
                         sling:resourceType="wetelco-sites/components/content/product/image"
                         fileReference="/content/dam/wetelco-sites/Tablet/ipad-pro.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-02-22T15:43:10.532+11:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="weTelco/weTelco/components/ng-product/assets"/>
                 </go-mobile-broadband-35-apple-ipad-pro-128gb-silver>
                 <go-mobile-broadband-55-apple-ipad-pro-64gb-gold
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-02-22T15:43:10.532+11:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weTelco/weTelco/components/ng-product"
@@ -76,8 +63,6 @@
                         sling:resourceType="wetelco-sites/components/content/product/image"
                         fileReference="/content/dam/wetelco-sites/Tablet/ipad-pro.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-02-22T15:43:10.560+11:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="weTelco/weTelco/components/ng-product/assets"/>
@@ -89,8 +74,6 @@
                     sling:resourceType="wetelco-sites/components/content/product/image"
                     fileReference="/content/dam/wetelco-sites/Tablet/ipad-pro.jpg"/>
                 <assets
-                    cq:lastRolledout="{Date}2016-02-22T15:43:10.573+11:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weTelco/weTelco/components/ng-product/assets"/>
@@ -105,7 +88,7 @@
             jcr:lastModified="{Date}2015-01-26T12:28:08.323Z"
             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="wetelco-sites/components/content/product/image"
+            sling:resourceType="foundation/components/image"
             fileReference="/content/dam/wetelco-sites/Tablet/ipad-pro.jpg"/>
     </jcr:content>
 </jcr:root>

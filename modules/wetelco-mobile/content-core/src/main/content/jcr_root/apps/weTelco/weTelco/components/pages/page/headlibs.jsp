@@ -16,6 +16,6 @@
 --%>
 <%@ page session="false" %><%
 %><%@include file="/libs/foundation/global.jsp" %>
-<cq:includeClientLib categories="wetelco-aem-mobile.all"/>
+<cq:includeClientLib categories="apps.weTelco.weTelco.all"/>
 <cq:include script="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp"/>
 <%currentDesign.writeCssIncludes(pageContext); %>

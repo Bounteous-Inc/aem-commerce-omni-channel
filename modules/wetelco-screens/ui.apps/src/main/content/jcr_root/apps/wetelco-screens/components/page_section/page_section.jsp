@@ -115,7 +115,6 @@
                         }
                         %><span href="<%= n.getPath() %>.html" class="wr-ProductGrid-entry u-showAfterLoad">
                             <img src="<%= imageHref %>" class="wr-ProductGrid-entryImage" />
-                            <span class="wr-ProductGrid-price">$<%= price %></span>
                             <strong class="wr-ProductGrid-entryTitle"><%= title %></strong>
                         </span><%
                     }

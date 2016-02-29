@@ -14,5 +14,5 @@
   is strictly forbidden unless prior written permission is obtained
   from Adobe Systems Incorporated.
 --%><%@include file="/libs/foundation/global.jsp"%><%
-%><cq:includeClientLib css="coralui3,we-retail.demo"/>
+%><cq:includeClientLib css="coralui3,wetelcoscreens.demo"/>
 <% currentDesign.writeCssIncludes(pageContext); %>

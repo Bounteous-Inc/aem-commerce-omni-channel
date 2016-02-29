@@ -8,13 +8,12 @@
         type="publish-pages"/>
     <images
         jcr:primaryType="nt:unstructured"
-        path="\{page.path}"
-        type="dio-style-images"/>
+        path="\{page.path}"/>
     <manifest-xml
         jcr:primaryType="nt:unstructured"
         order="{Long}100"
         path="\{page.path}"
-        type="publish-dio-manifest-xml"/>
+        type="publish-manifest-xml"/>
     <toc
         jcr:primaryType="nt:unstructured"
         path="\{page.path}"

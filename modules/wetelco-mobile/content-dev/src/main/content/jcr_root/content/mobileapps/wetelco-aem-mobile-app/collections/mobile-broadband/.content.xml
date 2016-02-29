@@ -1,15 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-02-22T15:43:11.418+11:00"
+        cq:lastModified="{Date}2016-02-26T04:42:52.525+11:00"
         cq:lastModifiedBy="admin"
         cq:template="/libs/mobileapps/dps/templates/collection/default"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Hiking"
+        jcr:title="Mobile Broadband"
         sling:resourceType="mobileapps/dps/components/page/collection/collection"
-        dps-id="/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/collection/mobile-broadband;version=1456116300649"
-        dps-lastUploaded="{Date}2016-02-22T15:45:00.785+11:00"
+        dps-allowDownload="false"
+        dps-contentLinks="[]"
+        dps-horizontalSwipe="false"
+        dps-id="/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/collection/mobile-broadband;version=1456420917750"
+        dps-importance="normal"
+        dps-lastSynced="{Date}2016-02-26T04:42:52.525+11:00"
+        dps-lastUploaded="{Date}2016-02-26T04:21:57.989+11:00"
         dps-lastUploadedBy="admin"
-        dps-resourceType="dps:Collection"/>
+        dps-layout="/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/layout/d30f8678-d10e-c86c-e214-4026d61b20a5;version=1455595593036"
+        dps-layoutTitle="d30f8678-d10e-c86c-e214-4026d61b20a5"
+        dps-openDefault="browsePage"
+        dps-productId="mobilebroadband"
+        dps-readingPosition="retain"
+        dps-resourceType="dps:Collection"
+        dps-title="Mobile Broadband"
+        dps-version="1456420917750"
+        pge-type="app-content">
+        <image
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/image"
+            fileReference="/content/dam/wetelco-sites/logo/wetelco_logo.png"/>
+        <background-image
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/image"
+            fileReference="/libs/mobileapps/dps/gui/resources/icons/dps_logo.png"/>
+    </jcr:content>
 </jcr:root>

@@ -7,4 +7,4 @@
     jcr:mixinTypes="[cq:ReplicationStatus]"
     jcr:primaryType="cq:Component"
     jcr:title="Article"
-    sling:resourceSuperType="wetelco-aem-mobile/components/pages/page"/>
+    sling:resourceSuperType="weTelco/weTelco/components/pages/page"/>
