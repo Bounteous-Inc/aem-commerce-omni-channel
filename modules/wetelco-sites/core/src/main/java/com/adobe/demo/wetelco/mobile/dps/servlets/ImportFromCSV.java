@@ -21,7 +21,7 @@ import com.adobe.cq.mobile.dps.DPSProject;
 import com.day.cq.wcm.api.Page;
 import com.adobe.demo.wetelco.mobile.dps.mobileclient.AEMMobileClient;
 import com.adobe.demo.wetelco.mobile.dps.services.Importer;
-import com.adobe.demo.wetelco.mobile.dps.utils.AdobeCaresUtil;
+import com.adobe.demo.wetelco.mobile.dps.utils.AEMMoDUtil;
 
 import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.sling.SlingServlet;
@@ -72,7 +72,7 @@ public class ImportFromCSV extends org.apache.sling.api.servlets.SlingAllMethods
                             fileReceived = true;
                             Resource resource = request.getResourceResolver().getResource("/content/mobileapps/adobe-cares");
                             Page page = resource.adaptTo(Page.class);
-                            DPSProject dpsProject = (DPSProject)AdobeCaresUtil.getDPSObject(page);
+                            DPSProject dpsProject = (DPSProject)AEMMoDUtil.getDPSObject(page);
 
                             // Import
                             stream = param.getInputStream();

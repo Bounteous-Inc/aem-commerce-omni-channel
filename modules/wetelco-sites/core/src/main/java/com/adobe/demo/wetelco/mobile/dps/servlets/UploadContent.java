@@ -22,7 +22,7 @@ import com.adobe.cq.mobile.dps.DPSProject;
 import com.adobe.demo.wetelco.mobile.dps.mobileclient.AEMMobileClient;
 import com.adobe.demo.wetelco.mobile.dps.mobileclient.RequestException;
 import com.adobe.demo.wetelco.mobile.dps.services.Uploader;
-import com.adobe.demo.wetelco.mobile.dps.utils.AdobeCaresUtil;
+import com.adobe.demo.wetelco.mobile.dps.utils.AEMMoDUtil;
 import com.day.cq.wcm.api.Page;
 
 import org.apache.felix.scr.annotations.Component;
@@ -80,7 +80,7 @@ public class UploadContent extends SlingAllMethodsServlet {
 
                 // ACTIONS
                 JSONObject apiResponseObject = null;
-                DPSObject dpsObject = AdobeCaresUtil.getDPSObject(page);
+                DPSObject dpsObject = AEMMoDUtil.getDPSObject(page);
                 int uploaded = 0;
 
                 if (dpsObject instanceof DPSProject) {

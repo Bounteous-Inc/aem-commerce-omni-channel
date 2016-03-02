@@ -35,143 +35,154 @@ import java.util.Calendar;
  */
 public class ContentCreationUtil {
 
-    /**
-     * Static logger
-     */
-    private static final Logger LOGGER = LoggerFactory.getLogger(ContentCreationUtil.class);
+	/**
+	 * Static logger
+	 */
+	private static final Logger LOGGER = LoggerFactory
+			.getLogger(ContentCreationUtil.class);
 
-    public static final String ARTICLE_SLING_RESOURCE_TYPE = "adobe-cares-app/components/pages/article";
-    public static final String ARTICLE_TEMPLATE = "/apps/adobe-cares-app/templates/article";
-    public static final String BANNER_SLING_RESOURCE_TYPE = "adobe-cares-app/components/pages/banner";
-    public static final String BANNER_TEMPLATE = "/apps/adobe-cares-app/templates/banner";
-    public static final String DESIGN_PATH = "/etc/designs/adobe-cares-app";
 
-    public static final String PARENT_COLLECTION_NAME = "productguide-aem";
+	public static final String PARENT_COLLECTION_NAME = "productguide-aem";
 
-    private static final String NN_GENERATED = "generated";
-    /**
-     * Default constructor
-     */
-    private ContentCreationUtil() {
-        // no instance
-    }
+	/**
+	 * Default constructor
+	 */
+	private ContentCreationUtil() {
+		// no instance
+	}
 
-    public static void updateCollection(Node collectionContentNode, String collectionTitle, String imagePath, String[] layout) throws RepositoryException, JSONException, DPSException {
-        collectionContentNode.setProperty("cq:lastModified", Calendar.getInstance());
-        collectionContentNode.setProperty("cq:template", "/libs/mobileapps/dps/templates/collection/default");
-        collectionContentNode.setProperty("dps-allowDownload", new Boolean(true));
-        collectionContentNode.setProperty("dps-importance", "normal");
+	public static void updateCollection(Node collectionContentNode,
+			String collectionTitle, String imagePath, String bgImagePath,
+			String[] layout) throws RepositoryException, JSONException,
+			DPSException {
+		collectionContentNode.setProperty("cq:lastModified",
+				Calendar.getInstance());
+		collectionContentNode.setProperty("cq:template",
+				"/libs/mobileapps/dps/templates/collection/default");
+		collectionContentNode.setProperty("dps-allowDownload",
+				new Boolean(true));
+		collectionContentNode.setProperty("dps-importance", "normal");
 
-        String productId = "com.org.collection." + collectionTitle;
-        if(! collectionTitle.equals(PARENT_COLLECTION_NAME)){
-            collectionContentNode.setProperty("collectionCat", PARENT_COLLECTION_NAME);
-        } else {
-            productId = "com.org.collection.productguideaem";
-        }
+		String productId = "com.org.collection.wetelco." + collectionTitle.replace("-", "");
+		if (!collectionTitle.equals(PARENT_COLLECTION_NAME)) {
+			collectionContentNode.setProperty("collectionCat",
+					PARENT_COLLECTION_NAME);
+		} else {
+			productId = "com.org.collection.wetelco.";
+		}
 
-        String internalKeyword = "subcollection";
-        String[] internalKeywords = internalKeyword.split(",");
-        collectionContentNode.setProperty("dps-internalKeywords", internalKeywords);
-        collectionContentNode.setProperty("dps-layoutTitle", layout[0]);
-        collectionContentNode.setProperty("dps-layout", layout[1]);
-        collectionContentNode.setProperty("dps-readingPosition", "retain");
-        collectionContentNode.setProperty("dps-horizontalSwipe", new Boolean(true));
-        collectionContentNode.setProperty("dps-productId", productId);
-        collectionContentNode.setProperty("dps-resourceType", "dps:Collection");
-        collectionContentNode.setProperty("dps-shortTitle", collectionTitle);
-        collectionContentNode.setProperty("dps-title", collectionTitle.toUpperCase());
-        collectionContentNode.setProperty("jcr:title", collectionTitle.toUpperCase());
-        String[] pgetype = {"app-content"};
-        collectionContentNode.setProperty("pge-type", pgetype);
-        collectionContentNode.setProperty("sling:resourceType", "mobileapps/dps/components/page/collection/collection");
+		String internalKeyword = "subcollection,launch";
+		String[] internalKeywords = internalKeyword.split(",");
+		collectionContentNode.setProperty("dps-internalKeywords",
+				internalKeywords);
+		collectionContentNode.setProperty("dps-layoutTitle", layout[0]);
+		collectionContentNode.setProperty("dps-layout", layout[1]);
+		collectionContentNode.setProperty("dps-readingPosition", "retain");
+		collectionContentNode.setProperty("dps-horizontalSwipe", new Boolean(
+				true));
+		collectionContentNode.setProperty("dps-productId", productId);
+		collectionContentNode.setProperty("dps-resourceType", "dps:Collection");
+		collectionContentNode.setProperty("dps-shortTitle", collectionTitle);
+		collectionContentNode.setProperty("dps-title",
+				collectionTitle);
+		collectionContentNode.setProperty("jcr:title",
+				collectionTitle);
+		String[] pgetype = { "app-content" };
+		collectionContentNode.setProperty("pge-type", pgetype);
+		collectionContentNode.setProperty("sling:resourceType",
+				"mobileapps/dps/components/page/collection/collection");
 
-        addImage(collectionContentNode, "image", imagePath);
-        addImage(collectionContentNode, "background-image", "/content/dam/adobe-cares/application/transparent.png");
+		addImage(collectionContentNode, "image", imagePath);
+		addImage(collectionContentNode, "background-image", bgImagePath);
 
-        collectionContentNode.getSession().save();
-    }
+		collectionContentNode.getSession().save();
+	}
 
-    public static void updateArticle(Node articleContentNode, String md5, String articleShortTitle, String collectionTitle, String internalKeyword, String articleTitle, String description, String price, String feature1, String feature2, String feature3, String imagePath) throws Exception {
-        if(articleTitle==null || articleTitle.isEmpty()){
-            articleTitle = articleShortTitle;
-        }
+	public static void updateArticle(Node articleContentNode, String md5,
+			String articleShortTitle, String collectionTitle,
+			String internalKeyword, String articleTitle, String description,
+			String price, String feature1, String feature2, String feature3,
+			String imagePath) throws Exception {
+		if (articleTitle == null || articleTitle.isEmpty()) {
+			articleTitle = articleShortTitle;
+		}
 
-        articleContentNode.setProperty("cq:lastModified", Calendar.getInstance());
-        articleContentNode.setProperty("cq:template", ARTICLE_TEMPLATE);
-        articleContentNode.setProperty("cq:designPath", DESIGN_PATH);
-        String[] deviceGroups = {"/etc/mobile/groups/responsive"};
-        articleContentNode.setProperty("cq:deviceGroups", deviceGroups);
+		articleContentNode.setProperty("cq:lastModified",
+				Calendar.getInstance());
+		String[] deviceGroups = { "/etc/mobile/groups/responsive" };
+		articleContentNode.setProperty("cq:deviceGroups", deviceGroups);
 
-        articleContentNode.setProperty("jcr:title", articleShortTitle);
+		articleContentNode.setProperty("jcr:title", articleShortTitle);
 
-        articleContentNode.setProperty("sling:resourceType", ARTICLE_SLING_RESOURCE_TYPE);
+		String[] pgetype = { "app-content" };
+		articleContentNode.setProperty("pge-type", pgetype);
 
-        String[] pgetype = {"app-content"};
-        articleContentNode.setProperty("pge-type", pgetype);
+		articleContentNode.setProperty("dps-title", articleTitle);
+		String[] internalKeywords = internalKeyword.split(",");
+		articleContentNode
+				.setProperty("dps-internalKeywords", internalKeywords);
+		articleContentNode.setProperty("dps-shortTitle", price);
+		articleContentNode.setProperty("dps-access", "free");
+		articleContentNode.setProperty("dps-resourceType", "dps:Article");
 
-        articleContentNode.setProperty("dps-title", articleTitle);
-        String[] internalKeywords = internalKeyword.split(",");
-        articleContentNode.setProperty("dps-internalKeywords", internalKeywords);
-        articleContentNode.setProperty("dps-shortTitle", price);
-        articleContentNode.setProperty("dps-access", "free");
-        articleContentNode.setProperty("dps-resourceType", "dps:Article");
+		articleContentNode.setProperty("importMD5", md5);
+		articleContentNode.setProperty("navTitle", articleTitle);
+		articleContentNode.setProperty("articleShortTitle", articleShortTitle);
+		articleContentNode.setProperty("collectionTitle", collectionTitle);
+		articleContentNode.setProperty("internalKeyword", internalKeyword);
+		articleContentNode.setProperty("articleTitle", articleTitle);
+		articleContentNode.setProperty("description", description);
+		articleContentNode.setProperty("price", price);
+		articleContentNode.setProperty("feature1", feature1);
+		articleContentNode.setProperty("feature2", feature2);
+		articleContentNode.setProperty("feature3", feature3);
+		articleContentNode.setProperty("collectionCat", collectionTitle);
+		articleContentNode.setProperty("imageDirectory", imagePath);
 
-        articleContentNode.setProperty("importMD5", md5);
-        articleContentNode.setProperty("navTitle", articleTitle);
-        articleContentNode.setProperty("articleShortTitle", articleShortTitle);
-        articleContentNode.setProperty("collectionTitle", collectionTitle);
-        articleContentNode.setProperty("internalKeyword", internalKeyword);
-        articleContentNode.setProperty("articleTitle", articleTitle);
-        articleContentNode.setProperty("description", description);
-        articleContentNode.setProperty("price", price);
-        articleContentNode.setProperty("feature1", feature1);
-        articleContentNode.setProperty("feature2", feature2);
-        articleContentNode.setProperty("feature3", feature3);
-        articleContentNode.setProperty("collectionCat", collectionTitle);
-        articleContentNode.setProperty("imageDirectory", imagePath);
+		addImage(articleContentNode, "image", imagePath);
+		addImage(articleContentNode, "social-share-image", imagePath);
 
-        addImage(articleContentNode, "image", imagePath);
-        addImage(articleContentNode, "social-share-image", imagePath);
+		articleContentNode.getSession().save();
+	}
 
-        articleContentNode.getSession().save();
-    }
+	public static void updateBanner(Node bannerContentNode, String md5,
+			String title, String collectionTitle, String imagePath)
+			throws Exception {
+		bannerContentNode
+				.setProperty("cq:lastModified", Calendar.getInstance());
+		bannerContentNode.setProperty("jcr:title", title);
 
-    public static void updateBanner(Node bannerContentNode, String md5, String title, String collectionTitle, String imagePath) throws Exception {
-        bannerContentNode.setProperty("cq:lastModified", Calendar.getInstance());
-        bannerContentNode.setProperty("cq:template", BANNER_TEMPLATE);
+		String[] pgetype = { "app-content" };
+		bannerContentNode.setProperty("pge-type", pgetype);
 
-        bannerContentNode.setProperty("jcr:title", title);
+		bannerContentNode.setProperty("dps-title", title);
+		bannerContentNode.setProperty("dps-access", "free");
+		bannerContentNode.setProperty("dps-resourceType", "dps:Banner");
 
-        bannerContentNode.setProperty("sling:resourceType", BANNER_SLING_RESOURCE_TYPE);
+		bannerContentNode.setProperty("importMD5", md5);
+		bannerContentNode.setProperty("collectionCat", collectionTitle);
 
-        String[] pgetype = {"app-content"};
-        bannerContentNode.setProperty("pge-type", pgetype);
+		addImage(bannerContentNode, "image", imagePath);
 
-        bannerContentNode.setProperty("dps-title", title);
-        bannerContentNode.setProperty("dps-access", "free");
-        bannerContentNode.setProperty("dps-resourceType", "dps:Banner");
+		bannerContentNode.getSession().save();
+	}
 
-        bannerContentNode.setProperty("importMD5", md5);
-        bannerContentNode.setProperty("collectionCat", collectionTitle);
+	private static void addImage(Node node, String imageNodeName,
+			String imagePath) throws RepositoryException {
+		Node image = node.addNode(imageNodeName, "nt:unstructured");
+		image.setProperty("fileReference", imagePath);
+		image.setProperty("sling:resourceType", "foundation/components/image");
+	}
 
-        addImage(bannerContentNode, "image", imagePath);
-
-        bannerContentNode.getSession().save();
-    }
-
-    private static void addImage(Node node, String imageNodeName, String imagePath) throws RepositoryException {
-        Node image = node.addNode(imageNodeName, "nt:unstructured");
-        image.setProperty("fileReference", imagePath);
-        image.setProperty("sling:resourceType", "foundation/components/image");
-    }
-
-    public static String[] getLayout(AEMMobileClient aemMobileClient, DPSProject dpsProject) throws JSONException, DPSException {
-        String layoutTitle = "Catalog Category";
-        String layoutURI = aemMobileClient.getLayoutURI(dpsProject, layoutTitle);
-        if(layoutURI==null){
-            layoutTitle = "Default Layout";
-            layoutURI = aemMobileClient.getLayoutURI(dpsProject, layoutTitle);
-        }
-        return new String[] {layoutTitle, layoutURI};
-    }
+	public static String[] getLayout(AEMMobileClient aemMobileClient,
+			DPSProject dpsProject) throws JSONException, DPSException {
+		String layoutTitle = "Catalog Category";
+		String layoutURI = aemMobileClient
+				.getLayoutURI(dpsProject, layoutTitle);
+		if (layoutURI == null) {
+			layoutTitle = "Default Layout";
+			layoutURI = aemMobileClient.getLayoutURI(dpsProject, layoutTitle);
+		}
+		return new String[] { layoutTitle, layoutURI };
+	}
 }

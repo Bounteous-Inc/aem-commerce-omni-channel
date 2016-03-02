@@ -32,12 +32,12 @@ import java.util.Date;
 /**
  * Utilities
  */
-public class AdobeCaresUtil {
+public class AEMMoDUtil {
 
     /**
      * Static logger
      */
-    private static final Logger LOGGER = LoggerFactory.getLogger(AdobeCaresUtil.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AEMMoDUtil.class);
 
     public static final String PN_DPS_RESOURCE_TYPE  = "dps-resourceType";
     public static final String DPS_TYPE_PROJECT     = "dps:Project";
@@ -48,7 +48,7 @@ public class AdobeCaresUtil {
     /**
      * Default constructor
      */
-    private AdobeCaresUtil() {
+    private AEMMoDUtil() {
         // no instance
     }
 

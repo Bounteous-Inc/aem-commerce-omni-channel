@@ -22,7 +22,7 @@ import com.adobe.cq.mobile.dps.DPSException;
 import com.adobe.cq.mobile.dps.DPSProject;
 import com.adobe.demo.wetelco.mobile.dps.mobileclient.AEMMobileClient;
 import com.adobe.demo.wetelco.mobile.dps.mobileclient.RequestException;
-import com.adobe.demo.wetelco.mobile.dps.utils.AdobeCaresUtil;
+import com.adobe.demo.wetelco.mobile.dps.utils.AEMMoDUtil;
 import com.adobe.demo.wetelco.mobile.dps.utils.ContentCreationUtil;
 import com.day.cq.wcm.api.Page;
 
@@ -44,7 +44,8 @@ public class Uploader {
     private static final Logger LOGGER = LoggerFactory.getLogger(Uploader.class);
 
     private static final String PN_TARGET_COLLECTION = "collectionCat";
-
+    public static final String DPS_BG_IMAGE = "/content/dam/weTelco/weTelco/WeTelco_BG.png";
+	
     private DPSProject dpsProject = null;
     private AEMMobileClient aemMobileClient = null;
 
@@ -74,10 +75,10 @@ public class Uploader {
         return uploaded;
     }
 
-    private int processContent(List<? extends DPSEntity> entities) throws RepositoryException, ServletException, IOException, RequestException {
+    public int processContent(List<? extends DPSEntity> entities) throws RepositoryException, ServletException, IOException, RequestException {
         int uploaded = 0;
         for (DPSEntity entity : entities) {
-            if (AdobeCaresUtil.needsUpload(entity)) {
+            if (AEMMoDUtil.needsUpload(entity)) {
                 uploaded++;
                 aemMobileClient.upload(entity.getPath(), getTargetCollection(entity));
             } else {
@@ -100,7 +101,7 @@ public class Uploader {
         LOGGER.info("CREATED COLLECTION: " + collectionName);
 
         String[] layout = ContentCreationUtil.getLayout(aemMobileClient, dpsProject);
-        ContentCreationUtil.updateCollection(collectionContentNode, collectionName, imageDirectory, layout);
+        ContentCreationUtil.updateCollection(collectionContentNode, collectionName, imageDirectory, DPS_BG_IMAGE, layout);
         return collectionNode;
     }
 }

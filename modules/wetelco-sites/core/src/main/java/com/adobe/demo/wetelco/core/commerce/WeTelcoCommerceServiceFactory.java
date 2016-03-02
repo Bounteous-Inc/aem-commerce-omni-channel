@@ -11,7 +11,7 @@ import com.adobe.cq.commerce.api.CommerceService;
 import com.adobe.cq.commerce.api.CommerceServiceFactory;
 import com.adobe.cq.commerce.common.AbstractJcrCommerceServiceFactory;
 import com.adobe.demo.wetelco.core.commerce.impl.WeTelcoCommerceServiceImpl;
-import com.adobe.demo.wetelco.mobile.dps.operations.CreateArticleService;
+import com.adobe.demo.wetelco.mobile.dps.services.AEMMoDService;
 
 /**
  * Implementation for the {@link CommerceServiceFactory} interface for WeTelco
@@ -26,10 +26,10 @@ public class WeTelcoCommerceServiceFactory extends
 		AbstractJcrCommerceServiceFactory implements CommerceServiceFactory {
 
 	@Reference
-	private CreateArticleService createArticleService;
+	private AEMMoDService aemModService;
 	
 	public CommerceService getCommerceService(Resource res) {
-		return new WeTelcoCommerceServiceImpl(getServiceContext(), res, createArticleService);
+		return new WeTelcoCommerceServiceImpl(getServiceContext(), res, aemModService);
 	}
 
 }
