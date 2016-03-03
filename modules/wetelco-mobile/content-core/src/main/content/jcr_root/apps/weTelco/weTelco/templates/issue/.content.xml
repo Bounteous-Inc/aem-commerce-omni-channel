@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    cq:designPath="/etc/designs/phonegap/weTelco/weTelco"
-    jcr:description="WeTelco AEM Mobile DPS Folio Template"
+    cq:designPath="/etc/designs/geometrixx-unlimited-app"
+    jcr:description="Unlimited folio template"
     jcr:primaryType="cq:Template"
-    jcr:title="WeTelco AEM Mobile DPS Tablet Folio"
-    allowedParents="[/content/mobileapps]"
+    jcr:title="Unlimited Tablet Folio"
     allowedPaths="[/]"
     ranking="{Long}0">
     <jcr:content
-        cq:allowedTemplates="[/apps/weTelco/weTelco/templates/.*]"
-        cq:designPath="/etc/designs/phonegap/weTelco/weTelco"
+        cq:allowedTemplates="[/apps/geometrixx-unlimited-app/templates/.*]"
+        cq:designPath="/etc/designs/geometrixx-unlimited-app"
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="weTelco/weTelco/components/pages/issue"
-        dps-exportTemplate="/etc/contentsync/templates/wetelco-aem-mobile"
+        sling:resourceType="geometrixx-unlimited-app/components/pages/issue"
+        dps-exportTemplate="/etc/contentsync/templates/dps-geometrixx-unlimited-app"
         dps-resourceType="dps:Project"
         pge-dashboard-config="/libs/mobileapps/dps/admin/content/dashboard/tiles/dpsdefault"/>
 </jcr:root>

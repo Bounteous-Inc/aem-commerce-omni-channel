@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:allowedTemplates="[/apps/weTelco/weTelco/templates/.*]"
@@ -9,17 +9,21 @@
         cq:lastModifiedBy="admin"
         cq:template="/apps/weTelco/weTelco/templates/issue"
         jcr:primaryType="cq:PageContent"
-        jcr:title="WeTelco AEM Mobile App"
+        jcr:title="WeTelco AEM Mobile On Demand App"
         sling:resourceType="weTelco/weTelco/components/pages/issue"
         dps-cloudConfig="/etc/cloudservices/dps2015/Summit2016WeTelco"
         dps-exportTemplate="/etc/contentsync/templates/wetelco-aem-mobile"
-        dps-projectId="e0bb1e8d-4c5d-4278-aa55-b4468cf341aa"
-        dps-projectTitle="L322-INS"
         dps-resourceType="dps:Project"
-        dps-sharedHTMLResources-lastUploaded="{Date}2016-02-24T12:22:40.855+11:00"
-        dps-sharedHTMLResources-lastUploadedBy="admin"
+        iconPath="/content/dam/weTelco/weTelco/thumbnail.png"
         pge-dashboard-config="/libs/mobileapps/dps/admin/content/dashboard/tiles/dpsdefault"
-        pge-type="[app-group,app-publish,app-instance]"/>
-    <collections/>
-    <articles/>
+        pge-type="[app-group,app-publish,app-instance]">
+        <image
+            jcr:lastModified="{Date}2013-11-08T22:47:39.166Z"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            fileReference="/content/dam/weTelco/weTelco/thumbnail.png"
+            imageRotate="0"/>
+        <collections/>
+    	<articles/>
+    </jcr:content>
 </jcr:root>

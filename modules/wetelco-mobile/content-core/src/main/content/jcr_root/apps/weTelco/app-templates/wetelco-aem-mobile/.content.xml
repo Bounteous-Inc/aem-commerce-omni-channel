@@ -6,7 +6,7 @@
     jcr:title="WeTelco AEM Mobile OnDemand App"
     allowedPaths="[/content/phonegap(/.*)?,/content/mobileapps(/.*)?]"
     pge-type="app-publish"
-    wizard="/apps/weTelco/admin/content/createpublishappsteps.html">
+    wizard="/libs/mobileapps/dps/admin/content/createpublishappsteps.html">
     <jcr:content
         cq:designPath="/etc/designs/phonegap/weTelco/weTelco"
         cq:deviceGroups="[/etc/mobile/groups/responsive]"

@@ -9,7 +9,7 @@
         cq:parentPath="/content/dam/weTelco/weTelco"
         dam:assetID="257c6837-cc9e-45f6-a53c-812629bdd323"
         dam:relativePath="weTelco/weTelco/weTelco.png"
-        jcr:lastModified="{Date}2016-02-29T21:03:23.979+11:00"
+        jcr:lastModified="{Date}2016-03-03T20:08:52.020+11:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -29,7 +29,7 @@
             dam:size="{Long}93524"
             dc:format="image/png"
             dc:modified="{Date}2015-10-29T14:57:11.778+08:00"
-            jcr:lastModified="{Date}2016-02-29T21:03:23.671+11:00"
+            jcr:lastModified="{Date}2016-03-03T20:08:51.910+11:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"

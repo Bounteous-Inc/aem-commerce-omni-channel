@@ -9,7 +9,7 @@
         cq:parentPath="/content/dam/weTelco/weTelco"
         dam:assetID="42be3406-5a18-4ed6-b6f7-bb3f0a247c22"
         dam:relativePath="weTelco/weTelco/AppSplash736.png"
-        jcr:lastModified="{Date}2016-02-29T21:03:24.588+11:00"
+        jcr:lastModified="{Date}2016-03-03T20:08:52.550+11:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -41,7 +41,7 @@
             exif:FlashpixVersion="0100"
             exif:PixelXDimension="{Long}1242"
             exif:PixelYDimension="{Long}2208"
-            jcr:lastModified="{Date}2016-02-29T21:03:21.468+11:00"
+            jcr:lastModified="{Date}2016-03-03T20:08:49.648+11:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"

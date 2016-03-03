@@ -16,7 +16,7 @@
         dam:s7damImageCopyPath="/var/folders/ff/_j335_652tdghgnwr94_g05h0000gp/T/scene72220069993243075586.tmp"
         dam:s7damType="Image"
         dam:s7damWidth="{Long}319"
-        jcr:lastModified="{Date}2016-02-29T21:03:24.125+11:00"
+        jcr:lastModified="{Date}2016-03-03T20:08:50.454+11:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -39,7 +39,7 @@
             exif:ColorSpace="{Long}65535"
             exif:PixelXDimension="{Long}319"
             exif:PixelYDimension="{Long}319"
-            jcr:lastModified="{Date}2016-02-29T21:03:21.589+11:00"
+            jcr:lastModified="{Date}2016-03-03T20:08:50.154+11:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"

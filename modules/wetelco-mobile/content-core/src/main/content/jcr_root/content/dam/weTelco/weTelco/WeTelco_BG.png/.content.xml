@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:mixinTypes="[mix:referenceable]"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
     jcr:primaryType="dam:Asset"
     jcr:uuid="5724f0ff-1aec-4778-b05e-67942ce7b4b4">
     <jcr:content
+        cq:name="WeTelco_BG.png"
+        cq:parentPath="/content/dam/weTelco/weTelco"
         dam:assetID="5724f0ff-1aec-4778-b05e-67942ce7b4b4"
         dam:relativePath="weTelco/weTelco/WeTelco_BG.png"
-        jcr:lastModified="{Date}2016-02-29T21:04:35.291+11:00"
+        jcr:lastModified="{Date}2016-03-03T20:08:52.176+11:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -22,8 +25,11 @@
             dam:Physicalwidthininches="{Decimal}-1.0"
             dam:Progressive="no"
             dc:format="image/png"
+            dc:modified="{Date}2016-03-03T20:08:51.234+11:00"
             exif:PixelXDimension="{Long}557"
             exif:PixelYDimension="{Long}420"
+            jcr:lastModified="{Date}2016-03-03T20:08:51.234+11:00"
+            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             tiff:ImageLength="{Long}420"
