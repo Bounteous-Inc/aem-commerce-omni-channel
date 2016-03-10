@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.adobe.demo.wetelco</groupId>
+  <artifactId>wetelco-mobile.content-dev</artifactId>
+  <versioning>
+    <versions>
+      <version>0.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20160310004835</lastUpdated>
+  </versioning>
+</metadata>

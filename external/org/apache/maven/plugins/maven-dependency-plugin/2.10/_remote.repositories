@@ -1,0 +1,4 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Mar 10 11:39:06 AEDT 2016
+maven-dependency-plugin-2.10.jar>fallback=
+maven-dependency-plugin-2.10.pom>fallback=

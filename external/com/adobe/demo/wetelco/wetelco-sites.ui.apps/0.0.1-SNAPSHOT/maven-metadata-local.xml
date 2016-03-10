@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.adobe.demo.wetelco</groupId>
+  <artifactId>wetelco-sites.ui.apps</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <localCopy>true</localCopy>
+    </snapshot>
+    <lastUpdated>20160310003834</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>zip</extension>
+        <value>0.0.1-SNAPSHOT</value>
+        <updated>20160310003834</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>0.0.1-SNAPSHOT</value>
+        <updated>20160310003834</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

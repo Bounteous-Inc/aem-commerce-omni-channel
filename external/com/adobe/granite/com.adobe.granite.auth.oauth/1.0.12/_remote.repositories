@@ -1,0 +1,4 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Mar 10 11:34:38 AEDT 2016
+com.adobe.granite.auth.oauth-1.0.12.jar>nexus-releases=
+com.adobe.granite.auth.oauth-1.0.12.pom>nexus-releases=

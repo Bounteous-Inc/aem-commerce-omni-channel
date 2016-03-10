@@ -1,0 +1,4 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Mar 10 11:48:30 AEDT 2016
+maven-plugin-registry-2.0.6.jar>fallback=
+maven-plugin-registry-2.0.6.pom>fallback=

@@ -1,0 +1,4 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Mar 10 11:19:53 AEDT 2016
+maven-clean-plugin-2.6.1.jar>fallback=
+maven-clean-plugin-2.6.1.pom>fallback=
