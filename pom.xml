@@ -34,9 +34,6 @@
     <!-- M O D U L E S                                                          -->
     <!-- ====================================================================== -->
     <modules>
-        <module>modules/wetelco-sites</module>
-        <module>modules/wetelco-mobile</module>
-        <module>modules/wetelco-screens</module>
         <module>parent</module>
     </modules>
 </project>

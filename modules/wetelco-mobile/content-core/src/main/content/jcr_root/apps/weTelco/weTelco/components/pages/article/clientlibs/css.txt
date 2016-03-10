@@ -1,2 +1,0 @@
-article.css
-mobile.css

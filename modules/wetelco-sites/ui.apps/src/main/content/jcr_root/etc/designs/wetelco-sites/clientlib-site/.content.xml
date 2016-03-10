@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
-    jcr:mixinTypes="[cq:ReplicationStatus,mix:lockable]"
-    jcr:primaryType="cq:ClientLibraryFolder"
-    categories="[wetelco-sites.site]"
-    dependencies="[jquery,cq.personalization]"
-    embed="[underscore,granite.shared,cq.shared,jquery.jcarousel,cq.foundation,cq.foundation-main,jquery-ui,cq.jquery.ui,personalization.core.kernel,personalization.clientcontext.kernel,personalization.stores.kernel,personalization.kernel,cq.collab.comments,cq.collab.feedlink,cq.collab.ratings,cq.collab.toggle,cq.collab.forum]"/>

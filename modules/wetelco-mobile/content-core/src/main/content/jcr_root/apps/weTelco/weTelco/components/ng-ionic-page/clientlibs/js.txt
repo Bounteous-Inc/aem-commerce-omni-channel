@@ -1,2 +1,0 @@
-splashscreen-dismiss.js
-app-navigation.js

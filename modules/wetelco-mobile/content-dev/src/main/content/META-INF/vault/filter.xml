@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<workspaceFilter version="1.0">
-    <filter root="/content/phonegap/weTelco">
-        <include pattern="/content/phonegap/weTelco(/.*)?"/>
-        <exclude pattern="/content/phonegap/weTelco/shell(/.*)?"/>
-    </filter>
-    <filter root="/content/mobileapps/wetelco-aem-mobile-app"/>
-</workspaceFilter>
