@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:file">
+    <jcr:content
+        dam:folderThumbnailPaths="[/content/dam/wetelco-sites/Mobile/iphone6s-select-2014_GEO_AU.jpg,/content/dam/wetelco-sites/Mobile/galaxys6_black_v3.jpg,/content/dam/wetelco-sites/Mobile/galaxy-note5_gallery_with-spen_black_s3.png]"
+        jcr:primaryType="nt:unstructured"
+        bgcolor="{Long}-1"
+        height="{Long}160"
+        width="{Long}240"/>
+</jcr:root>
