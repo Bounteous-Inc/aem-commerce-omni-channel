@@ -5,5 +5,5 @@ cd /Users/vvenkata/Documents/Varun/PresentationInventory/Presentation/Summit2016
 git fetch
 git checkout lab0
 cp -rf external/* ~/.m2/repository
-mvn clean install
+mvn clean install -PautoInstallPackage
 echo "************* L322 - End Initialisation  ***********"
