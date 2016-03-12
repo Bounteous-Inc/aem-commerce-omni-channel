@@ -1,0 +1,10 @@
+modules/wetelco-mobile/content-author/.classpath
+modules/wetelco-mobile/content-core/.classpath
+modules/wetelco-mobile/content-dev/.classpath
+modules/wetelco-screens/ui.apps/.classpath
+modules/wetelco-screens/ui.content/.classpath
+modules/wetelco-sites/core/.classpath
+modules/wetelco-sites/it.launcher/.classpath
+modules/wetelco-sites/it.tests/.classpath
+modules/wetelco-sites/ui.apps/.classpath
+modules/wetelco-sites/ui.content/.classpath
