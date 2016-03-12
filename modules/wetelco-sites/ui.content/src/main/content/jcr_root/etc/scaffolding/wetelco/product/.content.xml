@@ -2,14 +2,14 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:targetPath="/etc/commerce/products/origin-energy"
-        jcr:description="Example scaffolding that is used to create and update Geometrixx Outdoors products."
+        cq:targetPath="/etc/commerce/products/wetelco"
+        jcr:description="Scaffolding that is used to create and update WeTelco products."
         jcr:primaryType="cq:PageContent"
         jcr:title="Product Data"
         sling:resourceType="wcm/scaffolding/components/scaffolding">
         <cq:dialog
             jcr:primaryType="nt:unstructured"
-            jcr:title="Geometrixx Outdoors Product Properties"
+            jcr:title="WeTelco Product Properties"
             sling:resourceType="cq/gui/components/authoring/dialog">
             <layout
                 jcr:primaryType="nt:unstructured"
@@ -67,24 +67,12 @@
                                                 fieldLabel="Identifier"
                                                 name="./identifier"
                                                 renderReadOnly="{Boolean}true"/>
-                                            <product_sap_id
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                                fieldLabel="Product SAP ID"
-                                                name="./product_sap_id"
-                                                renderReadOnly="{Boolean}true"/>
                                             <special_offer
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/foundation/form/textfield"
                                                 fieldLabel="Special Offer"
                                                 name="./special_offer"
                                                 renderReadOnly="{Boolean}true"/>
-                                            <state
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                                fieldLabel="State"
-                                                name="./state"
-                                                renderReadOnly="{Boolean}true" />                                               
                                             <payontimediscount
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/foundation/form/textfield"
@@ -120,43 +108,14 @@
                                                 sling:resourceType="cq/gui/components/authoring/dialog/richtext"
                                                 fieldLabel="Terms and Conditions"
                                                 name="./terms_and_conditions"
-                                                renderReadOnly="{Boolean}true"/>  
-                                                <terms_and_conditions_plans
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
-                                                fieldLabel="Terms and Conditions- Comparison Plans Page"
-                                                name="./terms_and_conditions_plans"
-                                                renderReadOnly="{Boolean}true"/>                                             
-                                              <product_image_icon
+                                                renderReadOnly="{Boolean}true"/>                                      
+                                            <product_image_icon
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
                                                 fieldLabel="Product Image Icon"
                                                 name="./product_image_icon"
                                                 renderReadOnly="{Boolean}true"/>
-                                              <elecusagediscount
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                                fieldLabel="Electricity Discount"
-                                                name="./elecusagediscount"
-                                                renderReadOnly="{Boolean}true"/>
-                                              <gasusagediscount
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                                fieldLabel="Natural Gas Discount"
-                                                name="./gasusagediscount"
-                                                renderReadOnly="{Boolean}true"/>
-                                              <sapdiscounttype
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/select"
-                                                class="user-dropdown save-button-enabler"
-                                                fieldLabel="Discount values from SAP"
-                                                name="./sapDiscount"
-                                                renderReadOnly="{Boolean}true">
-                                                <datasource
-                                                    jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="/apps/origin-ui/components/content/datasource/sapdiscountdatasource"/>
-                                              </sapdiscounttype>
-                                                                                               
+                                                                                        
                                              <clientlibs
 		                                        jcr:primaryType="nt:unstructured"
 		                                        sling:resourceType="granite/ui/components/foundation/includeclientlibs"
