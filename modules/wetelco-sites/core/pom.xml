@@ -1,291 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- | Copyright 2015 Adobe Systems Incorporated | | Licensed under the Apache 
-	License, Version 2.0 (the "License"); | you may not use this file except 
-	in compliance with the License. | You may obtain a copy of the License at 
-	| | http://www.apache.org/licenses/LICENSE-2.0 | | Unless required by applicable 
-	law or agreed to in writing, software | distributed under the License is 
-	distributed on an "AS IS" BASIS, | WITHOUT WARRANTIES OR CONDITIONS OF ANY 
-	KIND, either express or implied. | See the License for the specific language 
-	governing permissions and | limitations under the License. -->
+<!--
+ |  Copyright 2015 Adobe Systems Incorporated
+ |
+ |  Licensed under the Apache License, Version 2.0 (the "License");
+ |  you may not use this file except in compliance with the License.
+ |  You may obtain a copy of the License at
+ |
+ |      http://www.apache.org/licenses/LICENSE-2.0
+ |
+ |  Unless required by applicable law or agreed to in writing, software
+ |  distributed under the License is distributed on an "AS IS" BASIS,
+ |  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ |  See the License for the specific language governing permissions and
+ |  limitations under the License.
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>com.adobe.demo.wetelco</groupId>
-		<artifactId>wetelco-sites</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../pom.xml</relativePath>
-	</parent>
-	<artifactId>wetelco-sites.core</artifactId>
-	<packaging>bundle</packaging>
-	<name>wetelco-sites - Core</name>
-	<description>Core bundle for wetelco-sites</description>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-scr-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-				<extensions>true</extensions>
-				<configuration>
-					<instructions>
-						<!-- <Embed-Dependency> artifactId1, artifactId2;inline=true </Embed-Dependency> -->
-						<Sling-Model-Packages>
-							com.adobe.demo.wetelco
-						</Sling-Model-Packages>
-						<Embed-Dependency>commons-csv;scope=provided</Embed-Dependency>
-					</instructions>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-	<profiles>
-		<!-- Development profile: install only the bundle -->
-		<profile>
-			<id>autoInstallBundle</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.sling</groupId>
-						<artifactId>maven-sling-plugin</artifactId>
-						<configuration>
-							<!-- Note that this requires /apps/wetelco-sites/install to exist!! -->
-							<!-- This is typically the case when ui.apps is deployed first -->
-							<!-- Otherwise, create /apps/wetelco-sites/install manually (CRXDE|Lite) -->
-							<slingUrlSuffix>/apps/wetelco-sites/install/</slingUrlSuffix>
-							<failOnError>true</failOnError>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
-	<dependencies>
-		<!-- Adobe Commerce -->
-		<dependency>
-			<groupId>com.adobe.cq.commerce</groupId>
-			<artifactId>cq-commerce-core</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>com.day.cq</groupId>
-			<artifactId>cq-commons</artifactId>
-		</dependency>
-
-		<!-- Apache commons -->
-		<dependency>
-			<groupId>commons-collections</groupId>
-			<artifactId>commons-collections</artifactId>
-		</dependency>
-		<!-- OSGi Dependencies -->
-		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.apache.felix.scr</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.apache.felix.scr.annotations</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>biz.aQute</groupId>
-			<artifactId>bndlib</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.compendium</artifactId>
-		</dependency>
-		<!-- Other Dependencies -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>javax.jcr</groupId>
-			<artifactId>jcr</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-		</dependency>
-		<!-- <dependency> -->
-		<!-- <groupId>com.adobe.aem</groupId> -->
-		<!-- <artifactId>aem-api</artifactId> -->
-		<!-- <exclusions> -->
-		<!-- <exclusion> declare the exclusion here -->
-		<!-- <groupId>org.apache.sling</groupId> -->
-		<!-- <artifactId>org.apache.sling.event</artifactId> -->
-		<!-- </exclusion> -->
-		<!-- <exclusion> declare the exclusion here -->
-		<!-- <groupId>org.apache.sling</groupId> -->
-		<!-- <artifactId>org.apache.sling.event.job</artifactId> -->
-		<!-- </exclusion> -->
-		<!-- </exclusions> -->
-		<!-- </dependency> -->
-		<dependency>
-			<groupId>org.apache.sling</groupId>
-			<artifactId>org.apache.sling.models.api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-all</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>junit-addons</groupId>
-			<artifactId>junit-addons</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.adobe.cq.mobile</groupId>
-			<artifactId>cq-mobile-dps</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>commons-httpclient</groupId>
-			<artifactId>commons-httpclient</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-		</dependency>
-
-		<!-- Sling model -->
-		<dependency>
-			<groupId>org.apache.sling</groupId>
-			<artifactId>org.apache.sling.models.api</artifactId>
-		</dependency>
-
-
-		<dependency>
-			<groupId>javax.inject</groupId>
-			<artifactId>javax.inject</artifactId>
-		</dependency>
-		<!-- AEM 6.2 Required Artifacts instead of AEM-API jar (as 6.2 is yet to 
-			be released) -->
-		<dependency>
-			<groupId>com.day.cq.dam</groupId>
-			<artifactId>cq-dam-api</artifactId>
-			<version>5.9.42</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.adobe.cq</groupId>
-			<artifactId>cq-gfx</artifactId>
-			<version>1.0.0</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.sling</groupId>
-			<artifactId>org.apache.sling.commons.json</artifactId>
-			<version>2.0.16</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.sling</groupId>
-			<artifactId>org.apache.sling.api</artifactId>
-			<version>2.11.0</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.sling</groupId>
-			<artifactId>org.apache.sling.settings</artifactId>
-			<version>1.3.8</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.adobe.granite</groupId>
-			<artifactId>com.adobe.granite.security.user</artifactId>
-			<version>0.2.14</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.sling</groupId>
-			<artifactId>org.apache.sling.adapter</artifactId>
-			<version>2.1.6</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.day.cq.wcm</groupId>
-			<artifactId>cq-wcm-api</artifactId>
-			<version>5.10.34</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.jackrabbit</groupId>
-			<artifactId>jackrabbit-jcr-commons</artifactId>
-			<version>2.11.3</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.sling</groupId>
-			<artifactId>org.apache.sling.jcr.resource</artifactId>
-			<version>2.7.1-R1729663</version>
-			<scope>provided</scope>
-		</dependency><!-- <dependency> -->
-		<dependency>
-			<groupId>com.day.cq.dam</groupId>
-			<artifactId>cq-dam-commons</artifactId>
-			<version>5.9.78</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.sling</groupId>
-			<artifactId>org.apache.sling.jcr.api</artifactId>
-			<version>2.3.0</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.day.cq.workflow</groupId>
-			<artifactId>cq-workflow-api</artifactId>
-			<version>6.0.4</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-csv</artifactId>
-			<version>1.2</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>commons-fileupload</groupId>
-			<artifactId>commons-fileupload</artifactId>
-			<version>1.2</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.sling</groupId>
-			<artifactId>org.apache.sling.engine</artifactId>
-			<version>2.3.6</version>
-			<scope>provided</scope>
-		</dependency>
-		<!-- <dependency> -->
-		<!-- <groupId>org.apache.commons</groupId> -->
-		<!-- <artifactId>commons-csv</artifactId> -->
-		<!-- <version>1.2</version> -->
-		<!-- <scope>provided</scope> -->
-		<!-- </dependency> -->
-		<!-- <dependency> -->
-		<!-- <groupId>commons-fileupload</groupId> -->
-		<!-- <artifactId>commons-fileupload</artifactId> -->
-		<!-- <version>1.2</version> -->
-		<!-- <scope>provided</scope> -->
-		<!-- </dependency> -->
-
-
-	</dependencies>
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.adobe.demo.wetelco</groupId>
+        <artifactId>wetelco-sites</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <artifactId>wetelco-sites.core</artifactId>
+    <packaging>bundle</packaging>
+    <name>wetelco-sites - Core</name>
+    <description>Core bundle for wetelco-sites</description>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-scr-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <!--
+                        <Embed-Dependency>
+                            artifactId1,
+                            artifactId2;inline=true
+                        </Embed-Dependency>
+                        -->
+                        <Sling-Model-Packages>
+                            com.adobe.demo.wetelco.core
+                        </Sling-Model-Packages>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <!-- Development profile: install only the bundle -->
+        <profile>
+            <id>autoInstallBundle</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.sling</groupId>
+                        <artifactId>maven-sling-plugin</artifactId>
+                        <configuration>
+                            <!-- Note that this requires /apps/wetelco-sites/install to exist!!          -->
+                            <!--    This is typically the case when ui.apps is deployed first                -->
+                            <!--    Otherwise, create /apps/wetelco-sites/install manually (CRXDE|Lite)  -->
+                            <slingUrlSuffix>/apps/wetelco-sites/install/</slingUrlSuffix>
+                            <failOnError>true</failOnError>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    <dependencies>
+        <!-- OSGi Dependencies -->
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.scr</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.scr.annotations</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>biz.aQute</groupId>
+            <artifactId>bndlib</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+        </dependency>
+        <!-- Other Dependencies -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.jcr</groupId>
+            <artifactId>jcr</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>aem-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.models.api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit-addons</groupId>
+            <artifactId>junit-addons</artifactId>
+        </dependency>
+    </dependencies>
 </project>

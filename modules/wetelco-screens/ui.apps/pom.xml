@@ -119,13 +119,6 @@
                     <verbose>true</verbose>
                     <failOnError>true</failOnError>
                     <group>weTelco</group>
-<!--                     <embeddeds> -->
-<!--                         <embedded> -->
-<!--                             <groupId>com.adobe.demo.wetelco</groupId> -->
-<!--                             <artifactId>wetelco-screens.ui.apps</artifactId> -->
-<!--                             <target>/apps/wetelco-screens/install</target> -->
-<!--                         </embedded> -->
-<!--                     </embeddeds> -->
                 </configuration>
             </plugin>
         </plugins>
@@ -195,7 +188,7 @@
     <!-- D E P E N D E N C I E S                                                -->
     <!-- ====================================================================== -->
     <dependencies>
-        <dependency>
+       <dependency>
             <groupId>javax.jcr</groupId>
             <artifactId>jcr</artifactId>
         </dependency>
@@ -209,11 +202,5 @@
             <groupId>com.day.cq.wcm</groupId>
             <artifactId>cq-wcm-taglib</artifactId>
         </dependency>
-
-
-		<dependency>
-			<groupId>javax.inject</groupId>
-			<artifactId>javax.inject</artifactId>
-		</dependency>
     </dependencies>
 </project>

@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "************* L322 - Start Initialisation ***********"
-cd /Users/vvenkata/Documents/Varun/PresentationInventory/Presentation/Summit2016/LabMachine/Users/l322/Desktop/AEM-Commerce-Lab-WS/aem-commerce-omni-channel
-git checkout lab0
-git cp -rf external/* ~/.m2/repository
-echo "************* L322 - End Initialisation  ***********"
+echo "************* L322 - Lab0 - Start Initialisation ***********"
+mvn install package -PautoInstallPackage
+echo "************* L322 - Lab0 - End Initialisation  ***********"

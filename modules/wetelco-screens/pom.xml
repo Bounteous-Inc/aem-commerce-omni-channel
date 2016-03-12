@@ -418,7 +418,6 @@
                 <version>1.5.11</version>
                 <scope>provided</scope>
             </dependency>
-            <!-- Apache Sling Dependencies -->
             
             <dependency>
                 <groupId>org.apache.sling</groupId>
@@ -479,12 +478,6 @@
                 <version>1.4</version>
                 <scope>test</scope>
             </dependency>
-             
-            <dependency>
-				<groupId>javax.inject</groupId>
-				<artifactId>javax.inject</artifactId>
-				<version>1</version>
-			</dependency>
         </dependencies>
     </dependencyManagement>
 
