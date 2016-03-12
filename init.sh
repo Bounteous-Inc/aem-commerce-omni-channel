@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo "************* L322 - Lab1 - Start Initialisation ***********"
+echo "************* L322 - Lab2 - Start Initialisation ***********"
 mvn install package -PautoInstallPackage
-echo "************* L322 - Lab1 - End Initialisation  ***********"
+echo "************* L322 - Lab2 - End Initialisation  ***********"
