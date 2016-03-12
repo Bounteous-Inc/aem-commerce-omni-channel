@@ -124,6 +124,11 @@
                                                                 ignoreData="{Boolean}true"
                                                                 name="_charset_"
                                                                 value="utf-8"/>
+                                                            <terms-and-conditions
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                                                fieldLabel="Terms and Conditions"
+                                                                name="./terms_and_conditions"/>
                                                         </items>
                                                     </titles>
                                                     <erp
