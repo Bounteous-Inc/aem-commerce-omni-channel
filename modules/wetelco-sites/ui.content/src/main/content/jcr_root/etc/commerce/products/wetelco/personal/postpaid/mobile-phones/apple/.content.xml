@@ -22,7 +22,7 @@
         <image
             jcr:lastModified="{Date}2015-01-26T12:28:08.323Z"
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="wetelco-sites/components/content/product/image"
+            sling:resourceType="commerce/components/product/image"
             fileReference="/content/dam/wetelco-sites/Mobile/iphone6-select-2014_GEO_AU.jpg"/>
         <go-mobile-55-apple-iphone-6-16gb-grey
             cq:commerceType="variant"
@@ -64,7 +64,7 @@
         <image
             jcr:lastModified="{Date}2015-01-26T12:28:08.323Z"
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="wetelco-sites/components/content/product/image"
+            sling:resourceType="commerce/components/product/image"
             fileReference="/content/dam/wetelco-sites/Mobile/iphone6s-select-2014_GEO_AU.jpg"/>
         <go-mobile-95-apple-iphone-6s-128gb-rose-gold
             cq:commerceType="variant"
