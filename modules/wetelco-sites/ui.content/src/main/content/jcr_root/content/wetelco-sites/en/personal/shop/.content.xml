@@ -14,5 +14,7 @@
         jcr:title="Shop"
         assetCategory="[weTelco:]"
         navTitle="Shop"
-        pageTitle="Shop"/>
+        pageTitle="Shop"
+        sling:resourceType="wetelco-sites/components/structure/landingpage"
+       />
 </jcr:root>
