@@ -4,13 +4,13 @@
     <jcr:content
         cq:commerceProvider="wetelco"
         cq:targetPath="/etc/commerce/orders"
-        jcr:description="Example scaffolding that is used to create and update Geometrixx Outdoors orders."
+        jcr:description="Example scaffolding that is used to create and update WeTelco Outdoors orders."
         jcr:primaryType="cq:PageContent"
         jcr:title="Order Data"
         sling:resourceType="wcm/scaffolding/components/scaffolding">
         <cq:dialog
             jcr:primaryType="nt:unstructured"
-            jcr:title="Geometrixx Outdoors Order Properties"
+            jcr:title="WeTelco Order Properties"
             sling:resourceType="cq/gui/components/authoring/dialog">
             <layout
                 jcr:primaryType="nt:unstructured"
