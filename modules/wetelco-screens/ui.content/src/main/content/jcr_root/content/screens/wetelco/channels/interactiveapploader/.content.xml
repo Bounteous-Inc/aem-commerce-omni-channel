@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/wetelco-screens"
+        cq:template="/libs/screens/core/templates/appchannel"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="weTelco Interactive App"
+        sling:resourceSuperType="screens/core/components/channel"
+        sling:resourceType="screens/core/components/appchannel"
+        role="app">
+        <image jcr:primaryType="nt:unstructured">
+            <file/>
+        </image>
+        <app
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="screens/core/components/content/app"
+            appPath="/content/screens/wetelco/apps/interactiveapploader"/>
+    </jcr:content>
+</jcr:root>

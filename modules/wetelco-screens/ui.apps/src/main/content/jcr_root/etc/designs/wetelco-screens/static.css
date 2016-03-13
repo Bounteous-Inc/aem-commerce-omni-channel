@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'ProximaNovaRegular';
+  src: url('ProximaNova-Regular.otf') format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNovaBold';
+  src: url('ProximaNova-Bold.otf') format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNovaBlack';
+  src: url('ProximaNova-Black.otf') format('opentype');
+  font-style: normal;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: ProximaNovaBlack;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-size: 5.3em;
+}
+
+.cq-Sequence .parbase {
+  position: absolute;
+}
+
+.aem-AuthorLayer-Edit .wr-TeaserPage {
+  margin: 54px;
+}
+
+.aem-AuthorLayer-Edit .aem-Layout {
+  height: auto;
+}
+
+.aem-AuthorLayer-Edit .cq-Sequence .parbase {
+  position: relative;
+}
+
+.cq-Screens-page .aem-Screens-editWrapper {
+  height: 100%;
+}
+
+.cq-Screens-page .aem-Screens-editWrapper img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cq-Sequence .cq-Screens-video:before {
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  color: #fff;
+  content: 'Touch to Discover More';
+  font-family: ProximaNovaBold;
+  text-shadow: 0 0 2px rgba(0, 0, 0, .6);
+  text-transform: uppercase;
+  transform: translate3d(-50%, 0, 0);
+  z-index: 1;
+}
+
+.aem-AuthorLayer-Edit .cq-Sequence .cq-Screens-video:before {
+  display: none;
+}
+
+.wr-TeaserPage {
+  display: table;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.wr-TeaserPage .title {
+  color: #fff;
+  font-family: ProximaNovaBlack;
+  text-transform: uppercase;
+}
+
+.wr-TeaserPage .title h1 {
+  max-width: 60%;
+}
+
+.wr-TeaserPage .text {
+  color: #fff;
+  font-family: ProximaNovaBold;
+  text-transform: uppercase;
+}
+
+.wr-ImageParsys {
+  display: table-cell;
+  padding: 0 0 0 22%;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.wr-ImageParsys .parbase.text p {
+  font-size: 1.5em;
+  padding: 0;
+  margin: 0.3em 0 0 0.3%;
+}

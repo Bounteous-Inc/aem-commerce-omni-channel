@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Page Teaser"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+            margin="{Boolean}false"/>
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <link
+                        jcr:primaryType="nt:unstructured"
+                        sling:orderBefore="size"
+                        sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                        fieldLabel="Link Target"
+                        name="./link"
+                        rootPath="/content"/>
+                    <duration
+                        jcr:primaryType="nt:unstructured"
+                        sling:orderBefore="size"
+                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                        defaultValue=""
+                        fieldDescription="A number greater than 0 defines the time the video will play before transitioning to the next sequence element. Video will loop if duration is longer than its own duration. '0' means the strategy of the channel will define the duration. '-1' means the video will fully play once and then transition."
+                        fieldLabel="Duration (ms)"
+                        min="-1"
+                        name="./duration"
+                        required="{Boolean}false"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

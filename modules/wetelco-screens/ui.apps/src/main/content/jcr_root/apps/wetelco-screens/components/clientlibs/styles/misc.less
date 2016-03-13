@@ -1,0 +1,131 @@
+/*
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2016 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ */
+body {
+  background-color: rgb(245, 245, 245);
+}
+
+* {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.u-showAfterLoad {
+  visibility: hidden; // only show them once the page has loaded
+}
+
+.wr-ColumnLayout {
+
+}
+
+.wr-ColumnLayout::after {
+  content: "";
+  clear: both;
+}
+
+.wr-ColumnLayout-50 {
+  width: 50%;
+  float: left;
+}
+
+.wr-Button {
+  padding: 0;
+  background: none;
+  border: none;
+  color: rgba(0,0,0,.5);
+  font-family: 'ProximaNovaRegular';
+  font-size: 16px;
+  line-height: 42px;
+
+  &:hover {
+    color: rgba(0,0,0,1);
+  }
+
+}
+
+.wr-Button--callClerk {
+  float: right;
+
+  &:before {
+    margin-right: 4px;
+    content: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiDQoJIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiIHZpZXdCb3g9IjAgMCAzNTYuMzM0IDM1Ni4zMzQiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgZmlsbD0iIzY2NiI+DQoJPHBhdGggZD0iTTEyOS4wNSwyMDAuNzQ2YzMzLjk5NSwwLDYxLjU1NS0yNy4yNzMsNjEuNTU1LTYwLjkyM2MwLTMzLjY0My0yNy41Ni02MC45MjEtNjEuNTU1LTYwLjkyMQ0KCQljLTMzLjk5OCwwLTYxLjU1NiwyNy4yNzgtNjEuNTU2LDYwLjkyMUM2Ny40OTQsMTczLjQ3Myw5NS4wNTIsMjAwLjc0NiwxMjkuMDUsMjAwLjc0NnoiLz4NCgk8cGF0aCBkPSJNMjQ3LjA5NCwzNTAuMTYzbC00MS4wNDMtMTA4LjQ4MmMtMS4wNDMtMi43NTMtOS44NzItMjAuOTI3LTI2LjI2NS0yMC45MjdjLTUuMTg1LDAtOTUuMTE2LDAuMTM2LTk4LjA1OSwwLjEzNg0KCQljMCwwLTAuNDgsMC0zLjM5OCwwYy0xOC4zNSwwLTI1LjIxOSwxOC4wMzgtMjYuMjYsMjAuNzkxTDExLjAyNCwzNTAuMTYzYy0xLjA0MywyLjc1Mi0wLjQzOCw2LjE3MSw1LjMzOCw2LjE3MQ0KCQljMCwwLDIyLjE1NCwwLDMwLjI4OCwwYzUuNTE5LDAsNy4yMzctNC44Myw3LjIzNy00LjgzbDE5LjU2OC01Mi41MDVjMCwwLDIuNDYtNi43MjMsMi40NiwwLjU2OQ0KCQljMCwxMC4wMjMsMC4xMywzNi44MDIsMC4xOTYsNDkuNjY5YzAuMDIyLDQuMzM5LDAuNjk1LDcuMDk3LDUuODE5LDcuMDk3YzI2LjU0MywwLDc0Ljk0NywwLDk5LjkzLDANCgkJYzcuMDk2LDAsNi4yMy0zLjY5Myw2LjIxNS05LjI2NWMtMC4wMzktMTMuNTgxLTAuMTA0LTM4LjMyMS0wLjEwNC00Ny44OTZjMC00LjkyNywxLjc0Ni0xLjU2NSwxLjc0Ni0xLjU2NWwxOC4zNzksNTMuMDc1DQoJCWMwLDAsMS43NTMsNS42NSw4LjI1Nyw1LjY1YzYuOTEzLDAsMjUuMDk4LDAsMjUuMDk4LDBDMjQ3LjQyMSwzNTYuMzM0LDI0OC4xMzcsMzUyLjkxNSwyNDcuMDk0LDM1MC4xNjN6IE0xNTMuMjE3LDMxOS4wNTENCgkJbC0yMC42NTQsMTguOTk0Yy0xLjkzMiwxLjc3Ni01LjA5NSwxLjc3Ni03LjAyNywwbC0yMC42NTQtMTguOTk0Yy0xLjkzNC0xLjc3NS0zLjA3My01LjMzMi0yLjUzNi03Ljg5OWwxMC43Ny01MS40MzENCgkJYzAuMTYxLTAuNzY4LDAuNjQ4LTMuMDk2LDAuNjA2LTMuNjI0Yy0wLjIxMS0yLjcxMi0wLjg0Ni0xMC44NDctMC44NDYtMTAuODQ3Yy0wLjIwNi0yLjYxNywxLjc3NS00Ljc1OSw0LjM5OS00Ljc1OWgyMy41NDYNCgkJYzIuNjI0LDAsNC42MDUsMi4xNDIsNC4zOTksNC43NTljMCwwLTAuNjM1LDguMTM1LTAuODQ2LDEwLjg0N2MtMC4wNDIsMC41MjYsMC40NDYsMi44NTYsMC42MDcsMy42MjRsMTAuNzY5LDUxLjQzMQ0KCQlDMTU2LjI5MSwzMTMuNzE5LDE1NS4xNSwzMTcuMjc1LDE1My4yMTcsMzE5LjA1MXoiLz4NCgk8cGF0aCBkPSJNMzM2LjcxMSwwSDIwNC45NzljLTQuOTYsMC05LjAxOCw0LjA1OS05LjAxOCw5LjAxOVY5MC4xOGMwLDQuOTYsNC4wNTgsOS4wMTgsOS4wMTgsOS4wMThoMjMuNDM2DQoJCWM0Ljk2LDAsOC4yNDQsMy45ODMsNy4yOTcsOC44NTJsLTQuMzY3LDIyLjQ3MWMtMC45NDYsNC44NjksMS4zMzIsNi4xNzgsNS4wNjIsMi45MDlsMzIuMjgyLTI4LjI4OQ0KCQljMy43My0zLjI2OSwxMC44NC01Ljk0MywxNS44LTUuOTQzaDUyLjIyMmM0Ljk2LDAsOS4wMTgtNC4wNTgsOS4wMTgtOS4wMThWOS4wMTlDMzQ1LjcyOSw0LjA1OSwzNDEuNjcxLDAsMzM2LjcxMSwweg0KCQkgTTIyMy4wNSwyOS44ODljMC0yLjE2NiwxLjc3Mi0zLjkzOCwzLjkzOS0zLjkzOGg2OS42NzZjMi4xNjcsMCwzLjkzOSwxLjc3MiwzLjkzOSwzLjkzOHYzLjM5NWMwLDIuMTY3LTEuNzcyLDMuOTM5LTMuOTM5LDMuOTM5DQoJCWgtNjkuNjc2Yy0yLjE2NywwLTMuOTM5LTEuNzcyLTMuOTM5LTMuOTM5VjI5Ljg4OXogTTMxOC42NCw2My45NDRjMCwyLjE2Ni0xLjc3MiwzLjkzOS0zLjkzOSwzLjkzOWgtODcuNzEyDQoJCWMtMi4xNjcsMC0zLjkzOS0xLjc3Mi0zLjkzOS0zLjkzOXYtMy4zOTVjMC0yLjE2NiwxLjc3Mi0zLjkzOSwzLjkzOS0zLjkzOWg4Ny43MTJjMi4xNjcsMCwzLjkzOSwxLjc3MywzLjkzOSwzLjkzOVY2My45NDR6Ii8+DQo8L2c+DQo8L3N2Zz4=);
+    vertical-align: middle;
+  }
+
+}
+
+.wr-Notification {
+  position: absolute;
+  padding: 0 20px;
+  right: 0;
+  top: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  font-family: 'ProximaNovaRegular';
+  font-size: 16px;
+  line-height: 80px;
+  z-index: 9999;
+
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  -webkit-transition: -webkit-transform .5s;
+  transition: transform .5s;
+}
+
+.wr-Notification--visible {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform .5s .5s;
+  transition: transform .5s .5s;
+}
+
+.wr-Notification-message {
+  display: inline;
+  margin: 0 15px 0 0;
+}
+
+.wr-Notification-button {
+  display: inline-block;
+  padding: 0 10px;
+  margin-left: 5px;
+  border: 1px solid #a0148c;
+  color: #a0148c;
+  cursor: pointer;
+  font-family: 'ProximaNovaBold';
+  line-height: 40px;
+  text-transform: uppercase;
+
+  &:not([data-action="cancel"]) {
+    color: #fff;
+    background-color: #a0148c;
+  }
+
+}
+
+.wr-Notification-overlay {
+  position: absolute;
+  display: none;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9997;
+}

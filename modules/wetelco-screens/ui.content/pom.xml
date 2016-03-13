@@ -119,6 +119,13 @@
                     <verbose>true</verbose>
                     <failOnError>true</failOnError>
                     <group>weTelco</group>
+<!--                     <embeddeds> -->
+<!--                         <embedded> -->
+<!--                             <groupId>com.adobe.demo.wetelco</groupId> -->
+<!--                             <artifactId>wetelco-screens.ui.apps</artifactId> -->
+<!--                             <target>/apps/wetelco-screens/install</target> -->
+<!--                         </embedded> -->
+<!--                     </embeddeds> -->
                 </configuration>
             </plugin>
         </plugins>
@@ -183,12 +190,16 @@
             </build>
         </profile>
     </profiles>
-
-    <!-- ====================================================================== -->
+ <!-- ====================================================================== -->
     <!-- D E P E N D E N C I E S                                                -->
     <!-- ====================================================================== -->
-    <dependencies>
-       
-        
-    </dependencies>
+<!--     <dependencies> -->
+<!--         <dependency> -->
+<!--             <groupId>com.adobe.demo.wetelco</groupId> -->
+<!--             <artifactId>wetelco-screens.ui.apps</artifactId> -->
+<!--             <version>0.0.1-SNAPSHOT</version> -->
+<!--         </dependency> -->
+
+<!--     </dependencies> -->
+    
 </project>

@@ -3,7 +3,8 @@
     jcr:primaryType="sling:OrderedFolder"
     jcr:title="Screens">
     <svc/>
-    <context/>
     <geometrixx/>
     <wetelco/>
+    <wefinance/>
+    <we-retail/>
 </jcr:root>
