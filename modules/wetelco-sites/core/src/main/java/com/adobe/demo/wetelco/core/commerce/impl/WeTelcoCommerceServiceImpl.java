@@ -14,6 +14,7 @@ import com.adobe.cq.commerce.api.CommerceException;
 import com.adobe.cq.commerce.api.CommerceService;
 import com.adobe.cq.commerce.api.CommerceSession;
 import com.adobe.cq.commerce.api.Product;
+import com.adobe.cq.commerce.api.ShippingMethod;
 import com.adobe.cq.commerce.common.AbstractJcrCommerceService;
 import com.adobe.cq.commerce.common.ServiceContext;
 import com.day.cq.wcm.api.Page;
@@ -35,7 +36,11 @@ public class WeTelcoCommerceServiceImpl extends AbstractJcrCommerceService
 	@Override
 	public CommerceSession login(SlingHttpServletRequest request,
 			SlingHttpServletResponse response) throws CommerceException {
-		return new WeTelcoCommerceSessionImpl(this, request, response, resource);
+		// TODO LAB2 : START
+
+		return null;
+
+		// TODO LAB2 : END
 	}
 
 	@Override
@@ -62,16 +67,14 @@ public class WeTelcoCommerceServiceImpl extends AbstractJcrCommerceService
 			throws CommerceException {
 
 		// TODO: Lab 4
-		
+
 	}
 
 	@Override
 	public void sectionRolloutHook(Page blueprint, Page section) {
 		super.sectionRolloutHook(blueprint, section);
 
-
 		// TODO: Lab 4
-		
 
 	}
 
@@ -79,9 +82,8 @@ public class WeTelcoCommerceServiceImpl extends AbstractJcrCommerceService
 	public void productRolloutHook(Product productData, Page productPage,
 			Product product) throws CommerceException {
 
-
 		// TODO: Lab 4
-		
+
 	}
 
 	@Override
@@ -117,6 +119,13 @@ public class WeTelcoCommerceServiceImpl extends AbstractJcrCommerceService
 		List<String> predicates = new ArrayList<String>();
 		predicates.add(CommerceConstants.OPEN_ORDERS_PREDICATE);
 		return predicates;
+	}
+
+	@Override
+	public List<ShippingMethod> getAvailableShippingMethods()
+			throws CommerceException {
+		return enumerateMethods("/etc/commerce/shipping-methods/wetelco",
+				ShippingMethod.class);
 	}
 
 }

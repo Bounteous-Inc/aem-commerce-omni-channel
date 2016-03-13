@@ -3,7 +3,6 @@ package com.adobe.demo.wetelco.core.commerce;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Properties;
 import org.apache.felix.scr.annotations.Property;
-import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
 import org.apache.sling.api.resource.Resource;
 
@@ -24,8 +23,13 @@ import com.adobe.demo.wetelco.core.commerce.impl.WeTelcoCommerceServiceImpl;
 public class WeTelcoCommerceServiceFactory extends
 		AbstractJcrCommerceServiceFactory implements CommerceServiceFactory {
 
-	public CommerceService getCommerceService(Resource res) {
-		return new WeTelcoCommerceServiceImpl(getServiceContext(), res);
+	@Override
+	public CommerceService getCommerceService(Resource arg0) {
+		// TODO LAB2 : START
+		
+		return null;
+		
+		// TODO LAB2 : END
 	}
 
 }

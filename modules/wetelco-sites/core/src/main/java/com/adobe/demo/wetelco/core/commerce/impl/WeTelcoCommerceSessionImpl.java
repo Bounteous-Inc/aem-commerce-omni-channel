@@ -33,8 +33,10 @@ public class WeTelcoCommerceSessionImpl extends AbstractJcrCommerceSession {
 
 	}
 
+
 	@Override
 	protected BigDecimal getShipping(String method) {
+		//TODO
 		return BigDecimal.ZERO;
 	}
 
