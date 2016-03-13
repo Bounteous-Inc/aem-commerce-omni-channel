@@ -23,13 +23,8 @@ import com.adobe.demo.wetelco.core.commerce.impl.WeTelcoCommerceServiceImpl;
 public class WeTelcoCommerceServiceFactory extends
 		AbstractJcrCommerceServiceFactory implements CommerceServiceFactory {
 
-	@Override
-	public CommerceService getCommerceService(Resource arg0) {
-		// TODO LAB2 : START
-		
-		return null;
-		
-		// TODO LAB2 : END
+	public CommerceService getCommerceService(Resource res) {
+		return new WeTelcoCommerceServiceImpl(getServiceContext(), res);
 	}
 
 }

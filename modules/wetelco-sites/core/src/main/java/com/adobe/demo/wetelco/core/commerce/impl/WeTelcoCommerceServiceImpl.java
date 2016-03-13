@@ -36,11 +36,7 @@ public class WeTelcoCommerceServiceImpl extends AbstractJcrCommerceService
 	@Override
 	public CommerceSession login(SlingHttpServletRequest request,
 			SlingHttpServletResponse response) throws CommerceException {
-		// TODO LAB2 : START
-
-		return null;
-
-		// TODO LAB2 : END
+		return new WeTelcoCommerceSessionImpl(this, request, response, resource);
 	}
 
 	@Override
