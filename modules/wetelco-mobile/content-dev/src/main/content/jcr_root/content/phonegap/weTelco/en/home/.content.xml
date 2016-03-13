@@ -2,7 +2,6 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <my-account/>
-    <shop_backup/>
     <jcr:content
         cq:designPath="/etc/designs/phonegap/weTelco/weTelco"
         cq:lastModified="{Date}2015-10-31T08:01:32.481+11:00"
@@ -15,7 +14,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="weTelco"
-        jcr:uuid="06b328f2-8ab1-4d1d-9010-dfbc77776d60"
+        jcr:uuid="2d2c2b38-1293-4813-ad07-b1979238d866"
         sling:resourceType="weTelco/weTelco/components/ng-ionic-page"
         phonegap-contentPackageName="en"
         phonegap-contentSyncConfigPath="/content/phonegap/weTelco/content/weTelco/contentsync">

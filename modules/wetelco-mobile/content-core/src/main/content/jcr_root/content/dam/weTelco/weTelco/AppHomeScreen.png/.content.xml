@@ -9,7 +9,7 @@
         cq:parentPath="/content/dam/weTelco/weTelco"
         dam:assetID="2bd1e15a-19a7-40b0-9d8e-d8bd8e5f800b"
         dam:relativePath="weTelco/weTelco/AppHomeScreen.png"
-        jcr:lastModified="{Date}2016-03-03T20:08:50.553+11:00"
+        jcr:lastModified="{Date}2016-03-13T18:52:36.420+11:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -27,11 +27,11 @@
             dam:Progressive="no"
             dam:sha1="5f828c231c53eb987397182cec3dfc904ef545d0"
             dam:size="{Long}15287273"
-            dc:creator="Mark Szulc"
+            dc:creator="Adobe Systems"
             dc:format="image/png"
             dc:modified="{Date}2015-10-29T15:01:28.125+08:00"
             dc:title="weTelco App Home Banner"
-            jcr:lastModified="{Date}2016-03-03T20:08:50.215+11:00"
+            jcr:lastModified="{Date}2016-03-13T18:52:36.013+11:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"

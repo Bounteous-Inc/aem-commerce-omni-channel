@@ -3,16 +3,18 @@
 <properties>
 <comment>FileVault Package Properties</comment>
 <entry key="createdBy">admin</entry>
-<entry key="name">wetelco-mobile.content-author</entry>
-<entry key="lastModified">2016-02-28T17:51:08.865+11:00</entry>
+<entry key="name">wetelco-mobile.content-dev</entry>
+<entry key="lastModified">2016-03-13T18:54:53.572+11:00</entry>
 <entry key="lastModifiedBy">admin</entry>
-<entry key="created">2016-02-28T17:51:09.422+11:00</entry>
+<entry key="requiresRestart">false</entry>
+<entry key="created">2016-03-13T18:54:53.701+11:00</entry>
 <entry key="buildCount">1</entry>
 <entry key="version">0.0.1-SNAPSHOT</entry>
 <entry key="dependencies"/>
+<entry key="requiresRoot">false</entry>
 <entry key="packageFormatVersion">2</entry>
+<entry key="lastWrapped">2016-03-13T18:54:53.572+11:00</entry>
 <entry key="group">weTelco</entry>
-<entry key="lastWrapped">2016-02-28T17:51:08.865+11:00</entry>
 <entry key="description">wetelco-mobile</entry>
 <entry key="lastWrappedBy">admin</entry>
 </properties>

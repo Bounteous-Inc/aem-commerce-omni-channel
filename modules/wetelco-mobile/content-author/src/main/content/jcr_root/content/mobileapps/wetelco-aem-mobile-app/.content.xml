@@ -23,7 +23,7 @@
             jcr:primaryType="nt:unstructured"
             fileReference="/content/dam/weTelco/weTelco/thumbnail.png"
             imageRotate="0"/>
-        <collections/>
-    	<articles/>
     </jcr:content>
+    <collections/>
+    <articles/>
 </jcr:root>

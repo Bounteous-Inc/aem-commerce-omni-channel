@@ -12,7 +12,7 @@
         phonegap-build-exportTemplate="/content/phonegap/weTelco/shell/jcr:content/pge-app/weTelco"
         phonegap-build-exportTemplate-dev="/content/phonegap/weTelco/shell/jcr:content/pge-app/weTelco-dev"
         phonegap-exportTemplate="/content/phonegap/weTelco/shell/jcr:content/pge-app/app-config"
-        serverURL="http://mszulc.local:4503/">
+        serverURL="http://localhost:4503/">
         <image
             jcr:lastModified="{Date}2014-09-04T16:49:51.263-04:00"
             jcr:lastModifiedBy="admin"
@@ -47,10 +47,6 @@
             <description
                 jcr:primaryType="nt:unstructured"
                 text="The new weTelco app allows you to manage your accounts and get access to exclusive content and offers!"/>
-            <author
-                jcr:primaryType="nt:unstructured"
-                email="mszulc@adobe.com"
-                text="Mark Szulc"/>
             <content
                 jcr:primaryType="nt:unstructured"
                 src="/content/phonegap/weTelco/en"/>

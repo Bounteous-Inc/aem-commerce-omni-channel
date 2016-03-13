@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:vlt="http://www.day.com/jcr/vault/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:created="{Date}2016-02-28T17:51:08.865+11:00"
+    jcr:created="{Date}2016-03-13T18:54:53.572+11:00"
     jcr:createdBy="admin"
     jcr:description="wetelco-mobile"
-    jcr:lastModified="{Date}2016-02-28T17:51:08.865+11:00"
+    jcr:lastModified="{Date}2016-03-13T18:54:53.572+11:00"
     jcr:lastModifiedBy="admin"
     jcr:primaryType="vlt:PackageDefinition"
     buildCount="1"
-    builtWith="Adobe Experience Manager-6.2.0"
     group="weTelco"
-    lastUnwrapped="{Date}2016-02-28T17:51:08.865+11:00"
+    lastUnwrapped="{Date}2016-03-13T18:54:53.572+11:00"
     lastUnwrappedBy="admin"
-    lastWrapped="{Date}2016-02-28T17:51:08.865+11:00"
+    lastWrapped="{Date}2016-03-13T18:54:53.572+11:00"
     lastWrappedBy="admin"
-    name="wetelco-mobile.content-author"
+    name="wetelco-mobile.content-dev"
+    requiresRestart="{Boolean}false"
+    requiresRoot="{Boolean}false"
     version="0.0.1-SNAPSHOT">
     <thumbnail.png/>
     <filter jcr:primaryType="nt:unstructured">
