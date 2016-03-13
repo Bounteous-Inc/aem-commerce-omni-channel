@@ -5,8 +5,8 @@
         jcr:language="fr"
         jcr:primaryType="nt:unstructured"
         jcr:title="Français"
-        pageTitle="Nouveau Project"
-        sling:resourceType="wetelco-sites/components/structure/page">
+        sling:resourceType="wetelco-sites/components/structure/page"
+        pageTitle="Nouveau Project">
         <logo
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wetelco-sites/components/structure/logo"/>
@@ -22,16 +22,16 @@
             <title_0
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Service Component"
-                type="h2"
-                sling:resourceType="wetelco-sites/components/content/title"/>
+                sling:resourceType="wetelco-sites/components/content/title"
+                type="h2"/>
             <servicecomponent
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wetelco-sites/components/content/helloworld"/>
             <title_1
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Lorem ipsum"
-                type="h2"
-                sling:resourceType="wetelco-sites/components/content/title"/>
+                sling:resourceType="wetelco-sites/components/content/title"
+                type="h2"/>
             <text
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wetelco-sites/components/content/text"

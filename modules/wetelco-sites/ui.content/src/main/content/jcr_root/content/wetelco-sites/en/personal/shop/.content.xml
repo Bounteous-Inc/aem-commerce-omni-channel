@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
-     <jcr:content
+    <broadband/>
+    <mobile-phones/>
+    <tablets/>
+    <mobile-phones0/>
+    <tablets0/>
+    <broadband0/>
+    <jcr:content
         cq:catalogBlueprint="/content/catalogs/wetelco/en/aem-sites-personal-base-catalog"
         cq:commerceProvider="wetelco"
         cq:commerceType="section"
@@ -13,7 +19,6 @@
         jcr:primaryType="nt:unstructured"
         jcr:title="Shop"
         assetCategory="[weTelco:]"
-        sling:resourceType="wetelco-sites/components/structure/contentpage"
         navTitle="Shop"
         pageTitle="Shop"/>
 </jcr:root>

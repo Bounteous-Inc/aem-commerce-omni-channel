@@ -9,15 +9,13 @@
     <catalogs/>
     <formsanddocuments/>
     <formsanddocuments-themes/>
-    <geometrixx/>
-    <geometrixx-outdoors/>
     <geometrixx-media/>
-    <geometrixx-unlimited/>
+    <geometrixx-outdoors/>
     <geometrixx-unlimited-app/>
+    <geometrixx/>
     <geometrixx-gov/>
     <geometrixx-instore/>
-    <wetelco-sites/>
     <weTelco/>
-    <wetelco/>
-    <wetelco-aem-mobile/>
+    <wetelco-screens/>
+    <wetelco-sites/>
 </jcr:root>

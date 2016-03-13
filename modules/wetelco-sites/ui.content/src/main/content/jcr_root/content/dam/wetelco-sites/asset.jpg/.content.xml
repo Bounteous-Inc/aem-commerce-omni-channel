@@ -3,13 +3,13 @@
     jcr:isCheckedOut="{Boolean}true"
     jcr:mixinTypes="[mix:versionable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="9fbb52fe-6f2f-487d-8b88-1a1621ba3844">
+    jcr:uuid="5a12bb2b-1f4f-4155-ac9a-49f375478f8a">
     <jcr:content
         cq:name="asset.jpg"
         cq:parentPath="/content/dam/wetelco-sites"
         dam:assetID="aaid:86fa29b941394c409ddf2cc090cb1d4f"
         dam:relativePath="wetelco-sites/asset.jpg"
-        jcr:lastModified="{Date}2016-02-24T18:08:07.061+11:00"
+        jcr:lastModified="{Date}2016-03-13T10:28:45.205+11:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -66,6 +66,14 @@
                 stRef:documentID="xmp.did:4576AD9C112068118083FEAE8F0AE3A0"
                 stRef:instanceID="xmp.iid:524b6b7f-6449-45a6-b6fd-22994ff6a8fe"
                 xmpNodeType="xmpStruct"/>
+            <tiff:BitsPerSample
+                jcr:primaryType="nt:unstructured"
+                _x0031_="{Long}8"
+                _x0032_="{Long}8"
+                _x0033_="{Long}8"
+                xmpArraySize="{Long}3"
+                xmpArrayType="rdf:Bag"
+                xmpNodeType="xmpArray"/>
             <xmpMM:History
                 jcr:primaryType="nt:unstructured"
                 xmpArraySize="{Long}1"
@@ -80,14 +88,6 @@
                     stEvt:when="{Date}2015-01-01T00:00:00.000Z"
                     xmpNodeType="xmpStruct"/>
             </xmpMM:History>
-            <tiff:BitsPerSample
-                jcr:primaryType="nt:unstructured"
-                _x0031_="{Long}8"
-                _x0032_="{Long}8"
-                _x0033_="{Long}8"
-                xmpArraySize="{Long}3"
-                xmpArrayType="rdf:Bag"
-                xmpNodeType="xmpArray"/>
         </metadata>
         <related jcr:primaryType="nt:unstructured"/>
     </jcr:content>
