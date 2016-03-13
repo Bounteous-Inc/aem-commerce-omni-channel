@@ -21,14 +21,6 @@
   - * (undefined)
   + * (nt:base) = cq:Tag version
 
-[cq:LiveRelationship]
-  mixin
-  - cq:lastRolledout (date)
-  - cq:lastRolledoutBy (string)
-
-[cq:CatalogSyncAction]
-  mixin
-
 [cq:OwnerTaggable] > cq:Taggable
   mixin
 
@@ -46,11 +38,35 @@
   + renditions (nt:folder)
   + related (nt:unstructured)
 
+[cq:Panel] > cq:Widget
+  orderable
+
+[cq:Widget] > nt:unstructured
+  orderable
+  - name (string)
+  - xtype (string)
+  - title (string)
+  + items (nt:base) = cq:WidgetCollection
+
+[cq:WidgetCollection] > nt:unstructured
+  orderable
+  + * (cq:Widget) = cq:Widget
+
 [cq:CatalogSyncConfig] > nt:unstructured
 
-[cq:LcPathFilter]
-  mixin
-  - cq:excludedPaths (string) multiple
+[cq:ClientLibraryFolder] > sling:Folder
+  - dependencies (string) multiple
+  - categories (string) multiple
+  - embed (string) multiple
+  - channels (string) multiple
+
+[sling:Folder] > nt:folder
+  - * (undefined) multiple
+  - * (undefined)
+  + * (nt:base) = sling:Folder version
+
+[cq:Dialog] > cq:Widget
+  orderable
 
 [cq:PageContent] > cq:OwnerTaggable, cq:ReplicationStatus, mix:created, mix:title, nt:unstructured, sling:Resource, sling:VanityPath
   orderable
@@ -82,29 +98,9 @@
   - cq:lastReplicationAction (string) ignore
   - cq:lastReplicated (date) ignore
 
-[sling:Folder] > nt:folder
-  - * (undefined) multiple
-  - * (undefined)
-  + * (nt:base) = sling:Folder version
-
 [sling:OrderedFolder] > sling:Folder
   orderable
   + * (nt:base) = sling:OrderedFolder version
-
-[cq:ContentSyncConfig] > sling:Folder
-
-[cq:LiveCopy] > cq:LcPathFilter, cq:LiveSyncConfig
-  - cq:moveTarget (string)
-
-[cq:LiveSyncConfig]
-  - cq:isDeep (boolean) = 'true'
-  - cq:rolloutConfigs (string) multiple
-  - cq:master (string) mandatory
-  - cq:trigger (string)
-
-[cq:LiveSync] > cq:LiveRelationship
-  orderable mixin
-  + cq:LiveSyncConfig (nt:base) = cq:LiveSyncConfig
 
 [rep:RepoAccessControllable]
   mixin

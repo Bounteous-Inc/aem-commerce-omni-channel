@@ -3,129 +3,205 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:targetPath="/etc/commerce/products/wetelco"
-        jcr:description="Scaffolding that is used to create and update WeTelco products."
+        jcr:description="WeTelco scaffolding that is used to create and update products."
         jcr:primaryType="cq:PageContent"
         jcr:title="Product Data"
         sling:resourceType="wcm/scaffolding/components/scaffolding">
         <cq:dialog
             jcr:primaryType="nt:unstructured"
-            jcr:title="WeTelco Product Properties"
+            jcr:title="Geometrixx Outdoors Product Properties"
             sling:resourceType="cq/gui/components/authoring/dialog">
-            <layout
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="granite/ui/components/foundation/layouts/tabs"
-                type="nav"/>
             <content
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-                    <tabs
+                    <columns
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/container">
                         <layout
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
-                            type="nav"/>
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                            margin="{Boolean}false"/>
                         <items jcr:primaryType="nt:unstructured">
-                            <basic
+                            <column1
                                 jcr:primaryType="nt:unstructured"
-                                jcr:title="Basic"
-                                sling:resourceType="granite/ui/components/foundation/section">
+                                sling:resourceType="granite/ui/components/foundation/container">
                                 <items jcr:primaryType="nt:unstructured">
-                                    <titles
+                                    <images
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/foundation/form/fieldset">
-                                        <items jcr:primaryType="nt:unstructured">
-                                           <!--<blurb
+                                        sling:resourceType="commerce/gui/components/admin/products/images">
+                                        <image
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="commerce/gui/components/admin/products/images/image"
+                                            var="${imageRelPath}">
+                                            <thumbnail
                                                 jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                                fieldLabel="Blurb"
-                                                name="./blurb"
-                                                renderReadOnly="{Boolean}true"/>-->
-                                            <description
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/textarea"
-                                                fieldLabel="Description"
-                                                name="./jcr:description"
-                                                renderReadOnly="{Boolean}true"/>    
-                                            <frontendtitle
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                                fieldLabel="Front End Title"
-                                                name="./frontendtitle"
-                                                renderReadOnly="{Boolean}true"
-                                                required="{Boolean}true"/>
-                                            <campaigndescription
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                                fieldLabel="Campaign Description"
-                                                name="./jcr:title"
-                                                renderReadOnly="{Boolean}true"/>                                               
-                                            <identifier
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                                fieldLabel="Identifier"
-                                                name="./identifier"
-                                                renderReadOnly="{Boolean}true"/>
-                                            <special_offer
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                                fieldLabel="Special Offer"
-                                                name="./special_offer"
-                                                renderReadOnly="{Boolean}true"/>
-                                            <payontimediscount
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                                fieldLabel="Pay On Time Discount"
-                                                name="./payontimediscount"
-                                                renderReadOnly="{Boolean}true"/>                                                
-                                            <directdebitdiscount
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                                fieldLabel="Direct Debit Discount"
-                                                name="./directdebitdiscount"
-                                                renderReadOnly="{Boolean}true"/>                                               
-                                            <benefitperiod
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                                fieldLabel="Benefit Period"
-                                                name="./benefitperiod"
-                                                renderReadOnly="{Boolean}true"/>
-                                            <earlyTerminationFee
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                                fieldLabel="Early Termination Fee"
-                                                name="./earlyTerminationFee"
-                                                renderReadOnly="{Boolean}true"/>
-                                            <accountmanagement
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                                fieldLabel="Account Management"
-                                                name="./accountmanagement"
-                                                renderReadOnly="{Boolean}true"/>
-                                            <terms_and_conditions
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
-                                                fieldLabel="Terms and Conditions"
-                                                name="./terms_and_conditions"
-                                                renderReadOnly="{Boolean}true"/>                                      
-                                            <product_image_icon
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
-                                                fieldLabel="Product Image Icon"
-                                                name="./product_image_icon"
-                                                renderReadOnly="{Boolean}true"/>
-                                                                                        
-                                             <clientlibs
-		                                        jcr:primaryType="nt:unstructured"
-		                                        sling:resourceType="granite/ui/components/foundation/includeclientlibs"
-		                                        categories="[cq.authoring.dialog]"/>   
-                                        </items>
-                                    </titles>
+                                                sling:resourceType="commerce/gui/components/admin/products/properties/productthumbnail"
+                                                class="cq-ProductThumbnail">
+                                                <assetcategory
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/common/tagspicker"
+                                                    allowCreate="{Boolean}true"
+                                                    fieldLabel="Asset Category"
+                                                    name="./${imageRelPath}/assetCategory"
+                                                    rel="cq-commerce-product-image-category"
+                                                    renderReadOnly="{Boolean}true"/>
+                                                <assetpicker
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="commerce/gui/components/common/assetpicker"
+                                                    fieldLabel="Asset Path"
+                                                    name="./${imageRelPath}/${imagePropName}"
+                                                    previewTarget=".cq-ProductThumbnail"
+                                                    renderReadOnly="{Boolean}true"/>
+                                                <remove
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/submit"
+                                                    align="right"
+                                                    class="button remove-image-button"
+                                                    text="Remove"
+                                                    type="image"/>
+                                            </thumbnail>
+                                        </image>
+                                        <addimage
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/submit"
+                                            align="right"
+                                            class="button add-image-button"
+                                            text="Add Asset"
+                                            type="image"/>
+                                    </images>
                                 </items>
-                            </basic>
+                            </column1>
+                            <column2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <tabs
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/container">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+                                            type="nav"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <basic
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Basic"
+                                                sling:resourceType="granite/ui/components/foundation/section">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <titles
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <title
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                                fieldLabel="Title *"
+                                                                name="./jcr:title"
+                                                                renderReadOnly="{Boolean}true"
+                                                                required="{Boolean}true"/>
+                                                            <description
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                                                fieldLabel="Description"
+                                                                name="./jcr:description"
+                                                                renderReadOnly="{Boolean}true"/>
+                                                            <tags
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="cq/gui/components/common/tagspicker"
+                                                                fieldLabel="Tags"
+                                                                name="./cq:tags"
+                                                                renderReadOnly="{Boolean}true"/>
+                                                            <product-asset-category-default
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="cq/gui/components/common/tagspicker"
+                                                                fieldLabel="Default Asset Category"
+                                                                name="./assetCategory"
+                                                                renderReadOnly="{Boolean}true"/>
+                                                            <charset
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                                                ignoreData="{Boolean}true"
+                                                                name="_charset_"
+                                                                value="utf-8"/>
+                                                            <terms
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                                                fieldLabel="Terms"
+                                                                name="./terms"/>
+                                                        </items>
+                                                    </titles>
+                                                    <erp
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="ERP Data"
+                                                        sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <sku
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                                fieldLabel="SKU *"
+                                                                name="./identifier"
+                                                                renderReadOnly="{Boolean}true"
+                                                                required="{Boolean}true"
+                                                                validation="geometrixx.sku"/>
+                                                            <color
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                                fieldLabel="Color"
+                                                                name="./color"
+                                                                renderReadOnly="{Boolean}true"/>
+                                                            <size
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                                fieldLabel="Size"
+                                                                name="./size"
+                                                                renderReadOnly="{Boolean}true"/>
+                                                            <price
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                                fieldLabel="Price"
+                                                                name="./price"
+                                                                renderReadOnly="{Boolean}true"
+                                                                validation="geometrixx.price"/>
+                                                            <price-typehint
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                                                name="./price@TypeHint"
+                                                                renderReadOnly="{Boolean}true"
+                                                                value="Decimal"/>
+                                                        </items>
+                                                    </erp>
+                                                </items>
+                                            </basic>
+                                            <product-tabs
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Product Tabs"
+                                                sling:resourceType="granite/ui/components/foundation/section">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <clientlibs
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/includeclientlibs"
+                                                        categories="[cq.authoring.dialog]"/>
+                                                    <summary
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                        fieldLabel="Summary"
+                                                        name="./summary"
+                                                        renderReadOnly="{Boolean}true"/>
+                                                    <features
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                        fieldLabel="Features"
+                                                        name="./features"
+                                                        renderReadOnly="{Boolean}true"/>
+                                                </items>
+                                            </product-tabs>
+                                        </items>
+                                    </tabs>
+                                </items>
+                            </column2>
                         </items>
-                    </tabs>
+                    </columns>
                 </items>
             </content>
         </cq:dialog>

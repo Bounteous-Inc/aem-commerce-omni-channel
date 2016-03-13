@@ -13,11 +13,11 @@
         sling:resourceType="commerce/components/section">
         <target
             jcr:primaryType="nt:unstructured"
-            jcr_title="Hiking">
+            jcr_title="Mobile Broadband">
             <par jcr:primaryType="nt:unstructured">
                 <banner
                     jcr:primaryType="nt:unstructured"
-                    fileReference="/content/dam/geometrixx-outdoors/banners/adventure.jpg"/>
+                    fileReference=""/>
             </par>
         </target>
         <filter

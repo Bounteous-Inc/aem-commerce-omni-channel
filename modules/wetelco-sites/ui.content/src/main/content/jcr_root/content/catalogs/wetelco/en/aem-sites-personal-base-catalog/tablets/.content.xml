@@ -19,7 +19,7 @@
             <par jcr:primaryType="nt:unstructured">
                 <banner
                     jcr:primaryType="nt:unstructured"
-                    fileReference="/content/dam/geometrixx-outdoors/banners/cool-and-stylish.jpg"/>
+                    fileReference=""/>
             </par>
         </target>
         <templates jcr:primaryType="nt:unstructured"/>

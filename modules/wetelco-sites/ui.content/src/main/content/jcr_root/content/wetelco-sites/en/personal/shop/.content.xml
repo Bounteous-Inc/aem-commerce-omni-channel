@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
-    <broadband/>
-    <mobile-phones/>
-    <tablets/>
-    <mobile-phones0/>
-    <tablets0/>
-    <broadband0/>
     <jcr:content
         cq:catalogBlueprint="/content/catalogs/wetelco/en/aem-sites-personal-base-catalog"
         cq:commerceProvider="wetelco"
         cq:commerceType="section"
         cq:designPath="/etc/designs/wetelco-sites"
-        cq:lastModified="{Date}2016-02-21T18:47:14.264+11:00"
+        cq:lastModified="{Date}2016-03-13T12:14:05.541+11:00"
         cq:lastModifiedBy="admin"
-        cq:lastPropertyRollout="{Date}2016-02-21T18:47:11.333+11:00"
+        cq:lastPropertyRollout="{Date}2016-03-13T12:14:05.541+11:00"
         jcr:description="Personal Devices Shop"
         jcr:primaryType="nt:unstructured"
         jcr:title="Shop"

@@ -5,5 +5,5 @@
     <filter root="/content/dam/wetelco-sites"/>
     <filter root="/etc/tags/weTelco"/>
     <filter root="/etc/commerce/products/wetelco"/>
-    <filter root="/etc/scaffolding/weTelco"/>
+    <filter root="/etc/scaffolding/wetelco"/>
 </workspaceFilter>

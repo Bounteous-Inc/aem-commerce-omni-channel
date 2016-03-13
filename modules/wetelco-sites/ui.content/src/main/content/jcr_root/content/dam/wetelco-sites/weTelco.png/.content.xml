@@ -12,7 +12,7 @@
         dam:assetID="aaid:e7e94c22311743458a516b4cb5c18e34"
         dam:parentAssetID="aaid:31e45830896e4138bfa1991ffdb7d616"
         dam:relativePath="wetelco-sites/weTelco.png"
-        jcr:lastModified="{Date}2016-03-13T10:28:46.449+11:00"
+        jcr:lastModified="{Date}2016-03-13T12:08:27.000+11:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata

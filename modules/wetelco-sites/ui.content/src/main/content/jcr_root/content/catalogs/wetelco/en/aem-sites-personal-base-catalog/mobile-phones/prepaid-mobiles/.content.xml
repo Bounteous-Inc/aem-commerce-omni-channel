@@ -17,7 +17,7 @@
             <par jcr:primaryType="nt:unstructured">
                 <banner
                     jcr:primaryType="nt:unstructured"
-                    fileReference="/content/dam/geometrixx-outdoors/banners/keep-your-cool.jpg"/>
+                    fileReference=""/>
             </par>
         </target>
         <filter
