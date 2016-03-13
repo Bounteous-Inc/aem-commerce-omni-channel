@@ -21,7 +21,7 @@
         <image
             jcr:lastModified="{Date}2015-01-26T12:28:08.323Z"
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="wetelco-sites/components/content/product/image"
+            sling:resourceType="commerce/components/product/image"
             fileReference="/content/dam/wetelco-sites/Tablet/ipad-pro.jpg"/>
         <go-mobile-broadband-35-apple-ipad-pro-128gb-silver
             cq:commerceType="variant"
