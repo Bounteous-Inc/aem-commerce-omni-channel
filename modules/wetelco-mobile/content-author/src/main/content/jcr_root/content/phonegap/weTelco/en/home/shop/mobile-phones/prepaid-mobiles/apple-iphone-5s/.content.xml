@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/phonegap/weTelco/weTelco"
+        cq:lastModified="{Date}2016-02-21T16:53:46.637+11:00"
+        cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2016-02-21T16:53:46.665+11:00"
+        cq:lastRolledoutBy="admin"
+        cq:productMaster="/etc/commerce/products/wetelco/personal/prepaid/mobile-phones/apple/iphone5s"
+        cq:template="/apps/weTelco/weTelco/templates/ng-product-page"
+        jcr:mixinTypes="[cq:LiveSync]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Apple iPhone 5s"
+        sling:resourceType="weTelco/weTelco/components/ng-ionic-product-page">
+        <content-par
+            cq:lastRolledout="{Date}2016-02-21T16:53:46.657+11:00"
+            cq:lastRolledoutBy="admin"
+            jcr:mixinTypes="[cq:LiveRelationship]"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <ng-product
+                cq:lastRolledout="{Date}2016-02-21T16:53:46.665+11:00"
+                cq:lastRolledoutBy="admin"
+                jcr:created="{Date}2013-08-29T10:15:06.985Z"
+                jcr:createdBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="weTelco/weTelco/components/ng-product"
+                frameworkType="angular"/>
+        </content-par>
+        <cq:LiveSyncConfig
+            cq:isDeep="{Boolean}false"
+            cq:master="/content/catalogs/wetelco/en/aem-mobile-template-pages/product-page-template"
+            cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
+            jcr:primaryType="cq:LiveCopy"/>
+    </jcr:content>
+</jcr:root>

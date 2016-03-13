@@ -11,7 +11,8 @@
         pge-type="[app-instance]"
         phonegap-build-exportTemplate="/content/phonegap/weTelco/shell/jcr:content/pge-app/weTelco"
         phonegap-build-exportTemplate-dev="/content/phonegap/weTelco/shell/jcr:content/pge-app/weTelco-dev"
-        phonegap-exportTemplate="/content/phonegap/weTelco/shell/jcr:content/pge-app/app-config">
+        phonegap-exportTemplate="/content/phonegap/weTelco/shell/jcr:content/pge-app/app-config"
+        serverURL="http://mszulc.local:4503/">
         <image
             jcr:lastModified="{Date}2014-09-04T16:49:51.263-04:00"
             jcr:lastModifiedBy="admin"
@@ -23,9 +24,9 @@
                 <phonegap/>
             </app-content>
             <app-config/>
+            <app-config-dev/>
             <weTelco/>
             <weTelco-dev/>
-            <app-config-dev/>
         </pge-app>
         <screenshots
             jcr:primaryType="nt:unstructured"
@@ -36,5 +37,28 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resources="[]"/>
         </screenshots>
+        <store
+            jcr:primaryType="nt:unstructured"
+            shortdescription="Manage your weTelco services all in one place!"/>
+        <widget jcr:primaryType="nt:unstructured">
+            <icon
+                jcr:primaryType="nt:unstructured"
+                fileReference="/content/dam/weTelco/weTelco/weTelco.png"/>
+            <description
+                jcr:primaryType="nt:unstructured"
+                text="The new weTelco app allows you to manage your accounts and get access to exclusive content and offers!"/>
+            <author
+                jcr:primaryType="nt:unstructured"
+                email="mszulc@adobe.com"
+                text="Mark Szulc"/>
+            <content
+                jcr:primaryType="nt:unstructured"
+                src="/content/phonegap/weTelco/en"/>
+            <preferences jcr:primaryType="nt:unstructured">
+                <phonegap-version
+                    jcr:primaryType="nt:unstructured"
+                    value="5.3.3"/>
+            </preferences>
+        </widget>
     </jcr:content>
 </jcr:root>

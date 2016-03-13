@@ -28,8 +28,9 @@
 
             String title = (carouselPage.getTitle() == null ? "" : carouselPage.getTitle());
 %><%
-%>        <a class="item" ng-click="go('<%= xssAPI.getValidHref(carouselPage.getPath()) %>')">
+%>        <a class="item item-icon-right" ng-click="go('<%= xssAPI.getValidHref(carouselPage.getPath()) %>')">
         	<%= xssAPI.encodeForHTML(title) %>
+        	<i class="icon ion-chevron-right"></i>
         </a><%
 %><%
         }

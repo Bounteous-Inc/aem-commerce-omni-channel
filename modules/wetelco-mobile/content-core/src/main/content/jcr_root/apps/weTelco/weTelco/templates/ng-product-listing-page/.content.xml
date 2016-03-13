@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="WeTelco Mobile product listing page"
+    jcr:primaryType="cq:Template"
+    jcr:title="WeTelco Mobile App Product listing page"
+    allowedPaths="[/]"
+    ranking="{Long}0">
+    <jcr:content
+        cq:designPath="/etc/designs/phonegap/geometrixx/ng-outdoorsapp"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="geometrixx-outdoors-app/components/angular/ng-geometrixx-page">
+        <content-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <ng_menu_list
+                jcr:created="{Date}2013-11-08T22:40:20.283Z"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2013-11-08T22:45:19.019Z"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="geometrixx-outdoors-app/components/menu-list"
+                listFrom="children"
+                playSpeed="6000"
+                transTime="1000"/>
+            <ng_product_listing
+                jcr:created="{Date}2013-11-08T22:40:20.283Z"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2013-11-08T22:45:19.019Z"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="geometrixx-outdoors-app/components/product/product-listing"/>
+        </content-par>
+    </jcr:content>
+</jcr:root>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
-    <filter root="/apps/weTelco/weTelco"/>
+    <filter root="/apps/weTelco"/>
     <filter root="/etc/clientlibs/weTelco/ionic-1.1.0"/>
     <filter root="/etc/clientlibs/weTelco/phonegap-ready"/>
-    <filter root="/etc/clientlibs/weTelco/utility"/>
     <filter root="/etc/designs/phonegap/weTelco/weTelco"/>
-    <filter root="/content/dam/weTelco/weTelco"/>
+    <filter root="/etc/contentsync/templates/wetelco-aem-mobile"/>
+    <filter root="/content/dam/weTelco"/>
 </workspaceFilter>

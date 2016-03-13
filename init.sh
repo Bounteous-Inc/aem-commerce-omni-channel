@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo "************* L322 - Lab3 - Start Initialisation ***********"
+echo "************* L322 - Lab4 - Start Initialisation ***********"
 mvn clean install package -PautoInstallPackage
-echo "************* L322 - Lab3 - End Initialisation  ***********"
+echo "************* L322 - Lab4 - End Initialisation  ***********"

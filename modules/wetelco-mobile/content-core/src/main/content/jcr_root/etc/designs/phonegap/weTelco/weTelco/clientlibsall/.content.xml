@@ -3,4 +3,4 @@
     jcr:primaryType="cq:ClientLibraryFolder"
     categories="[apps.weTelco.weTelco.all]"
     dependencies="[weTelco.ionic-1.1.0]"
-    embed="[weTelco.btford-angular-phonegap,apps.weTelco.nav,apps.weTelco.weTelco,weTelco.utility,cq.mobile.content-sync-2]"/>
+    embed="[weTelco.btford-angular-phonegap,apps.weTelco.nav,apps.weTelco.weTelco,cq.mobile.content-sync-2,apps.weTelco.article]"/>
