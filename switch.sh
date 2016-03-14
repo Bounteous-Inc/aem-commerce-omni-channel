@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo "************* L322 - Lab1 - Switch to Lesson 2 ***********"
-git checkout lab2-task2
-echo "************* L322 - Lab1 - End Switch to Lesson 2   ***********"
+echo "************* L322 - Lab3 - Switch to Lesson 3 ***********"
+git checkout lab3
+echo "************* L322 - Lab3 - End Switch to Lesson 3   ***********"
