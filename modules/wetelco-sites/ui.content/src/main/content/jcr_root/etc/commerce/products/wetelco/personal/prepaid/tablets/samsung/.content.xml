@@ -22,7 +22,7 @@
         <image
             jcr:lastModified="{Date}2015-01-26T12:28:08.323Z"
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="wetelco-sites/components/content/product/image"
+            sling:resourceType="commerce/components/product/image"
             fileReference="/content/dam/wetelco-sites/Tablet/samsung_galaxy_tab_a_8_wi_fi.jpg"/>
         <prepaid-mobile-broadband-55-samsung-galaxy-tab-a-80-white
             cq:commerceType="variant"

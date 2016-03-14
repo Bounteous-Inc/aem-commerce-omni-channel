@@ -4,7 +4,6 @@
 <'nt'='http://www.jcp.org/jcr/nt/1.0'>
 <'jcr'='http://www.jcp.org/jcr/1.0'>
 <'dam'='http://www.day.com/dam/1.0'>
-<'vlt'='http://www.day.com/jcr/vault/1.0'>
 <'rep'='internal'>
 
 [sling:Redirect] > sling:Resource
@@ -119,9 +118,6 @@
   - configPath (string)
   - active (boolean)
   + config (nt:unstructured) = nt:unstructured
-
-[vlt:FullCoverage]
-  mixin
 
 [sling:OrderedFolder] > sling:Folder
   orderable

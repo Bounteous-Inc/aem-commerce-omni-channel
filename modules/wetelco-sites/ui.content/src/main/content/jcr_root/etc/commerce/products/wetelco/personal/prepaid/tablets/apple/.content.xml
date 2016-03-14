@@ -22,7 +22,7 @@
         <image
             jcr:lastModified="{Date}2015-01-26T12:28:08.323Z"
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="wetelco-sites/components/content/product/image"
+            sling:resourceType="commerce/components/product/image"
             fileReference="/content/dam/wetelco-sites/Tablet/ipad-pro.jpg"/>
         <pp-ipad-mini-4-16gb-gold-cellular
             cq:commerceType="variant"

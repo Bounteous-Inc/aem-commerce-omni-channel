@@ -4,5 +4,4 @@
         <include pattern="/content/phonegap/weTelco(/.*)?"/>
         <exclude pattern="/content/phonegap/weTelco/shell(/.*)?"/>
     </filter>
-    <filter root="/content/mobileapps/wetelco-aem-mobile-app"/>
 </workspaceFilter>

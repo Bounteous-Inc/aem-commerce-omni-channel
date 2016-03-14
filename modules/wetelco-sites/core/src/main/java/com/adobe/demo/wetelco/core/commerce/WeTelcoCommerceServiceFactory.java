@@ -27,9 +27,10 @@ public class WeTelcoCommerceServiceFactory extends
 
 	@Reference
 	private AEMMoDService aemModService;
-	
+
 	public CommerceService getCommerceService(Resource res) {
-		return new WeTelcoCommerceServiceImpl(getServiceContext(), res, aemModService);
+		return new WeTelcoCommerceServiceImpl(getServiceContext(), res,
+				aemModService);
 	}
 
 }

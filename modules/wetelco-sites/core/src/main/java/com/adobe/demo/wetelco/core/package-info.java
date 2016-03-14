@@ -19,4 +19,3 @@ package com.adobe.demo.wetelco.core;
 
 import aQute.bnd.annotation.Export;
 import aQute.bnd.annotation.Version;
-
