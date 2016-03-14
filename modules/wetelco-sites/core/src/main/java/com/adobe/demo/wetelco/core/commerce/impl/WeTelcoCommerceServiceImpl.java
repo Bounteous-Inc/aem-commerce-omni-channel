@@ -40,6 +40,7 @@ public class WeTelcoCommerceServiceImpl extends AbstractJcrCommerceService
 			Resource resource, AEMMoDService aemModService) {
 		super(serviceContext, resource);
 		this.resource = resource;
+		this.aemModService = aemModService;
 	}
 
 	@Override
