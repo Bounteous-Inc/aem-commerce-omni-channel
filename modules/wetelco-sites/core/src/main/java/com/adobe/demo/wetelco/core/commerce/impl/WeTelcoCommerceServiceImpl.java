@@ -1,11 +1,16 @@
 package com.adobe.demo.wetelco.core.commerce.impl;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.jcr.RepositoryException;
+import javax.servlet.ServletException;
 
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.Resource;
+import org.apache.sling.api.resource.ValueMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,6 +22,7 @@ import com.adobe.cq.commerce.api.Product;
 import com.adobe.cq.commerce.api.ShippingMethod;
 import com.adobe.cq.commerce.common.AbstractJcrCommerceService;
 import com.adobe.cq.commerce.common.ServiceContext;
+import com.adobe.demo.wetelco.mobile.dps.mobileclient.RequestException;
 import com.adobe.demo.wetelco.mobile.dps.services.AEMMoDService;
 import com.day.cq.wcm.api.Page;
 
@@ -65,24 +71,84 @@ public class WeTelcoCommerceServiceImpl extends AbstractJcrCommerceService
 	public void catalogRolloutHook(Page blueprint, Page catalog)
 			throws CommerceException {
 
-		// TODO: Lab 4
 
+		// This will be the first method, so make sure to import all
+		// collection/articles from
+		// AEM MoD
+		// TODO - Lab 4 : Uncomment Start
+		/*
+		try {
+			aemModService.importOnDemandContent(catalog);
+		} catch (ServletException e) {
+			LOGGER.error("Error during AEM MoD Service Import");
+			e.printStackTrace();
+		} catch (IOException e) {
+			LOGGER.error("Error during AEM MoD Service Import");
+			e.printStackTrace();
+		} catch (RequestException e) {
+			LOGGER.error("Error during AEM MoD Service Import");
+			e.printStackTrace();
+		} catch (RepositoryException e) {
+			LOGGER.error("Error during AEM MoD Service Import");
+			e.printStackTrace();
+		}*/
+		// TODO - Lab 4 : Uncomment End
 	}
 
 	@Override
 	public void sectionRolloutHook(Page blueprint, Page section) {
+
 		super.sectionRolloutHook(blueprint, section);
+		LOGGER.debug("THIS IS A COLLECTION TO BE CREATED !!!!");
 
-		// TODO: Lab 4
+		// TODO - Lab 4 : Uncomment Start
+		/*
+		// 1. Check if the blueprint is having a property for DPS Rollout
+		ValueMap listOfProperties = section.getProperties();
+		Object dpsResourceType = listOfProperties.get("dps-isRolloutout");
 
+		// 2. If the rollout is for DPS Rollout, then make sure that the secion
+		// goes in as category
+		if (dpsResourceType != null) {
+			// Then this is a article and we need to create a Collection
+			try {
+
+				LOGGER.debug("START - COLLECTION TO BE CREATED !!!!");
+				aemModService.createCollection(section);
+				LOGGER.debug("END - COLLECTION TO BE CREATED !!!!");
+
+			} catch (RepositoryException e) {
+				LOGGER.error("Error during AEM MoD Service Upload of Collections");
+				e.printStackTrace();
+			} catch (Exception e) {
+				LOGGER.error("Error during AEM MoD Service Upload of Collections");
+				e.printStackTrace();
+			}
+		}*/
+		// TODO - Lab 4 : Uncomment End
 	}
 
 	@Override
 	public void productRolloutHook(Product productData, Page productPage,
 			Product product) throws CommerceException {
 
-		// TODO: Lab 4
 
+		super.productRolloutHook(productData, productPage, product);
+
+		LOGGER.debug("THIS IS A ARTICLE TO BE CREATED !!!!");
+		// TODO - Lab 4 : Uncomment Start
+		/*
+		try {
+			// Then this is a article and we need to create a Collection
+			aemModService.createArticle(productPage);
+		} catch (RepositoryException e) {
+			LOGGER.error("Error during AEM MoD Service Upload of Articles");
+			e.printStackTrace();
+		} catch (Exception e) {
+			LOGGER.error("Error during AEM MoD Service Upload of Articles");
+			e.printStackTrace();
+		}*/
+		// TODO - Lab 4 : Uncomment End
 	}
 
 	@Override
