@@ -17,6 +17,7 @@ import com.adobe.cq.commerce.api.Product;
 import com.adobe.cq.commerce.api.ShippingMethod;
 import com.adobe.cq.commerce.common.AbstractJcrCommerceService;
 import com.adobe.cq.commerce.common.ServiceContext;
+import com.adobe.demo.wetelco.mobile.dps.services.AEMMoDService;
 import com.day.cq.wcm.api.Page;
 
 public class WeTelcoCommerceServiceImpl extends AbstractJcrCommerceService
@@ -27,8 +28,10 @@ public class WeTelcoCommerceServiceImpl extends AbstractJcrCommerceService
 	public static final Logger LOGGER = LoggerFactory
 			.getLogger(WeTelcoCommerceServiceImpl.class);
 
+	private AEMMoDService aemModService;
+	
 	public WeTelcoCommerceServiceImpl(ServiceContext serviceContext,
-			Resource resource) {
+			Resource resource, AEMMoDService aemModService) {
 		super(serviceContext, resource);
 		this.resource = resource;
 	}
