@@ -76,7 +76,7 @@ public class WeTelcoCommerceServiceImpl extends AbstractJcrCommerceService
 		// collection/articles from
 		// AEM MoD
 		// TODO - Lab 4 : Uncomment Start
-		/*
+		
 		try {
 			aemModService.importOnDemandContent(catalog);
 		} catch (ServletException e) {
@@ -91,7 +91,7 @@ public class WeTelcoCommerceServiceImpl extends AbstractJcrCommerceService
 		} catch (RepositoryException e) {
 			LOGGER.error("Error during AEM MoD Service Import");
 			e.printStackTrace();
-		}*/
+		}
 		// TODO - Lab 4 : Uncomment End
 	}
 
@@ -102,7 +102,7 @@ public class WeTelcoCommerceServiceImpl extends AbstractJcrCommerceService
 		LOGGER.debug("THIS IS A COLLECTION TO BE CREATED !!!!");
 
 		// TODO - Lab 4 : Uncomment Start
-		/*
+		
 		// 1. Check if the blueprint is having a property for DPS Rollout
 		ValueMap listOfProperties = section.getProperties();
 		Object dpsResourceType = listOfProperties.get("dps-isRolloutout");
@@ -124,7 +124,7 @@ public class WeTelcoCommerceServiceImpl extends AbstractJcrCommerceService
 				LOGGER.error("Error during AEM MoD Service Upload of Collections");
 				e.printStackTrace();
 			}
-		}*/
+		}
 		// TODO - Lab 4 : Uncomment End
 	}
 
@@ -137,7 +137,7 @@ public class WeTelcoCommerceServiceImpl extends AbstractJcrCommerceService
 
 		LOGGER.debug("THIS IS A ARTICLE TO BE CREATED !!!!");
 		// TODO - Lab 4 : Uncomment Start
-		/*
+		
 		try {
 			// Then this is a article and we need to create a Collection
 			aemModService.createArticle(productPage);
@@ -147,7 +147,7 @@ public class WeTelcoCommerceServiceImpl extends AbstractJcrCommerceService
 		} catch (Exception e) {
 			LOGGER.error("Error during AEM MoD Service Upload of Articles");
 			e.printStackTrace();
-		}*/
+		}
 		// TODO - Lab 4 : Uncomment End
 	}
 
