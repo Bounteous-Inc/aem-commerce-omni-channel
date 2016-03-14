@@ -25,7 +25,4 @@
             cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
             jcr:primaryType="cq:LiveCopy"/>
     </jcr:content>
-    <mobile-phones/>
-    <tablets/>
-    <broadband/>
 </jcr:root>
