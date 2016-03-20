@@ -1,9 +1,11 @@
 #!/bin/bash
 
 echo "************* L322 - Start Initialisation ***********"
-# cd /Users/vvenkata/Documents/Varun/PresentationInventory/Presentation/Summit2016/LabMachine/Users/l322/Desktop/AEM-Commerce-Lab-WS/aem-commerce-omni-channel
 git fetch
-git checkout lab1
+git pull
 cp -rf external/* ~/.m2/repository
+git checkout lab1
 mvn clean install -PautoInstallPackage
+echo "************* Copy Presentation, Workbook and Cheatsheets to Desktop"
+cp /Users/l322/Desktop/AEM-Commerce-Lab-WS/aem-commerce-omni-channel/documentation/* /Users/l322/Desktop/
 echo "************* L322 - End Initialisation  ***********"
