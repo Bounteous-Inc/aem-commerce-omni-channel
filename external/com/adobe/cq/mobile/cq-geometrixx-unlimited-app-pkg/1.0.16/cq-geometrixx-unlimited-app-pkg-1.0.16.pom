@@ -1,0 +1,419 @@
+<?xml version="1.0"?><!--
+
+  ADOBE CONFIDENTIAL
+  __________________
+
+   Copyright 2012 Adobe Systems Incorporated
+   All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!-- ====================================================================== -->
+    <!-- P A R E N T  P R O J E C T  D E S C R I P T I O N                      -->
+    <!-- ====================================================================== -->
+    <parent>
+        <groupId>com.day.cq</groupId>
+        <artifactId>parent</artifactId>
+        <version>46</version>
+        <relativePath />
+    </parent>
+
+    <!-- ====================================================================== -->
+    <!-- P R O J E C T  D E S C R I P T I O N                                   -->
+    <!-- ====================================================================== -->
+    <groupId>com.adobe.cq.mobile</groupId>
+    <artifactId>cq-geometrixx-unlimited-app-pkg</artifactId>
+    <packaging>content-package</packaging>
+    <name>CQ Mobile Geometrixx Unlimited App Package</name>
+    <version>1.0.16</version>
+    <description>Sample content package that contains the Geometrixx Unlimited Publish sample</description>
+
+    <scm>
+        <connection>scm:git:git@git.corp.adobe.com:CQ/mobile.git</connection>
+        <developerConnection>scm:git:git@git.corp.adobe.com:CQ/mobile.git</developerConnection>
+        <url>https://git.corp.adobe.com/CQ/mobile/tree/master/geometrixx-unlimited-app</url>
+        <tag>cq-geometrixx-unlimited-app-pkg-1.0.16</tag>
+    </scm>
+
+    <!-- ====================================================================== -->
+    <!-- P R O P E R T I E S -->
+    <!-- ====================================================================== -->
+    <properties>
+        <crx.host>localhost</crx.host>
+        <crx.port>4502</crx.port>
+        <crx.custom.context />                 <!-- in the format: "/root" -->
+        <crx.username>admin</crx.username>
+        <crx.password>admin</crx.password>
+
+        <publish.crx.host>localhost</publish.crx.host>
+        <publish.crx.port>4503</publish.crx.port>
+        <publish.crx.custom.context />  <!-- in the format: "/root" -->
+        <publish.crx.username>admin</publish.crx.username>
+        <publish.crx.password>admin</publish.crx.password>
+
+        <bundle-install-home>/libs/mobileapps/install</bundle-install-home>
+        <baseline.failOnError>false</baseline.failOnError>
+        <slingUrl>http://localhost:4502/crx/repository/crx.default</slingUrl> <!-- This can be passed in as a parameter if using a custom root context -->
+
+        <install.targetbase>/libs/mobileapps</install.targetbase>
+        <vault.package.group>com/adobe/cq/mobile</vault.package.group>
+    </properties>
+
+    <!-- ====================================================================== -->
+    <!-- B U I L D   D E F I N I T I O N                                        -->
+    <!-- ====================================================================== -->
+    <build>
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/content/jcr_root</directory>
+                <targetPath>.</targetPath>
+                <filtering>false</filtering>
+                <includes>
+                    <include>apps/geometrixx-unlimited-app/**</include>
+
+                    <include>content/dam/**</include>
+                    <include>content/mobileapps/**</include>
+                    <include>etc/contentsync/templates/dps-geometrixx-unlimited-app/**</include>
+                    <include>etc/designs/geometrixx-unlimited-app/**</include>
+                </includes>
+                <excludes>
+                    <!-- exclude .vlt control files  -->
+                    <exclude>**/.vlt</exclude>
+                    <exclude>**/.vltignore</exclude>
+                    <exclude>**/*.ipr</exclude>
+                    <exclude>**/*.iws</exclude>
+                    <exclude>**/*.iml</exclude>
+                    <exclude>**/.classpath</exclude>
+                    <exclude>**/.project</exclude>
+                    <exclude>**/.settings</exclude>
+                    <exclude>**/.DS_Store</exclude>
+                    <exclude>**/target/**</exclude>
+                </excludes>
+            </resource>
+        </resources>
+
+        <plugins>
+            <!--
+                we want to keep some of the META-INF files and not configure
+                everything in the plugin (mainly the filters).
+
+                copy the resource explicitly instead of attaching it to the default resources
+            -->
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <!-- ensure that the empty directories are copied -->
+                <configuration>
+                    <includeEmptyDirs>true</includeEmptyDirs>
+                </configuration>
+
+                <executions>
+                    <execution>
+                        <id>copy-metainf-vault-resources</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/vault-work/META-INF</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${basedir}/src/main/content/META-INF</directory>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- we don't want the remote resources copied to target/classes
+                 (attached) this would add them below the jcr_root, too.
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-remote-resources-plugin</artifactId>
+                <version>1.2.1</version>
+                <configuration>
+                    <attached>false</attached>
+                    <outputDirectory>${project.build.directory}/vault-work/</outputDirectory>
+                </configuration>
+            </plugin>
+
+            <!-- ====================================================================== -->
+            <!-- V A U L T   P A C K A G E   P L U G I N                                -->
+            <!-- ====================================================================== -->
+
+            <plugin>
+                <groupId>com.day.jcr.vault</groupId>
+                <artifactId>content-package-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <group>day/cq60/product</group>
+                    <properties>
+                        <description>${project.description}</description>
+                        <created>${buildNumber}</created>
+                        <createdBy>Adobe Systems Incorporated</createdBy>
+                        <acHandling>merge_preserve</acHandling>
+                    </properties>
+                    <filterSource>src/main/content/META-INF/vault/filter.xml</filterSource>
+
+                    <dependencies>
+                        <dependency>
+                            <group>day/cq60/product</group>
+                            <name>cq-content</name>
+                            <version>[6.1.76,)</version>
+                        </dependency>
+                        <dependency>
+                            <group>day/cq60/product</group>
+                            <name>cq-geometrixx-outdoors-pkg</name>
+                            <version>[5.8.88,)</version>
+                        </dependency>
+                    </dependencies>
+
+                    <targetURL>http://${crx.host}:${crx.port}${crx.custom.context}/crx/packmgr/service.jsp</targetURL>
+                </configuration>
+            </plugin>
+
+            <!-- use the buildnumber plugin to generate a ISO8601 timestamp -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+                <version>1.1</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>create</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <format>{0,date,yyyyMMdd}</format>
+                    <items>
+                        <item>timestamp</item>
+                    </items>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <inherited>true</inherited>
+                <configuration>
+                    <attach>false</attach>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>autoInstallPackage</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.day.jcr.vault</groupId>
+                        <artifactId>content-package-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>install-content-package</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>install</goal>
+                                </goals>
+                                <configuration>
+                                    <targetURL>http://${crx.host}:${crx.port}${crx.custom.context}/crx/packmgr/service.jsp</targetURL>
+                                    <username>${crx.username}</username>
+                                    <password>${crx.password}</password>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>autoInstallPackagePublish</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.day.jcr.vault</groupId>
+                        <artifactId>content-package-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>install-content-package-publish</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>install</goal>
+                                </goals>
+                                <configuration>
+                                    <targetURL>http://${publish.crx.host}:${publish.crx.port}${publish.crx.custom.context}/crx/packmgr/service.jsp</targetURL>
+                                    <username>${publish.crx.username}</username>
+                                    <password>${publish.crx.password}</password>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <!-- ====================================================================== -->
+    <!-- R E P O R T I N G                                                      -->
+    <!-- ====================================================================== -->
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+
+    <!-- ====================================================================== -->
+    <!-- D E P E N D E N C I E S                                                -->
+    <!-- ====================================================================== -->
+    <dependencies>
+        <dependency>
+            <groupId>com.adobe.cq.mobile</groupId>
+            <artifactId>cq-mobile-core</artifactId>
+            <version>6.2.26</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.day.cq</groupId>
+            <artifactId>cq-commons</artifactId>
+            <version>5.6.2</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.day.cq.wcm</groupId>
+            <artifactId>cq-wcm-commons</artifactId>
+            <version>5.6.4</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.day.cq.wcm</groupId>
+            <artifactId>cq-wcm-api</artifactId>
+            <version>5.6.2</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.api</artifactId>
+            <version>2.2.2</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.day.cq.wcm</groupId>
+            <artifactId>cq-wcm-taglib</artifactId>
+            <version>5.6.2</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.day.cq.wcm</groupId>
+            <artifactId>cq-wcm-foundation</artifactId>
+            <version>5.6.4</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.scripting.jsp.taglib</artifactId>
+            <version>2.1.2</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.day.commons</groupId>
+            <artifactId>day-commons-text</artifactId>
+            <version>1.1.5</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.3.2</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.adobe.cq.wcm</groupId>
+            <artifactId>cq-geometrixx-commons-core</artifactId>
+            <version>1.0.12</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.adobe.cq.media</groupId>
+            <artifactId>cq-media-publishing-dps-integration</artifactId>
+            <version>5.6.16</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.adobe.cq.social</groupId>
+            <artifactId>cq-social-ugcbase</artifactId>
+            <version>2.0.67</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.adobe.cq.social</groupId>
+            <artifactId>cq-social-messaging</artifactId>
+            <version>1.2.12</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.adobe.granite</groupId>
+            <artifactId>com.adobe.granite.security.user</artifactId>
+            <version>0.1.8</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.granite</groupId>
+            <artifactId>com.adobe.granite.ui.commons</artifactId>
+            <version>5.5.174</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.granite</groupId>
+            <artifactId>com.adobe.granite.xssprotection</artifactId>
+            <version>5.5.34</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>

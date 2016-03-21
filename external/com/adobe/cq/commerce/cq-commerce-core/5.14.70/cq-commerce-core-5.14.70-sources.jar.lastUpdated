@@ -1,0 +1,18 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Mar 16 14:27:34 AEDT 2016
+https\://repo.adobe.com/nexus/content/groups/public/.error=
+http\://dev.cqblueprints.com/nexus/content/repositories/releases/.error=
+@default-fallback4-http\://54.153.145.58\:7402/artifactory/odt-remote-repos/.lastUpdated=1458098851591
+http\://dev.cqblueprints.com/nexus/content/repositories/releases/.lastUpdated=1458098852914
+http\://repository.apache.org/snapshots/.lastUpdated=1458098850697
+http\://repo2.maven.org/maven2/.error=
+https\://repo.adobe.com/nexus/content/groups/public/.lastUpdated=1458098854505
+http\://repo.adobe.com/nexus/content/groups/public/.error=
+http\://repo.adobe.com/nexus/content/groups/public/.lastUpdated=1458098850309
+http\://nexus.bsl.eur.adobe.com/content/groups/development-repositories/.error=Could not transfer artifact com.adobe.cq.commerce\:cq-commerce-core\:jar\:sources\:5.14.70 from/to nexus-releases (http\://nexus.bsl.eur.adobe.com/content/groups/development-repositories)\: nexus.bsl.eur.adobe.com\: nodename nor servname provided, or not known
+http\://repo2.maven.org/maven2/.lastUpdated=1458098851556
+@default-nexus-releases-http\://nexus.bsl.eur.adobe.com/content/groups/development-repositories/.lastUpdated=1458098851621
+http\://54.153.145.58\:7402/artifactory/odt-remote-repos/.error=Could not transfer artifact com.adobe.cq.commerce\:cq-commerce-core\:jar\:sources\:5.14.70 from/to fallback4 (http\://54.153.145.58\:7402/artifactory/odt-remote-repos)\: Connection refused
+http\://repo1.maven.org/maven2/.error=
+http\://repo1.maven.org/maven2/.lastUpdated=1458098851175
+http\://repository.apache.org/snapshots/.error=

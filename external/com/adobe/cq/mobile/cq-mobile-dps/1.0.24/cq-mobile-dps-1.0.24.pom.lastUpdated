@@ -1,0 +1,16 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Mar 17 17:44:59 AEDT 2016
+http\://dev.cqblueprints.com/nexus/content/repositories/releases/.error=
+http\://dev.cqblueprints.com/nexus/content/repositories/releases/.lastUpdated=1458197099895
+@default-fallback4-http\://54.153.145.58\:7402/artifactory/odt-remote-repos/.lastUpdated=1458197099434
+http\://repository.apache.org/snapshots/.lastUpdated=1458197098801
+http\://repo2.maven.org/maven2/.error=
+http\://repo.adobe.com/nexus/content/groups/public/.error=
+http\://repo.adobe.com/nexus/content/groups/public/.lastUpdated=1458197098423
+http\://nexus.bsl.eur.adobe.com/content/groups/development-repositories/.error=Could not transfer artifact com.adobe.cq.mobile\:cq-mobile-dps\:pom\:1.0.24 from/to nexus-releases (http\://nexus.bsl.eur.adobe.com/content/groups/development-repositories)\: nexus.bsl.eur.adobe.com
+@default-nexus-releases-http\://nexus.bsl.eur.adobe.com/content/groups/development-repositories/.lastUpdated=1458197099439
+http\://repo2.maven.org/maven2/.lastUpdated=1458197099423
+http\://54.153.145.58\:7402/artifactory/odt-remote-repos/.error=Could not transfer artifact com.adobe.cq.mobile\:cq-mobile-dps\:pom\:1.0.24 from/to fallback4 (http\://54.153.145.58\:7402/artifactory/odt-remote-repos)\: Connection refused
+http\://repo1.maven.org/maven2/.lastUpdated=1458197099078
+http\://repo1.maven.org/maven2/.error=
+http\://repository.apache.org/snapshots/.error=

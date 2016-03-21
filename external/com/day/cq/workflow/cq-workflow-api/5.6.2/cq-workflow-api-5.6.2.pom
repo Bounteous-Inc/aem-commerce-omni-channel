@@ -1,0 +1,159 @@
+<?xml version="1.0"?><!--
+  Copyright 1997-2009 Day Management AG
+  Barfuesserplatz 6, 4001 Basel, Switzerland
+  All Rights Reserved.
+
+  This software is the confidential and proprietary information of
+  Day Management AG, ("Confidential Information"). You shall not
+  disclose such Confidential Information and shall use it only in
+  accordance with the terms of the license agreement you entered into
+  with Day.
+ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!-- ======================================================================= -->
+    <!-- P A R E N T   P R O J E C T                                             -->
+    <!-- ======================================================================= -->
+    <parent>
+        <groupId>com.day.cq</groupId>
+        <artifactId>parent</artifactId>
+        <version>31</version>
+    </parent>
+
+    <!-- ======================================================================= -->
+    <!-- P R O J E C T                                                           -->
+    <!-- ======================================================================= -->
+    <groupId>com.day.cq.workflow</groupId>
+    <artifactId>cq-workflow-api</artifactId>
+    <version>5.6.2</version>
+    <packaging>bundle</packaging>
+
+    <name>Day Communique 5 Workflow API</name>
+    <description>
+        The Day Communique 5 Workflow API bundle provides public interfaces and
+        types for the Day Communiqué 5 workflow engine.
+    </description>
+
+    <scm>
+        <connection>scm:git:git@git.corp.adobe.com:CQ5/cq5.git</connection>
+        <developerConnection>scm:git:git@git.corp.adobe.com:CQ5/cq5.git</developerConnection>
+        <url>https://fit.corp.adobe.com/CQ5/cq5/tree/master/content/jcr_root/libs/cq/workflow/src/api</url>
+      <tag>cq-workflow-api-5.6.2</tag>
+  </scm>
+
+    <!-- ======================================================================= -->
+    <!-- B U I L D                                                               -->
+    <!-- ======================================================================= -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>maven-sling-plugin</artifactId>
+                <configuration>
+                    <slingUrlSuffix>/libs/cq/workflow/install/</slingUrlSuffix>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Bundle-Category>cq5-workflow</Bundle-Category>
+                        <Export-Package>
+                            com.day.cq.workflow,
+                            com.day.cq.workflow.job,
+                            com.day.cq.workflow.exec,
+                            com.day.cq.workflow.exec.filter,
+                            com.day.cq.workflow.model,
+                            com.day.cq.workflow.event,
+                            com.day.cq.workflow.rule,
+                            com.day.cq.workflow.statistics,
+                            com.day.cq.workflow.status,
+                            com.day.cq.workflow.collection,
+                            com.day.cq.workflow.collection.util,
+                            com.day.cq.workflow.ui,
+                            com.day.cq.workflow.metadata
+                        </Export-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- ======================================================================= -->
+    <!-- R E P O R T I N G                                                       -->
+    <!-- ======================================================================= -->
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <groups>
+                        <group>
+                            <title>Core Packages</title>
+                            <packages>com.day.cq.workflow:com.day.cq.workflow.*</packages>
+                        </group>
+                    </groups>
+                    <tags>
+                        <tag>
+                            <name>todo</name>
+                            <placement>a</placement>
+                            <head>TODO:</head>
+                        </tag>
+                    </tags>
+                    <doctitle>${project.name} Documentation (Version: ${project.version})</doctitle>
+                    <windowtitle>${project.name} Documentation (Version: ${project.version})</windowtitle>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+
+    <!-- ======================================================================= -->
+    <!-- D E P E N D E N C I E S                                                 -->
+    <!-- ======================================================================= -->
+    <dependencies>
+        <dependency>
+            <groupId>com.day.cq</groupId>
+            <artifactId>cq-security-api</artifactId>
+            <version>5.2.6</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.api</artifactId>
+            <version>2.0.8</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.event</artifactId>
+            <version>2.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.jcr</groupId>
+            <artifactId>jcr</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.jackrabbit</groupId>
+            <artifactId>jackrabbit-jcr-commons</artifactId>
+            <version>2.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
