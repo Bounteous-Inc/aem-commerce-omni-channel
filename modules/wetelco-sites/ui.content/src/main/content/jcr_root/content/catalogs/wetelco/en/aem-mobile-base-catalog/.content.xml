@@ -37,7 +37,7 @@
             searchType="simple"/>
         <cq:CatalogSyncConfig jcr:primaryType="cq:CatalogSyncConfig">
             <catalog
-                cq:catalogPath="/content/phonegap/weTelco/en/home/shop"
+                cq:catalogPath="/content/mobileapps/wetelco-aem-mobile-app/shop"
                 cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
                 jcr:primaryType="nt:unstructured"/>
         </cq:CatalogSyncConfig>
