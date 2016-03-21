@@ -41,9 +41,9 @@ public class ContentCreationUtil {
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(ContentCreationUtil.class);
 
-
 	public static final String PARENT_COLLECTION_NAME = "productguide-aem";
-
+	private static String []layout = null;
+    
 	/**
 	 * Default constructor
 	 */
@@ -63,7 +63,8 @@ public class ContentCreationUtil {
 				new Boolean(true));
 		collectionContentNode.setProperty("dps-importance", "normal");
 
-		String productId = "com.org.collection.wetelco." + collectionTitle.replace("-", "");
+		String productId = "com.org.collection.wetelco."
+				+ collectionTitle.replace("-", "");
 		if (!collectionTitle.equals(PARENT_COLLECTION_NAME)) {
 			collectionContentNode.setProperty("collectionCat",
 					PARENT_COLLECTION_NAME);
@@ -83,10 +84,8 @@ public class ContentCreationUtil {
 		collectionContentNode.setProperty("dps-productId", productId);
 		collectionContentNode.setProperty("dps-resourceType", "dps:Collection");
 		collectionContentNode.setProperty("dps-shortTitle", collectionTitle);
-		collectionContentNode.setProperty("dps-title",
-				collectionTitle);
-		collectionContentNode.setProperty("jcr:title",
-				collectionTitle);
+		collectionContentNode.setProperty("dps-title", collectionTitle);
+		collectionContentNode.setProperty("jcr:title", collectionTitle);
 		String[] pgetype = { "app-content" };
 		collectionContentNode.setProperty("pge-type", pgetype);
 		collectionContentNode.setProperty("sling:resourceType",
@@ -176,13 +175,21 @@ public class ContentCreationUtil {
 
 	public static String[] getLayout(AEMMobileClient aemMobileClient,
 			DPSProject dpsProject) throws JSONException, DPSException {
-		String layoutTitle = "Catalog Category";
+		if(layout != null && layout.length == 2 && 
+				layout[0].equals("4-Col")) {
+			return layout;
+		} 
+		
+		String layoutTitle = "4-Col";
 		String layoutURI = aemMobileClient
 				.getLayoutURI(dpsProject, layoutTitle);
 		if (layoutURI == null) {
 			layoutTitle = "Default Layout";
 			layoutURI = aemMobileClient.getLayoutURI(dpsProject, layoutTitle);
 		}
-		return new String[] { layoutTitle, layoutURI };
+		layout = new String[] { layoutTitle, layoutURI };
+		
+		return layout;
 	}
+
 }

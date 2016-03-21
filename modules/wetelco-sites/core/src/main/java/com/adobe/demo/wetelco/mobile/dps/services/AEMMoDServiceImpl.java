@@ -184,12 +184,14 @@ public class AEMMoDServiceImpl implements AEMMoDService {
 			Node newCollectionNodeJcrContent = newCollectionNode
 					.getNode("jcr:content");
 
-			String hardCodedLayoutMap[] = new String[2]; // TODO: Dynamic
+			String hardCodedLayoutMap[] = null; // new String[2]; // TODO: Dynamic
 															// fetch:getLayout(aemMobileClient,
 															// dpsProject)
-			hardCodedLayoutMap[0] = "4-Col";
-			hardCodedLayoutMap[1] = "/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/layout/d30f8678-d10e-c86c-e214-4026d61b20a5;version=1455595593036";
+			//hardCodedLayoutMap[0] = "4-Col";
+			//hardCodedLayoutMap[1] = "/publication/e0bb1e8d-4c5d-4278-aa55-b4468cf341aa/layout/d30f8678-d10e-c86c-e214-4026d61b20a5;version=1455595593036";
 
+			hardCodedLayoutMap = getLayout(aemMobileClient, dpsProject);
+			
 			ContentCreationUtil.updateCollection(newCollectionNodeJcrContent,
 					name, DPS_IMAGE, DPS_BG_IMAGE, hardCodedLayoutMap);
 
