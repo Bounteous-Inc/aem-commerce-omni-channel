@@ -38,6 +38,7 @@ public class WeTelcoCommerceServiceImpl extends AbstractJcrCommerceService
 			SlingHttpServletResponse response) throws CommerceException {
 		// TODO LAB2 : START
 
+		// return new WeTelcoCommerceServiceImpl(getServiceContext(), res);
 		return null;
 
 		// TODO LAB2 : END

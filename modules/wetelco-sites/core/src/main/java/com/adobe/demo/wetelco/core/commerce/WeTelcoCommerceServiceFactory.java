@@ -24,9 +24,9 @@ public class WeTelcoCommerceServiceFactory extends
 		AbstractJcrCommerceServiceFactory implements CommerceServiceFactory {
 
 	@Override
-	public CommerceService getCommerceService(Resource arg0) {
+	public CommerceService getCommerceService(Resource res) {
 		// TODO LAB2 : START
-		
+		// return new WeTelcoCommerceServiceImpl(getServiceContext(), res);
 		return null;
 		
 		// TODO LAB2 : END
