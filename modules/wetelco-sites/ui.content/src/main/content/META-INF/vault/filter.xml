@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
     <filter root="/content/wetelco-sites"/>
+    <filter root="/content/catalog/wetelco"/>
     <filter root="/content/dam/wetelco-sites"/>
     <filter root="/etc/commerce/products/wetelco"/>
     <filter root="/etc/tags/weTelco"/>
